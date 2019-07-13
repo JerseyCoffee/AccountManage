@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		3A8E719430A8C97103483090 /* libPods-AccountCheat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */; };
 		553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0D922D73C79005D739D /* AppDelegate.m */; };
-		553DD0DD22D73C79005D739D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0DC22D73C79005D739D /* SceneDelegate.m */; };
-		553DD0E022D73C79005D739D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0DF22D73C79005D739D /* ViewController.m */; };
-		553DD0E322D73C79005D739D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E122D73C79005D739D /* Main.storyboard */; };
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */; };
+		60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BE22D7770000D05534 /* UIView+JSDFrame.m */; };
+		60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709CB22D7770100D05534 /* JSDTabBarController.m */; };
+		60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709CE22D7770100D05534 /* JSDBaseViewController.m */; };
+		60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709D122D7770100D05534 /* JSDBaseNavigationController.m */; };
+		60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709D922D77DA500D05534 /* JSDHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,16 +25,26 @@
 		553DD0D522D73C79005D739D /* AccountCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DD0D822D73C79005D739D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		553DD0D922D73C79005D739D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		553DD0DB22D73C79005D739D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		553DD0DC22D73C79005D739D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		553DD0DE22D73C79005D739D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		553DD0DF22D73C79005D739D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		553DD0E222D73C79005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		553DD0E422D73C7C005D739D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F709BB22D7770000D05534 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
+		60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
+		60F709BE22D7770000D05534 /* UIView+JSDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSDFrame.m"; sourceTree = "<group>"; };
+		60F709BF22D7770000D05534 /* UIView+JSDFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSDFrame.h"; sourceTree = "<group>"; };
+		60F709CB22D7770100D05534 /* JSDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDTabBarController.m; sourceTree = "<group>"; };
+		60F709CC22D7770100D05534 /* JSDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDTabBarController.h; sourceTree = "<group>"; };
+		60F709CE22D7770100D05534 /* JSDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDBaseViewController.m; sourceTree = "<group>"; };
+		60F709CF22D7770100D05534 /* JSDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDBaseNavigationController.h; sourceTree = "<group>"; };
+		60F709D022D7770100D05534 /* JSDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
+		60F709D122D7770100D05534 /* JSDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDBaseNavigationController.m; sourceTree = "<group>"; };
+		60F709D822D77DA500D05534 /* JSDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeViewController.h; sourceTree = "<group>"; };
+		60F709D922D77DA500D05534 /* JSDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeViewController.m; sourceTree = "<group>"; };
+		60F709DB22D77E3200D05534 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
+		60F709DC22D77E3200D05534 /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
+		60F709DD22D77E3200D05534 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
 		CA36B848871123248EBEB14C /* Pods-AccountCheat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountCheat.release.xcconfig"; path = "Target Support Files/Pods-AccountCheat/Pods-AccountCheat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,19 +81,165 @@
 		553DD0D722D73C79005D739D /* AccountCheat */ = {
 			isa = PBXGroup;
 			children = (
-				553DD0D822D73C79005D739D /* AppDelegate.h */,
-				553DD0D922D73C79005D739D /* AppDelegate.m */,
-				553DD0DB22D73C79005D739D /* SceneDelegate.h */,
-				553DD0DC22D73C79005D739D /* SceneDelegate.m */,
-				553DD0DE22D73C79005D739D /* ViewController.h */,
-				553DD0DF22D73C79005D739D /* ViewController.m */,
-				553DD0E122D73C79005D739D /* Main.storyboard */,
-				553DD0E422D73C7C005D739D /* Assets.xcassets */,
-				553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */,
-				553DD0E922D73C7C005D739D /* Info.plist */,
-				553DD0EA22D73C7C005D739D /* main.m */,
+				60F709DE22D77ED400D05534 /* Application */,
+				60F709C922D7770100D05534 /* Base */,
+				60F709B922D7770000D05534 /* CategoryTool */,
+				60F709C022D7770000D05534 /* Modules */,
+				60F709D222D7770100D05534 /* Supporting Files */,
 			);
 			path = AccountCheat;
+			sourceTree = "<group>";
+		};
+		60F709B922D7770000D05534 /* CategoryTool */ = {
+			isa = PBXGroup;
+			children = (
+				60F709BA22D7770000D05534 /* UIStyle */,
+				60F709BD22D7770000D05534 /* UIView */,
+			);
+			path = CategoryTool;
+			sourceTree = "<group>";
+		};
+		60F709BA22D7770000D05534 /* UIStyle */ = {
+			isa = PBXGroup;
+			children = (
+				60F709BB22D7770000D05534 /* UIColor+JSDStyle.h */,
+				60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */,
+			);
+			path = UIStyle;
+			sourceTree = "<group>";
+		};
+		60F709BD22D7770000D05534 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				60F709BF22D7770000D05534 /* UIView+JSDFrame.h */,
+				60F709BE22D7770000D05534 /* UIView+JSDFrame.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		60F709C022D7770000D05534 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				60F709C122D7770000D05534 /* Home */,
+				60F709C522D7770000D05534 /* My */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		60F709C122D7770000D05534 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60F709C222D7770000D05534 /* Model */,
+				60F709C322D7770000D05534 /* View */,
+				60F709C422D7770000D05534 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		60F709C222D7770000D05534 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60F709C322D7770000D05534 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60F709C422D7770000D05534 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				60F709D822D77DA500D05534 /* JSDHomeViewController.h */,
+				60F709D922D77DA500D05534 /* JSDHomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		60F709C522D7770000D05534 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				60F709C622D7770000D05534 /* Model */,
+				60F709C722D7770000D05534 /* View */,
+				60F709C822D7770000D05534 /* ViewController */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		60F709C622D7770000D05534 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60F709C722D7770000D05534 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60F709C822D7770000D05534 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		60F709C922D7770100D05534 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				60F709CA22D7770100D05534 /* TabBarVC */,
+				60F709CD22D7770100D05534 /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		60F709CA22D7770100D05534 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				60F709CB22D7770100D05534 /* JSDTabBarController.m */,
+				60F709CC22D7770100D05534 /* JSDTabBarController.h */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		60F709CD22D7770100D05534 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				60F709CF22D7770100D05534 /* JSDBaseNavigationController.h */,
+				60F709D122D7770100D05534 /* JSDBaseNavigationController.m */,
+				60F709D022D7770100D05534 /* JSDBaseViewController.h */,
+				60F709CE22D7770100D05534 /* JSDBaseViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		60F709D222D7770100D05534 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60F709DB22D77E3200D05534 /* JSDMacro.h */,
+				60F709DC22D77E3200D05534 /* JSDPrefixHeader.pch */,
+				60F709DD22D77E3200D05534 /* JSDPublic.h */,
+				553DD0E922D73C7C005D739D /* Info.plist */,
+				553DD0EA22D73C7C005D739D /* main.m */,
+				553DD0E422D73C7C005D739D /* Assets.xcassets */,
+				553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60F709DE22D77ED400D05534 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				553DD0D822D73C79005D739D /* AppDelegate.h */,
+				553DD0D922D73C79005D739D /* AppDelegate.m */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		81592758B602A85A4EEE6EB5 /* Frameworks */ = {
@@ -97,7 +256,6 @@
 				1B43226E312D774371B81F5D /* Pods-AccountCheat.debug.xcconfig */,
 				CA36B848871123248EBEB14C /* Pods-AccountCheat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,7 +320,6 @@
 			files = (
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,
-				553DD0E322D73C79005D739D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,24 +417,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553DD0E022D73C79005D739D /* ViewController.m in Sources */,
+				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
+				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
+				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
-				553DD0DD22D73C79005D739D /* SceneDelegate.m in Sources */,
+				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
+				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
+				60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		553DD0E122D73C79005D739D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				553DD0E222D73C79005D739D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -406,7 +559,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMH655YJ87;
-				INFOPLIST_FILE = AccountCheat/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AccountCheat/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +579,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WMH655YJ87;
-				INFOPLIST_FILE = AccountCheat/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AccountCheat/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

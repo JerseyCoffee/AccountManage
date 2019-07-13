@@ -7,9 +7,11 @@ target 'AccountCheat' do
 
   # Pods for AccountCheat
 
-  pod "MaterialComponents"
+  pod 'MaterialComponents'
   pod 'MJExtension'
   pod 'Masonry'
+  pod 'CYLTabBarController', '~> 1.24.0'
+  
   inhibit_all_warnings!  #禁止掉三方库警告
 
 end

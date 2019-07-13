@@ -1,4 +1,7 @@
 PODS:
+  - CYLTabBarController (1.24.1):
+    - CYLTabBarController/Core (= 1.24.1)
+  - CYLTabBarController/Core (1.24.1)
   - Masonry (1.1.0)
   - MaterialComponents (84.0.0):
     - MaterialComponents/ActionSheet (= 84.0.0)
@@ -579,12 +582,14 @@ PODS:
   - MotionTransitioning (5.0.0)
 
 DEPENDENCIES:
+  - CYLTabBarController (~> 1.24.0)
   - Masonry
   - MaterialComponents
   - MJExtension
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CYLTabBarController
     - Masonry
     - MaterialComponents
     - MDFInternationalization
@@ -595,6 +600,7 @@ SPEC REPOS:
     - MotionTransitioning
 
 SPEC CHECKSUMS:
+  CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MaterialComponents: ea6e7d777ca716eed90e44700be40a91f4c9c4d5
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -604,6 +610,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: 0546f882f310662f92fe15282eb70f1524ac2b06
+PODFILE CHECKSUM: 7565e15badf497198e220276397578f3ead1071e
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1
