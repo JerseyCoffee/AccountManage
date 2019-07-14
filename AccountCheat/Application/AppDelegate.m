@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "JSDHomeViewController.h"
+#import <MaterialComponents/MDCAppBarViewController.h>
+#import <MaterialComponents/MDCAppBarNavigationController.h>
 
 @interface AppDelegate ()
 
@@ -21,8 +23,10 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     JSDHomeViewController* homeViewController = [[JSDHomeViewController alloc] init];
-    self.window.rootViewController = homeViewController;
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     return YES;

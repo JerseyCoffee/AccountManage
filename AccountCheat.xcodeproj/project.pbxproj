@@ -12,6 +12,10 @@
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
+		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
+		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
+		6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */; };
 		60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */; };
 		60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BE22D7770000D05534 /* UIView+JSDFrame.m */; };
 		60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709CB22D7770100D05534 /* JSDTabBarController.m */; };
@@ -30,6 +34,13 @@
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
+		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
+		6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteVC.h; sourceTree = "<group>"; };
+		6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDEditNoteVC.m; sourceTree = "<group>"; };
+		6081896122DAE56C007CF7E9 /* JSDEditNoteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteView.h; sourceTree = "<group>"; };
+		6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDEditNoteView.m; sourceTree = "<group>"; };
+		6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDEditNoteView.xib; sourceTree = "<group>"; };
 		60F709BB22D7770000D05534 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		60F709BE22D7770000D05534 /* UIView+JSDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSDFrame.m"; sourceTree = "<group>"; };
@@ -90,6 +101,59 @@
 			path = AccountCheat;
 			sourceTree = "<group>";
 		};
+		6081895522D9DC1C007CF7E9 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				6081895622D9DC2D007CF7E9 /* ViewController */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		6081895622D9DC2D007CF7E9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */,
+				6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6081895A22D9EB87007CF7E9 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				6081896022DAE558007CF7E9 /* Model */,
+				6081895F22DAE550007CF7E9 /* View */,
+				6081895B22D9EB91007CF7E9 /* ViewComtroller */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		6081895B22D9EB91007CF7E9 /* ViewComtroller */ = {
+			isa = PBXGroup;
+			children = (
+				6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */,
+				6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */,
+			);
+			path = ViewComtroller;
+			sourceTree = "<group>";
+		};
+		6081895F22DAE550007CF7E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6081896122DAE56C007CF7E9 /* JSDEditNoteView.h */,
+				6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */,
+				6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6081896022DAE558007CF7E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		60F709B922D7770000D05534 /* CategoryTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +184,8 @@
 		60F709C022D7770000D05534 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6081895A22D9EB87007CF7E9 /* Edit */,
+				6081895522D9DC1C007CF7E9 /* ItemList */,
 				60F709C122D7770000D05534 /* Home */,
 				60F709C522D7770000D05534 /* My */,
 			);
@@ -318,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,
 			);
@@ -419,12 +486,15 @@
 			files = (
 				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
+				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
 				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
 				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
+				6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */,
 				60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */,
+				6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
