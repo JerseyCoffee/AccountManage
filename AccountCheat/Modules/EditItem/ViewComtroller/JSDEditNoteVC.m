@@ -17,6 +17,9 @@
 @property (strong, nonatomic) JSDEditNoteView *editNoteView;
 @property (strong, nonatomic) MDCTextInputControllerUnderline *textFieldControllerFloating;
 @property (strong, nonatomic) MDCTextInputControllerUnderline *accountController;
+@property (strong, nonatomic) MDCTextInputControllerUnderline *passwrodController;
+@property (strong, nonatomic) MDCTextInputControllerUnderline *typeController;
+@property (strong, nonatomic) MDCTextInputControllerLegacyDefault *remarkController;
 @property (nonatomic, strong) MDCRaisedButton* saveButton;
 
 @end
@@ -143,20 +146,21 @@
        _accountController = accountController;
         
         MDCTextInputControllerUnderline* passwordController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.passwordTextField];
+        _passwrodController = passwordController;
         passwordController.normalColor = [UIColor grayColor];
         passwordController.activeColor = [UIColor blueColor];
         passwordController.borderFillColor = [UIColor lightGrayColor];
         passwordController.placeholderText = @"密码";
         
         MDCTextInputControllerUnderline* typeController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.typeTextField];
-//        typeController.textInput = _editNoteView.nameTextField;
+        _typeController = typeController;
         typeController.normalColor = [UIColor grayColor];
         typeController.activeColor = [UIColor blueColor];
         typeController.borderFillColor = [UIColor lightGrayColor];
         typeController.placeholderText = @"分类";
         
         MDCTextInputControllerLegacyDefault* remarkController = [[MDCTextInputControllerLegacyDefault alloc] initWithTextInput:_editNoteView.remarkTextField];
-//       remarkController.textInput = _editNoteView.nameTextField;
+       _remarkController = remarkController;
        remarkController.normalColor = [UIColor grayColor];
        remarkController.activeColor = [UIColor blueColor];
        remarkController.borderFillColor = [UIColor lightGrayColor];

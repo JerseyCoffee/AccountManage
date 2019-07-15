@@ -11,6 +11,7 @@ target 'AccountCheat' do
   pod 'MJExtension'
   pod 'Masonry'
   pod 'CYLTabBarController', '~> 1.24.0'
+  pod 'MGSwipeTableCell' 
   
   inhibit_all_warnings!  #禁止掉三方库警告
 

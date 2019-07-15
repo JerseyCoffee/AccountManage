@@ -11,6 +11,7 @@
 #import <MDCCollectionViewFlowLayout.h>
 #import "JSDEditNoteVC.h"
 #import "JSDPublic.h"
+#import "JSDItemShowVC.h"
 
 @interface JSDItemListViewController () 
 
@@ -136,8 +137,8 @@
     
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
     
-    JSDEditNoteVC* editVC = [[JSDEditNoteVC alloc] init];
-    [self presentViewController:editVC animated:YES completion:nil];
+    JSDItemShowVC* showVC = [[JSDItemShowVC alloc] init];
+    [self.navigationController pushViewController:showVC animated:YES];
 }
 
 #pragma mark - 5.Event Response

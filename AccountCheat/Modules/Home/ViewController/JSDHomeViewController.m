@@ -17,6 +17,7 @@
 #import "JSDHomeModel.h"
 #import <MaterialComponents/MaterialButtons.h>
 #import "JSDAddTypeVC.h"
+#import "JSDItemListVC.h"
 
 static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
@@ -130,7 +131,6 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 - (void)setupData {
     
-    JSDHomeViewModel* viewModel = [[JSDHomeViewModel alloc] init];
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -198,8 +198,8 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
-    
-    JSDItemListViewController* listVC = [[JSDItemListViewController alloc] init];
+//    JSDItemListViewController* listVC = [[JSDItemListViewController alloc] init];
+    JSDItemListVC* listVC = [[JSDItemListVC alloc] init];
     
     NSInteger index = indexPath.row;
     NSString* typeName = [self.viewModel.typeArray objectAtIndex:index].title;

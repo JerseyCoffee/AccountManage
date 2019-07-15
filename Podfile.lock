@@ -575,6 +575,7 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - MGSwipeTableCell (1.6.8)
   - MJExtension (3.0.17)
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
@@ -585,6 +586,7 @@ DEPENDENCIES:
   - CYLTabBarController (~> 1.24.0)
   - Masonry
   - MaterialComponents
+  - MGSwipeTableCell
   - MJExtension
 
 SPEC REPOS:
@@ -594,6 +596,7 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - MGSwipeTableCell
     - MJExtension
     - MotionAnimator
     - MotionInterchange
@@ -605,11 +608,12 @@ SPEC CHECKSUMS:
   MaterialComponents: ea6e7d777ca716eed90e44700be40a91f4c9c4d5
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  MGSwipeTableCell: dc4eca3212ed38a563b27d6aa7b3c01ce656c1e2
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: 7565e15badf497198e220276397578f3ead1071e
+PODFILE CHECKSUM: b7f26c1d9cc814ca27fa4a4d41f342398c941a26
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1
