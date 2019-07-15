@@ -12,6 +12,15 @@
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */; };
+		559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */; };
+		559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332F322DC359F001D37D6 /* JSDHomeModel.m */; };
+		559332F622DC37FA001D37D6 /* typeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 559332F522DC37F9001D37D6 /* typeData.json */; };
+		559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332FC22DC4B14001D37D6 /* JSDAddTypeVC.m */; };
+		559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559332FD22DC4B14001D37D6 /* JSDAddTypeVC.xib */; };
+		5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593330322DC71C6001D37D6 /* JSDItemListCell.m */; };
+		5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5593330422DC71C6001D37D6 /* JSDItemListCell.xib */; };
+		5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593330822DC71DE001D37D6 /* JSDItemListViewModel.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
@@ -33,6 +42,20 @@
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		559332ED22DC321A001D37D6 /* JSDHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		559332F222DC359F001D37D6 /* JSDHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeModel.h; sourceTree = "<group>"; };
+		559332F322DC359F001D37D6 /* JSDHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeModel.m; sourceTree = "<group>"; };
+		559332F522DC37F9001D37D6 /* typeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = typeData.json; sourceTree = "<group>"; };
+		559332FB22DC4B14001D37D6 /* JSDAddTypeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddTypeVC.h; sourceTree = "<group>"; };
+		559332FC22DC4B14001D37D6 /* JSDAddTypeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddTypeVC.m; sourceTree = "<group>"; };
+		559332FD22DC4B14001D37D6 /* JSDAddTypeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddTypeVC.xib; sourceTree = "<group>"; };
+		5593330222DC71C6001D37D6 /* JSDItemListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListCell.h; sourceTree = "<group>"; };
+		5593330322DC71C6001D37D6 /* JSDItemListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListCell.m; sourceTree = "<group>"; };
+		5593330422DC71C6001D37D6 /* JSDItemListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDItemListCell.xib; sourceTree = "<group>"; };
+		5593330722DC71DE001D37D6 /* JSDItemListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewModel.h; sourceTree = "<group>"; };
+		5593330822DC71DE001D37D6 /* JSDItemListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewModel.m; sourceTree = "<group>"; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
@@ -101,9 +124,64 @@
 			path = AccountCheat;
 			sourceTree = "<group>";
 		};
+		559332F722DC4ADC001D37D6 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				559332FA22DC4AF4001D37D6 /* ViewController */,
+				559332F922DC4AED001D37D6 /* View */,
+				559332F822DC4AE6001D37D6 /* Model */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		559332F822DC4AE6001D37D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		559332F922DC4AED001D37D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		559332FA22DC4AF4001D37D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				559332FB22DC4B14001D37D6 /* JSDAddTypeVC.h */,
+				559332FC22DC4B14001D37D6 /* JSDAddTypeVC.m */,
+				559332FD22DC4B14001D37D6 /* JSDAddTypeVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5593330022DC7189001D37D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5593330222DC71C6001D37D6 /* JSDItemListCell.h */,
+				5593330322DC71C6001D37D6 /* JSDItemListCell.m */,
+				5593330422DC71C6001D37D6 /* JSDItemListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5593330122DC7193001D37D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5593330722DC71DE001D37D6 /* JSDItemListViewModel.h */,
+				5593330822DC71DE001D37D6 /* JSDItemListViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6081895522D9DC1C007CF7E9 /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
+				5593330122DC7193001D37D6 /* Model */,
+				5593330022DC7189001D37D6 /* View */,
 				6081895622D9DC2D007CF7E9 /* ViewController */,
 			);
 			path = ItemList;
@@ -184,6 +262,7 @@
 		60F709C022D7770000D05534 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				559332F722DC4ADC001D37D6 /* Type */,
 				6081895A22D9EB87007CF7E9 /* Edit */,
 				6081895522D9DC1C007CF7E9 /* ItemList */,
 				60F709C122D7770000D05534 /* Home */,
@@ -205,6 +284,9 @@
 		60F709C222D7770000D05534 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				559332F222DC359F001D37D6 /* JSDHomeModel.h */,
+				559332F322DC359F001D37D6 /* JSDHomeModel.m */,
+				559332F522DC37F9001D37D6 /* typeData.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +294,9 @@
 		60F709C322D7770000D05534 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				559332ED22DC321A001D37D6 /* JSDHomeCollectionViewCell.h */,
+				559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */,
+				559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,9 +469,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
+				5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */,
+				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,
+				559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,10 +574,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
+				559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */,
+				5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */,
+				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
 				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
+				559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
+				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
 				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
 				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
@@ -638,7 +732,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -658,7 +752,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

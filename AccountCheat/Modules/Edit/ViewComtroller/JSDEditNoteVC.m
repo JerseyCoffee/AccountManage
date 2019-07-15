@@ -10,11 +10,14 @@
 
 #import "JSDEditNoteView.h"
 #import <MaterialComponents/MaterialTextFields.h>
+#import <MaterialButtons.h>
 
 @interface JSDEditNoteVC () 
 
 @property (strong, nonatomic) JSDEditNoteView *editNoteView;
 @property (strong, nonatomic) MDCTextInputControllerUnderline *textFieldControllerFloating;
+@property (strong, nonatomic) MDCTextInputControllerUnderline *accountController;
+@property (nonatomic, strong) MDCRaisedButton* saveButton;
 
 @end
 
@@ -45,6 +48,16 @@
 
 - (void)setupNavBar {
     
+    self.navigationItem.title = @"添加账户";
+    
+    _saveButton = [[MDCRaisedButton alloc] init];
+    [_saveButton setTitle:@"保存" forState:UIControlStateNormal];
+    [_saveButton setTitle:@"保存" forState:UIControlStateDisabled];
+    [_saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    [_saveButton addTarget:self action:@selector(touchesSaveSender:) forControlEvents:UIControlEventTouchUpInside];
+    _saveButton.enabled = NO;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_saveButton];
 }
 
 - (void)setupView {
@@ -75,11 +88,38 @@
 //    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)touchesSaveSender:(MDCButton *)sender {
+    
+    
+    JSDItemListModel* model = [[JSDItemListModel alloc] init];
+    model.name = self.editNoteView.nameTextField.text.length ? self.editNoteView.nameTextField.text : @"";
+    model.account = self.editNoteView.accountTextField.text.length ? self.editNoteView.accountTextField.text : @"";
+    model.password = self.editNoteView.passwordTextField.text.length ? self.editNoteView.passwordTextField.text : @"";
+    model.type = self.editNoteView.typeTextField.text.length ? self.editNoteView.typeTextField.text : @"";
+    //    model.remark = self.editNoteView.remarkTextField.text.length ? self.editNoteView.remarkTextField.text : @"";
+    model.remark = @"啊哈";
+    
+    @weakify(self)
+    [self.viewModel addItemModel:model complectionBlock:^{
+        @strongify(self)
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+}
+
 #pragma mark - 6.Private Methods
+
 
 - (void)setupNotification {
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldWillChange:) name:UITextFieldTextDidChangeNotification object:nil];
 }
+
+- (void)textFieldWillChange:(NSNotification *)notification {
+    
+    self.saveButton.enabled = self.editNoteView.nameTextField.text.length;
+}
+
 
 #pragma mark - 7.GET & SET
 
@@ -91,21 +131,36 @@
         self.textFieldControllerFloating.textInput = _editNoteView.nameTextField;
         self.textFieldControllerFloating.normalColor = [UIColor grayColor];
         self.textFieldControllerFloating.activeColor = [UIColor blueColor];
-        self.textFieldControllerFloating.borderFillColor = [UIColor yellowColor];
+        self.textFieldControllerFloating.borderFillColor = [UIColor lightGrayColor];
         self.textFieldControllerFloating.placeholderText = @"名称";
-//        self.textFieldControllerFloating.
         
         MDCTextInputControllerUnderline* accountController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.accountTextField];
-        MDCTextInputControllerUnderline* passwordController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.passwordTextField];
-        MDCTextInputControllerUnderline* typeController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.typeTextField];
-        MDCTextInputControllerBase* remarkController = [[MDCTextInputControllerBase alloc] initWithTextInput:_editNoteView.remarkTextField];
-        remarkController.borderFillColor = [UIColor whiteColor];
+//       accountController.textInput = _editNoteView.nameTextField;
+       accountController.normalColor = [UIColor grayColor];
+       accountController.activeColor = [UIColor blueColor];
+       accountController.borderFillColor = [UIColor lightGrayColor];
+       accountController.placeholderText = @"账号";
+       _accountController = accountController;
         
-//        MDCTextInputControllerOutlined* outLined = [[MDCTextInputControllerOutlined alloc] initWithTextInput:_editNoteView.accountTextField];
-//        MDCTextInputControllerFilled* filled = [[MDCTextInputControllerFilled alloc] initWithTextInput:_editNoteView.passwordTextField];
-//        MDCTextInputControllerFullWidth* fullWidth = [[MDCTextInputControllerFullWidth alloc] initWithTextInput:_editNoteView.typeTextField];
-//        fullWidth.backgroundColor = [UIColor yellowColor];
-//        MDCTextInputControllerLegacyDefault* defaultt = [[MDCTextInputControllerLegacyDefault alloc] initWithTextInput:_editNoteView.remarkTextField];
+        MDCTextInputControllerUnderline* passwordController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.passwordTextField];
+        passwordController.normalColor = [UIColor grayColor];
+        passwordController.activeColor = [UIColor blueColor];
+        passwordController.borderFillColor = [UIColor lightGrayColor];
+        passwordController.placeholderText = @"密码";
+        
+        MDCTextInputControllerUnderline* typeController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.typeTextField];
+//        typeController.textInput = _editNoteView.nameTextField;
+        typeController.normalColor = [UIColor grayColor];
+        typeController.activeColor = [UIColor blueColor];
+        typeController.borderFillColor = [UIColor lightGrayColor];
+        typeController.placeholderText = @"分类";
+        
+        MDCTextInputControllerLegacyDefault* remarkController = [[MDCTextInputControllerLegacyDefault alloc] initWithTextInput:_editNoteView.remarkTextField];
+//       remarkController.textInput = _editNoteView.nameTextField;
+       remarkController.normalColor = [UIColor grayColor];
+       remarkController.activeColor = [UIColor blueColor];
+       remarkController.borderFillColor = [UIColor lightGrayColor];
+       remarkController.placeholderText = @"备注";
     }
     return _editNoteView;
 }

@@ -9,13 +9,14 @@
 #import "JSDItemListViewController.h"
 
 #import <MDCCollectionViewFlowLayout.h>
-#import <MDCCollectionViewCell.h>
 #import "JSDEditNoteVC.h"
-
+#import "JSDPublic.h"
 
 @interface JSDItemListViewController () 
 
 @property (strong, nonatomic) MDCCollectionViewFlowLayout *layout;
+@property (nonatomic, strong) JSDItemListViewModel* viewModel;
+@property (nonatomic, strong) MDCFloatingButton* addItemButton;
 
 @end
 
@@ -48,10 +49,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+// TODO: 用通知回调刷新;
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.viewModel updata];
+    [self.collectionView reloadData];
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
     
+//    self.navigationItem.title = @"网易";
 }
 
 - (void)setupView {
@@ -60,6 +71,14 @@
     
     [self.collectionView registerClass:[MDCCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    _addItemButton = [[MDCFloatingButton alloc] init];
+    [_addItemButton jsd_setsize:CGSizeMake(65, 65)];
+    [_addItemButton jsd_setright:ScreenWidth - 30];
+    [_addItemButton jsd_setbottom:ScreenHeight - 30];
+    [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_addItemButton];
 }
 
 - (void)reloadView {
@@ -77,7 +96,7 @@
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.viewModel.itemList.count;
 }
 //
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -123,6 +142,14 @@
 
 #pragma mark - 5.Event Response
 
+- (void)touchAddItemSender:(MDCButton *)sender {
+    
+    JSDEditNoteVC* editNoteVC = [[JSDEditNoteVC alloc] init];
+    editNoteVC.viewModel = self.viewModel;
+    
+    [self.navigationController pushViewController:editNoteVC animated:YES];
+}
+
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
@@ -130,5 +157,14 @@
 }
 
 #pragma mark - 7.GET & SET
+
+- (JSDItemListViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDItemListViewModel alloc] init];
+        _viewModel.type = self.title;
+    }
+    return _viewModel;
+}
 
 @end

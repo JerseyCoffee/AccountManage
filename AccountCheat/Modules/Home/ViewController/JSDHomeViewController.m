@@ -10,17 +10,22 @@
 
 #import <MaterialComponents/MDCCollectionViewCell.h>
 #import <MaterialComponents/MDCCollectionViewFlowLayout.h>
-#import <MaterialComponents/MDCCardCollectionCell.h>
-#import <MaterialComponents/MDCCard.h>
-#import <MaterialComponents/MaterialChips.h>
 #import "JSDPublic.h"
 #import <MaterialBottomNavigation.h>
 #import "JSDItemListViewController.h"
+#import "JSDHomeCollectionViewCell.h"
+#import "JSDHomeModel.h"
+#import <MaterialComponents/MaterialButtons.h>
+#import "JSDAddTypeVC.h"
+
+static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 @interface JSDHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) MDCCollectionViewFlowLayout *layout;
 @property (strong, nonatomic) MDCBottomNavigationBar *bottomNavBar;
+@property (nonatomic, strong) JSDHomeViewModel* viewModel;
+@property (nonatomic, strong) MDCFloatingButton* addTypeButton;
 
 @end
 
@@ -64,6 +69,14 @@
 //    _bottomNavigationBar.frame = bottomNavBarFrame;
 //}
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.viewModel updateData];
+    [self.collectionView reloadData];
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
@@ -75,6 +88,7 @@
 //    [self.view addSubview:self.bottomNavBar];
 //    [self layoutBottomNavBar];
     
+    self.navigationItem.title = @"首页";
 }
 
 - (void)layoutBottomNavBar {
@@ -94,9 +108,18 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.collectionView registerClass:[MDCCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDHomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
     
+    [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+
+    _addTypeButton = [[MDCFloatingButton alloc] init];
+    [_addTypeButton jsd_setsize:CGSizeMake(65, 65)];
+    [_addTypeButton jsd_setright:ScreenWidth - 30];
+    [_addTypeButton jsd_setbottom:ScreenHeight - 30];
+    [_addTypeButton addTarget:self action:@selector(touchAddTypeSender:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_addTypeButton];
 }
 
 - (void)reloadView {
@@ -107,6 +130,7 @@
 
 - (void)setupData {
     
+    JSDHomeViewModel* viewModel = [[JSDHomeViewModel alloc] init];
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -121,16 +145,15 @@
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return self.viewModel.typeArray.count;
 }
 //
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    MDCCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-
-//    cell.accessoryView.backgroundColor = [UIColor redColor];
-//    cell.contentView.backgroundColor = [UIColor clearColor];
+    JSDHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJSDHomeCellIdentifier forIndexPath:indexPath];
+    
+    [cell setModel:self.viewModel.typeArray[indexPath.row]];
 
     return cell;
 }
@@ -177,10 +200,21 @@
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
     
     JSDItemListViewController* listVC = [[JSDItemListViewController alloc] init];
+    
+    NSInteger index = indexPath.row;
+    NSString* typeName = [self.viewModel.typeArray objectAtIndex:index].title;
+    listVC.title = typeName;
     [self.navigationController pushViewController:listVC animated:YES];
 }
 
 #pragma mark - 5.Event Response
+
+- (void)touchAddTypeSender:(MDCFloatingButton *)sender {
+    
+    JSDAddTypeVC* addTypeVC = [[JSDAddTypeVC alloc] init];
+    
+    [self.navigationController pushViewController:addTypeVC animated:YES];
+}
 
 #pragma mark - 6.Private Methods
 
@@ -190,29 +224,13 @@
 
 #pragma mark - 7.GET & SET
 
-//- (UICollectionViewFlowLayout *)collectionViewLayout {
-//
-//    if (!_collectionViewLayout) {
-//        _collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
-//        [_collectionViewLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-//        _collectionViewLayout.headerReferenceSize = CGSizeZero;
-//        _collectionViewLayout.itemSize = CGSizeMake(150, 200);
-////        [_collectionViewLayout registerClass:[MDCCollectionViewCell class] forDecorationViewOfKind:@"cell"];
-//
-//    }
-//    return _collectionViewLayout;
-//}
-//
-//- (UICollectionView *)collectionView {
-//
-//    if (!_collectionView) {
-//        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.collectionViewLayout];
-//        _collectionView.delegate = self;
-//        _collectionView.dataSource = self;
-//        [_collectionView registerClass:[MDCCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-//    }
-//    return _collectionView;
-//}
+- (JSDHomeViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDHomeViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 @end
 

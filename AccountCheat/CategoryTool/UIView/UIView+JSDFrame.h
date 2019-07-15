@@ -30,9 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGSize)jsd_size;
 - (void)jsd_setsize:(CGSize)size;
 - (CGFloat)jsd_centerX;
-- (void)jsd_setcenterX:(CGFloat)jsd_centerX;
+- (void)setcenterX:(CGFloat)centerX;
 - (CGFloat)jsd_centerY;
-- (void)jsd_setcenterY:(CGFloat)jsd_centerY;
+- (void)setcenterY:(CGFloat)centerY;
 
 
 

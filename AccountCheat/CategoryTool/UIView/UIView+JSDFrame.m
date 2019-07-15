@@ -95,7 +95,7 @@
     return self.center.x;
 }
 
-- (void)jsd_setcenterX:(CGFloat)jsd_centerX {
+- (void)setcenterX:(CGFloat)jsd_centerX {
     
     self.center = CGPointMake(jsd_centerX, self.center.y);
 }
@@ -105,7 +105,7 @@
     return self.center.y;
 }
 
-- (void)jsd_setcenterY:(CGFloat)jsd_centerY  {
+- (void)setcenterY:(CGFloat)jsd_centerY  {
     
     self.center = CGPointMake(self.center.x, jsd_centerY);
 }

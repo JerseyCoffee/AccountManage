@@ -11,5 +11,8 @@
 
 #import "UIColor+JSDStyle.h"
 #import "UIView+JSDFrame.h"
+#import <MaterialComponents/MaterialButtons.h>
+#import "JSDItemListViewModel.h"
+#import <MDCCollectionViewCell.h>
 
 #endif /* JSDPublic_h */
