@@ -60,6 +60,16 @@ NSString* const kItemListFilePathName = @"itemList.json";
     [self saveItemListWithcomplectionBlock:complectionBlock];
 }
 
+- (void)replaceItemModel:(JSDItemListModel *)model complectionBlock:(void (^)(void))complectionBlock {
+    
+    NSInteger index = [self.itemList indexOfObject:model];
+    [self.itemList replaceObjectAtIndex:index withObject:model];
+    
+    [self saveItemListWithcomplectionBlock:complectionBlock];
+}
+
+#pragma mark -- 保存到磁盘
+
 - (void)saveItemListWithcomplectionBlock:(void (^)(void))complectionBlock {
     
     NSArray* dataArray = [JSDItemListModel mj_keyValuesArrayWithObjectArray:self.itemList];

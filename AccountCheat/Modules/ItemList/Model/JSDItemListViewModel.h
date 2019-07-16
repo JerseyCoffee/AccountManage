@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* password;  //密码
 @property (nonatomic, copy) NSString* type;      //分类
 @property (nonatomic, copy) NSString* remark;    //备注
+@property (nonatomic, assign) BOOL isCollection; //收藏
 
 @end
 
@@ -29,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updata;
 - (void)addItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
 - (void)removeItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
+- (void)replaceItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
 
 @end
 

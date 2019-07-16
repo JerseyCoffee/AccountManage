@@ -14,8 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDEditNoteVC : JSDBaseViewController
 
 @property (nonatomic, strong) JSDItemListViewModel* viewModel;
-
-
+@property (nonatomic, strong) JSDItemListModel* model;
 
 @end
 

@@ -52,4 +52,9 @@
     
 }
 
++ (UIColor *)jsd_grayColor {
+    
+    return [UIColor grayColor];
+}
+
 @end

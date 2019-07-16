@@ -21,11 +21,21 @@
 		5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593330322DC71C6001D37D6 /* JSDItemListCell.m */; };
 		5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5593330422DC71C6001D37D6 /* JSDItemListCell.xib */; };
 		5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593330822DC71DE001D37D6 /* JSDItemListViewModel.m */; };
+		5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593330F22DD6EFD001D37D6 /* JSDItemShowVC.m */; };
+		5593331522DD6F51001D37D6 /* JSDItemShowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593331322DD6F51001D37D6 /* JSDItemShowViewCell.m */; };
+		5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5593331422DD6F51001D37D6 /* JSDItemShowViewCell.xib */; };
+		5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593331C22DD7645001D37D6 /* JSDSearchViewController.m */; };
+		5593332022DD7DD8001D37D6 /* JSDSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593331F22DD7DD8001D37D6 /* JSDSearchViewModel.m */; };
+		5593332422DDA933001D37D6 /* JSDSearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593332222DDA933001D37D6 /* JSDSearchViewCell.m */; };
+		5593332522DDA933001D37D6 /* JSDSearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5593332322DDA933001D37D6 /* JSDSearchViewCell.xib */; };
+		5593332722DDC648001D37D6 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332622DDC647001D37D6 /* search.png */; };
+		5593332922DDC8A3001D37D6 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332822DDC8A2001D37D6 /* add.png */; };
+		5593332C22DDCB6A001D37D6 /* collection_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332A22DDCB6A001D37D6 /* collection_default.png */; };
+		5593332D22DDCB6A001D37D6 /* collection_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332B22DDCB6A001D37D6 /* collection_selected.png */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
 		6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */; };
-		6081896E22DCB7BB007CF7E9 /* JSDItemShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896D22DCB7BB007CF7E9 /* JSDItemShowVC.m */; };
 		6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897022DCC273007CF7E9 /* JSDItemListVC.m */; };
 		6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897322DCC50E007CF7E9 /* JSDItemTableCell.m */; };
 		6081897622DCC50E007CF7E9 /* JSDItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081897422DCC50E007CF7E9 /* JSDItemTableCell.xib */; };
@@ -60,6 +70,22 @@
 		5593330422DC71C6001D37D6 /* JSDItemListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDItemListCell.xib; sourceTree = "<group>"; };
 		5593330722DC71DE001D37D6 /* JSDItemListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewModel.h; sourceTree = "<group>"; };
 		5593330822DC71DE001D37D6 /* JSDItemListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewModel.m; sourceTree = "<group>"; };
+		5593330E22DD6EFD001D37D6 /* JSDItemShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemShowVC.h; sourceTree = "<group>"; };
+		5593330F22DD6EFD001D37D6 /* JSDItemShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemShowVC.m; sourceTree = "<group>"; };
+		5593331222DD6F51001D37D6 /* JSDItemShowViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemShowViewCell.h; sourceTree = "<group>"; };
+		5593331322DD6F51001D37D6 /* JSDItemShowViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemShowViewCell.m; sourceTree = "<group>"; };
+		5593331422DD6F51001D37D6 /* JSDItemShowViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDItemShowViewCell.xib; sourceTree = "<group>"; };
+		5593331B22DD7645001D37D6 /* JSDSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchViewController.h; sourceTree = "<group>"; };
+		5593331C22DD7645001D37D6 /* JSDSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchViewController.m; sourceTree = "<group>"; };
+		5593331E22DD7DD8001D37D6 /* JSDSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchViewModel.h; sourceTree = "<group>"; };
+		5593331F22DD7DD8001D37D6 /* JSDSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchViewModel.m; sourceTree = "<group>"; };
+		5593332122DDA933001D37D6 /* JSDSearchViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchViewCell.h; sourceTree = "<group>"; };
+		5593332222DDA933001D37D6 /* JSDSearchViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchViewCell.m; sourceTree = "<group>"; };
+		5593332322DDA933001D37D6 /* JSDSearchViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDSearchViewCell.xib; sourceTree = "<group>"; };
+		5593332622DDC647001D37D6 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		5593332822DDC8A2001D37D6 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		5593332A22DDCB6A001D37D6 /* collection_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_default.png; sourceTree = "<group>"; };
+		5593332B22DDCB6A001D37D6 /* collection_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_selected.png; sourceTree = "<group>"; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
@@ -68,8 +94,6 @@
 		6081896122DAE56C007CF7E9 /* JSDEditNoteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteView.h; sourceTree = "<group>"; };
 		6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDEditNoteView.m; sourceTree = "<group>"; };
 		6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDEditNoteView.xib; sourceTree = "<group>"; };
-		6081896C22DCB7BB007CF7E9 /* JSDItemShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemShowVC.h; sourceTree = "<group>"; };
-		6081896D22DCB7BB007CF7E9 /* JSDItemShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemShowVC.m; sourceTree = "<group>"; };
 		6081896F22DCC273007CF7E9 /* JSDItemListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListVC.h; sourceTree = "<group>"; };
 		6081897022DCC273007CF7E9 /* JSDItemListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListVC.m; sourceTree = "<group>"; };
 		6081897222DCC50E007CF7E9 /* JSDItemTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemTableCell.h; sourceTree = "<group>"; };
@@ -191,6 +215,54 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5593331122DD6F13001D37D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5593331222DD6F51001D37D6 /* JSDItemShowViewCell.h */,
+				5593331322DD6F51001D37D6 /* JSDItemShowViewCell.m */,
+				5593331422DD6F51001D37D6 /* JSDItemShowViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5593331722DD75EE001D37D6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5593331A22DD760B001D37D6 /* Model */,
+				5593331922DD7601001D37D6 /* View */,
+				5593331822DD75FA001D37D6 /* ViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5593331822DD75FA001D37D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5593331B22DD7645001D37D6 /* JSDSearchViewController.h */,
+				5593331C22DD7645001D37D6 /* JSDSearchViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5593331922DD7601001D37D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5593332122DDA933001D37D6 /* JSDSearchViewCell.h */,
+				5593332222DDA933001D37D6 /* JSDSearchViewCell.m */,
+				5593332322DDA933001D37D6 /* JSDSearchViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5593331A22DD760B001D37D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5593331E22DD7DD8001D37D6 /* JSDSearchViewModel.h */,
+				5593331F22DD7DD8001D37D6 /* JSDSearchViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6081895522D9DC1C007CF7E9 /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +323,7 @@
 		6081896A22DCB792007CF7E9 /* Show */ = {
 			isa = PBXGroup;
 			children = (
+				5593331122DD6F13001D37D6 /* View */,
 				6081896B22DCB79F007CF7E9 /* ViewController */,
 			);
 			path = Show;
@@ -259,8 +332,8 @@
 		6081896B22DCB79F007CF7E9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6081896C22DCB7BB007CF7E9 /* JSDItemShowVC.h */,
-				6081896D22DCB7BB007CF7E9 /* JSDItemShowVC.m */,
+				5593330E22DD6EFD001D37D6 /* JSDItemShowVC.h */,
+				5593330F22DD6EFD001D37D6 /* JSDItemShowVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -295,6 +368,7 @@
 		60F709C022D7770000D05534 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5593331722DD75EE001D37D6 /* Search */,
 				6081896A22DCB792007CF7E9 /* Show */,
 				559332F722DC4ADC001D37D6 /* Type */,
 				6081895A22D9EB87007CF7E9 /* EditItem */,
@@ -407,6 +481,10 @@
 		60F709D222D7770100D05534 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5593332A22DDCB6A001D37D6 /* collection_default.png */,
+				5593332B22DDCB6A001D37D6 /* collection_selected.png */,
+				5593332822DDC8A2001D37D6 /* add.png */,
+				5593332622DDC647001D37D6 /* search.png */,
 				60F709DB22D77E3200D05534 /* JSDMacro.h */,
 				60F709DC22D77E3200D05534 /* JSDPrefixHeader.pch */,
 				60F709DD22D77E3200D05534 /* JSDPublic.h */,
@@ -505,9 +583,15 @@
 			files = (
 				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
+				5593332D22DDCB6A001D37D6 /* collection_selected.png in Resources */,
+				5593332522DDA933001D37D6 /* JSDSearchViewCell.xib in Resources */,
+				5593332922DDC8A3001D37D6 /* add.png in Resources */,
 				5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */,
+				5593332C22DDCB6A001D37D6 /* collection_default.png in Resources */,
+				5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */,
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
+				5593332722DDC648001D37D6 /* search.png in Resources */,
 				6081897622DCC50E007CF7E9 /* JSDItemTableCell.xib in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,
 				559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */,
@@ -614,9 +698,12 @@
 				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
 				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
+				5593332022DD7DD8001D37D6 /* JSDSearchViewModel.m in Sources */,
 				559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
+				5593331522DD6F51001D37D6 /* JSDItemShowViewCell.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
+				5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */,
 				6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
@@ -624,8 +711,9 @@
 				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
 				6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */,
 				60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */,
+				5593332422DDA933001D37D6 /* JSDSearchViewCell.m in Sources */,
 				6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */,
-				6081896E22DCB7BB007CF7E9 /* JSDItemShowVC.m in Sources */,
+				5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */,
 				6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

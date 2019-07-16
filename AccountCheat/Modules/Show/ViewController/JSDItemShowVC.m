@@ -2,66 +2,150 @@
 //  JSDItemShowVC.m
 //  AccountCheat
 //
-//  Created by ada on 2019/7/15.
+//  Created by Jersey on 2019/7/16.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
 #import "JSDItemShowVC.h"
 
+#import "JSDItemShowViewCell.h"
+#import <MaterialSnackbar.h>
+
+@interface JSDItemShowVC ()
+
+@end
+
 @implementation JSDItemShowVC
 
-#pragma mark - 1.View Controller Life Cycle
+static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Register cell classes
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDItemShowViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+    
     // Do any additional setup after loading the view.
     
-    //1.设置导航栏
-    [self setupNavBar];
-    //2.设置view
-    [self setupView];
-    //3.请求数据
-    [self setupData];
-    //4.设置通知
-    [self setupNotification];
+    [self setupNavigation];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - 2.SettingView and Style
-
-- (void)setupNavBar {
+- (void)setupNavigation {
     
+    self.navigationItem.title = @"详情";
 }
 
-- (void)setupView {
+#pragma mark <UICollectionViewDataSource>
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    return 1;
 }
 
-- (void)reloadView {
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
+    return 6;
 }
 
-#pragma mark - 3.Request Data
-
-- (void)setupData {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    JSDItemShowViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-}
-
-#pragma mark - 4.UITableViewDataSource and UITableViewDelegate
-
-#pragma mark - 5.Event Response
-
-#pragma mark - 6.Private Methods
-
-- (void)setupNotification {
+    // Configure the cell
+    switch (indexPath.row) {
+        case 0:
+            cell.titleLabel.text = self.model.name;
+            break;
+        case 1:
+            cell.titleLabel.text = self.model.account;
+            break;
+        case 2:
+            cell.titleLabel.text = self.model.password;
+            break;
+        case 3:
+            cell.titleLabel.text = self.model.type;
+            break;
+        case 4:
+            cell.titleLabel.text = self.model.remark;
+            break;
+        case 5:
+            cell.titleLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
+            break;
+        default:
+            break;
+    }
     
+    return cell;
 }
 
-#pragma mark - 7.GET & SET
+#pragma mark <UICollectionViewDelegate>
+
+/*
+// Uncomment this method to specify if the specified item should be highlighted during tracking
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+	return YES;
+}
+*/
+
+/*
+// Uncomment this method to specify if the specified item should be selected
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+*/
+
+/*
+// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	return NO;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+	
+}
+*/
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    
+    NSString* copyString;
+    switch (indexPath.row) {
+        case 0:
+            copyString = self.model.name;
+            break;
+        case 1:
+            copyString = self.model.account;
+            break;
+        case 2:
+            copyString = self.model.password;
+            break;
+        case 3:
+            copyString = self.model.type;
+            break;
+        case 4:
+            copyString = self.model.remark;
+            break;
+        case 5:
+            copyString = self.model.isCollection ? @"已收藏" : @"为收藏";
+            break;
+        default:
+            break;
+    }
+    if (copyString.length) {
+        UIPasteboard* pasteboard =  [UIPasteboard generalPasteboard];
+        pasteboard.string = copyString;
+        MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:[NSString stringWithFormat:@"已复制到剪切板:%@", copyString]];
+        [manager showMessage:message];
+    }
+}
 
 @end

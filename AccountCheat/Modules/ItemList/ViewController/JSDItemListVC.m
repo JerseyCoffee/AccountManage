@@ -14,7 +14,7 @@
 #import "JSDEditNoteVC.h"
 
 static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
-@interface JSDItemListVC () <UITableViewDelegate, UITableViewDataSource, MGSwipeTableCellDelegate>
+@interface JSDItemListVC () <UITableViewDelegate, UITableViewDataSource, MGSwipeTableCellDelegate, JSDItemTableCellDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic, strong) JSDItemListViewModel* viewModel;
@@ -66,7 +66,12 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.left.right.top.mas_equalTo(0);
+        if (@available(iOS 11.0,*)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        }else{
+            make.bottom.mas_equalTo(0);
+        }
     }];
     
     _addItemButton = [[MDCFloatingButton alloc] init];
@@ -76,6 +81,8 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_addItemButton];
+    [_addItemButton setBackgroundImage:JSDImageOfFile(@"add") forState:UIControlStateNormal];
+    _addItemButton.backgroundColor = [UIColor clearColor];
 }
 
 - (void)reloadView {
@@ -102,7 +109,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 85;
+    return 75;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -113,23 +120,27 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     }
     
     cell.delegate = self;
-    cell.backgroundColor = [UIColor blueColor];
     //configure right buttons
-    cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Delete" backgroundColor:[UIColor redColor]],
-                          [MGSwipeButton buttonWithTitle:@"More" backgroundColor:[UIColor lightGrayColor]]];
+    cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"编辑" backgroundColor:[UIColor blueColor]],
+                          [MGSwipeButton buttonWithTitle:@"删除" backgroundColor:[UIColor redColor]]
+                          ];
     cell.rightSwipeSettings.transition = indexPath.section;
+    cell.viewModel = self.viewModel.itemList[indexPath.section];
+    cell.section = indexPath.section;
+    cell.itemdelegate = self;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
-    return 8;
+    return 2;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     
     UIView* footerView = [[UIView alloc] init];
+    footerView.backgroundColor = [UIColor jsd_grayColor];
     
     return footerView;
 }
@@ -137,15 +148,40 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self showItemModel:self.viewModel.itemList[indexPath.section]];
 }
 
 #pragma mark - MGSwipeTableCellDelegate
 
 - (BOOL)swipeTableCell:(MGSwipeTableCell *)cell tappedButtonAtIndex:(NSInteger)index direction:(MGSwipeDirection)direction fromExpansion:(BOOL)fromExpansion {
     
-    NSLog(@"选中");
-    
+    JSDItemTableCell* itemCell = (JSDItemTableCell *)cell;
+    NSLog(@"%ld", itemCell.section);
+    switch (index) {
+        case 1:{ //删除
+        [self deleteItemModel: itemCell.viewModel];
+        }
+            break;
+        case 0:{ //编辑
+        [self editItemModel: itemCell.viewModel];
+        }
+        default:
+            break;
+    }
     return YES;
+}
+
+#pragma mark - JSDItemTableCellDelegate
+
+- (void)onTouchCollectionWithModel:(JSDItemListModel *)model {
+    
+    NSLog(@"点击收藏");
+    model.isCollection = !model.isCollection; //取反
+    
+    [self.viewModel replaceItemModel:model complectionBlock:^{
+//        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - 5.Event Response
@@ -162,6 +198,32 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (void)setupNotification {
     
+}
+
+- (void)deleteItemModel:(JSDItemListModel *)model {
+    
+    @weakify(self)
+    [self.viewModel removeItemModel:model complectionBlock:^{
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)showItemModel:(JSDItemListModel *)model {
+    
+    JSDItemShowVC* showVC = [[JSDItemShowVC alloc] init];
+    showVC.model = model;
+    showVC.title = model.name;
+    
+    [self.navigationController pushViewController:showVC animated:YES];
+}
+
+- (void)editItemModel:(JSDItemListModel *)model {
+    
+    JSDEditNoteVC* editVC = [[JSDEditNoteVC alloc] init];
+    editVC.model = model;
+    
+    [self.navigationController pushViewController:editVC animated:YES];
 }
 
 #pragma mark - 7.GET & SET

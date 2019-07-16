@@ -74,6 +74,84 @@ green:(g) / 255.0  \
 blue :(b) / 255.0  \
 alpha:(a)])
 
+// get Window
+#define JSDAppWindow [UIApplication sharedApplication].delegate.window
+
+// More fast way to get app delegate
+#define JSDAPPDElEGATE [[UIApplication  sharedApplication] delegate]
+
+#pragma mark - Load Font
+
+// Generate font with size
+#define JSDFontWithSize(size) [UIFont systemFontOfSize:size]
+
+// Generate bold font with size.
+#define JSDBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
+
+#pragma mark - Load Image
+
+// More easy way to load an image.
+#define JSDImage(Name) ([UIImage imageNamed:Name])
+
+// More easy to load an image from file.
+#define JSDImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"png"]])
+
+#pragma mark - System Singletons
+
+// More easy way to get user default object.
+#define JSDUserDefaults [NSUserDefaults standardUserDefaults]
+
+// More easy way to get NSNotificationCenter object.
+#define JSDNotificationCenter  [NSNotificationCenter defaultCenter]
+
+// More easy way to get [NSFileManager defaultManager]
+#define JSDFileManager [NSFileManager defaultManager]
+
+// More easy way to post a notification from notification center.
+#define JSDPostNotificationWithName(notificationName) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
+
+// More easy way to post a notification with user info from notification center.
+#define JSDPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
+
+#pragma mark -- Fundation
+
+#define JSDBundle [NSBundle mainBundle]
+
+// Get dispatch_get_main_queue()
+#define JSDMainThread (dispatch_get_main_queue())
+
+// Get default dispatch_get_global_queue
+#define JSDGlobalThread dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+// Radians convert to degress.
+#define JSDRadiansToDegrees(radians) ((radians) * (180.0 / M_PI))
+
+// Degrees convert to randians.
+#define JSDDegreesToRadians(angle) ((angle) / 180.0 * M_PI)
+
+// Fast to get iOS system version
+#define JSDIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
+
+#pragma mark - Judge
+
+// Judge whether it is an empty string.
+#define JSDIsEmptyString(s) (s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0))
+
+#define JSDIsString(s) !((s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0)))
+
+// Judge whether it is a nil or null object.
+#define JSDIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
+
+// Judge whether it is a vaid dictionary.
+#define JSDIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
+
+// Judge whether it is a valid array.
+#define JSDIsArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
+
+#define JSDIsClearString(s)  ([s isEqualToString:@""] && s.length == 0)
+
 //weak对象，用于block，例：@weakify(self)
 #ifndef    weakify
 #if __has_feature(objc_arc)

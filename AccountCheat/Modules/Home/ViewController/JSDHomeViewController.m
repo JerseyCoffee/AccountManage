@@ -18,6 +18,7 @@
 #import <MaterialComponents/MaterialButtons.h>
 #import "JSDAddTypeVC.h"
 #import "JSDItemListVC.h"
+#import "JSDSearchViewController.h"
 
 static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
@@ -27,6 +28,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 @property (strong, nonatomic) MDCBottomNavigationBar *bottomNavBar;
 @property (nonatomic, strong) JSDHomeViewModel* viewModel;
 @property (nonatomic, strong) MDCFloatingButton* addTypeButton;
+@property (nonatomic, strong) MDCFloatingButton* searchButton;
 
 @end
 
@@ -116,11 +118,23 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
     _addTypeButton = [[MDCFloatingButton alloc] init];
     [_addTypeButton jsd_setsize:CGSizeMake(65, 65)];
-    [_addTypeButton jsd_setright:ScreenWidth - 30];
+    [_addTypeButton setcenterX:ScreenWidth / 2];
     [_addTypeButton jsd_setbottom:ScreenHeight - 30];
     [_addTypeButton addTarget:self action:@selector(touchAddTypeSender:) forControlEvents:UIControlEventTouchUpInside];
+    [_addTypeButton setBackgroundImage:JSDImageOfFile(@"add") forState:UIControlStateNormal];
+    _addTypeButton.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:_addTypeButton];
+    
+    _searchButton = [[MDCFloatingButton alloc] init];
+    [_searchButton jsd_setsize:CGSizeMake(50, 50)];
+    [_searchButton jsd_setright:ScreenWidth - 30];
+    [_searchButton jsd_setbottom:ScreenHeight - 30];
+    [_searchButton addTarget:self action:@selector(touchSearchSender:) forControlEvents:UIControlEventTouchUpInside];
+    [_searchButton setBackgroundImage:JSDImageOfFile(@"search") forState:UIControlStateNormal];
+    _searchButton.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:_searchButton];
 }
 
 - (void)reloadView {
@@ -188,7 +202,6 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     return 10;
 }
 
-
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
@@ -216,10 +229,30 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     [self.navigationController pushViewController:addTypeVC animated:YES];
 }
 
+- (void)touchSearchSender:(MDCFloatingButton *)sender {
+    
+    JSDSearchViewController* searchVC = [[JSDSearchViewController alloc] init];
+    UINavigationController* navigationVC = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    
+    [self presentViewController:navigationVC animated:YES completion:nil];
+}
+
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [super touchesBegan:touches withEvent:event];
+    
+    [self.view endEditing:YES];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    [self.view endEditing:YES];
 }
 
 #pragma mark - 7.GET & SET

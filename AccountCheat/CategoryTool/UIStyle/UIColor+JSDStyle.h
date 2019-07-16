@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)jsd_colorWithHexString:(NSString *)color; //颜色字符串转换为颜色
 
++ (UIColor *)jsd_grayColor;
+
 @end
 
 NS_ASSUME_NONNULL_END
