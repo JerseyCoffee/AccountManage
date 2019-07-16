@@ -18,6 +18,14 @@
     
     [super awakeFromNib];
     
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTouchContentView:)];
+    [self.contentView addGestureRecognizer:tap];
 }
+
+- (void)onTouchContentView:(id)sender {
+    
+    [self endEditing:YES];
+}
+
 
 @end

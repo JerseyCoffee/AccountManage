@@ -16,14 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDEditNoteView : UIView
 
 @property (weak, nonatomic) IBOutlet MDCTextField *nameTextField;
-
 @property (weak, nonatomic) IBOutlet MDCTextField *accountTextField;
-
 @property (weak, nonatomic) IBOutlet MDCTextField *passwordTextField;
-
 @property (weak, nonatomic) IBOutlet MDCTextField *typeTextField;
-
 @property (weak, nonatomic) IBOutlet MDCMultilineTextField *remarkTextField;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
 
