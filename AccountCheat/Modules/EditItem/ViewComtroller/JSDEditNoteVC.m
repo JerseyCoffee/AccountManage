@@ -135,42 +135,44 @@
         _editNoteView = [[NSBundle mainBundle] loadNibNamed:@"JSDEditNoteView" owner:nil options:nil].lastObject;
         _editNoteView.frame = self.view.bounds;
         self.textFieldControllerFloating.textInput = _editNoteView.nameTextField;
-        self.textFieldControllerFloating.normalColor = [UIColor grayColor];
+        self.textFieldControllerFloating.normalColor = ColorWithFROMRGB(0xdddddd, 1);
         self.textFieldControllerFloating.activeColor = [UIColor blueColor];
         self.textFieldControllerFloating.borderFillColor = [UIColor lightGrayColor];
         self.textFieldControllerFloating.placeholderText = @"标题(最长10个字符)";
         self.textFieldControllerFloating.characterCountMax = 10;
+        self.textFieldControllerFloating.borderFillColor = [UIColor whiteColor];
+//        self.textFieldControllerFloating.leadingUnderlineLabelTextColor = []
         
         MDCTextInputControllerUnderline* accountController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.accountTextField];
 //       accountController.textInput = _editNoteView.nameTextField;
-       accountController.normalColor = [UIColor grayColor];
+       accountController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
        accountController.activeColor = [UIColor blueColor];
-       accountController.borderFillColor = [UIColor lightGrayColor];
+       accountController.borderFillColor = [UIColor whiteColor];
        accountController.placeholderText = @"账号(最长50个字符)";
        _accountController = accountController;
        accountController.characterCountMax = 50;
-        
+       
         MDCTextInputControllerUnderline* passwordController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.passwordTextField];
         _passwrodController = passwordController;
-        passwordController.normalColor = [UIColor grayColor];
+        passwordController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
         passwordController.activeColor = [UIColor blueColor];
-        passwordController.borderFillColor = [UIColor lightGrayColor];
+        passwordController.borderFillColor = [UIColor whiteColor];
         passwordController.placeholderText = @"密码(最长50个字符)";
         passwordController.characterCountMax = 50;
         
         MDCTextInputControllerUnderline* typeController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.typeTextField];
         _typeController = typeController;
-        typeController.normalColor = [UIColor grayColor];
+        typeController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
         typeController.activeColor = [UIColor blueColor];
-        typeController.borderFillColor = [UIColor lightGrayColor];
+        typeController.borderFillColor = [UIColor whiteColor];
         typeController.placeholderText = @"标签(最长50个字符)";
         typeController.characterCountMax = 50;
         
         MDCTextInputControllerLegacyDefault* remarkController = [[MDCTextInputControllerLegacyDefault alloc] initWithTextInput:_editNoteView.remarkTextField];
        _remarkController = remarkController;
-       remarkController.normalColor = [UIColor grayColor];
+       remarkController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
        remarkController.activeColor = [UIColor blueColor];
-       remarkController.borderFillColor = [UIColor lightGrayColor];
+       remarkController.borderFillColor = [UIColor whiteColor];
        remarkController.placeholderText = @"备注(最长250个字符)";
        remarkController.characterCountMax = 250;
     }

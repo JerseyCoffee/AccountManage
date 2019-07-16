@@ -175,7 +175,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake((ScreenWidth - 100) / 2, 100);
+    return CGSizeMake((ScreenWidth - 50) / 2, 100);
 }
 
 //footer的size
@@ -193,7 +193,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 30, 10, 30);
+    return UIEdgeInsetsMake(10, 15, 10, 15);
 }
 
 //设置每个item水平间距

@@ -124,7 +124,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"编辑" backgroundColor:[UIColor blueColor]],
                           [MGSwipeButton buttonWithTitle:@"删除" backgroundColor:[UIColor redColor]]
                           ];
-    cell.rightSwipeSettings.transition = indexPath.section;
+    cell.rightSwipeSettings.transition = MGSwipeTransitionDrag;
     cell.viewModel = self.viewModel.itemList[indexPath.section];
     cell.section = indexPath.section;
     cell.itemdelegate = self;
@@ -132,9 +132,26 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return 5;
+    } else {
+        return 0;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView* header = [[UIView alloc] init];
+    header.backgroundColor = [UIColor jsd_grayColor];
+    
+    return header;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
-    return 2;
+    return 5;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -231,8 +248,10 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 - (UITableView *)tableView {
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] init];
+//        _tableView = [[UITableView alloc] init];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         [_tableView registerNib:[UINib nibWithNibName:@"JSDItemTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier: kItemCellIdentifier];
+        _tableView.backgroundColor = [UIColor jsd_grayColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] init];

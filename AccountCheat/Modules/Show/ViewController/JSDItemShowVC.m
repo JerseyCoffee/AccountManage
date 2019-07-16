@@ -10,6 +10,7 @@
 
 #import "JSDItemShowViewCell.h"
 #import <MaterialSnackbar.h>
+#import <MDCCollectionViewTextCell.h>
 
 @interface JSDItemShowVC ()
 
@@ -26,7 +27,8 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDItemShowViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDItemShowViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[MDCCollectionViewTextCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     // Do any additional setup after loading the view.
     
@@ -52,31 +54,61 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    JSDItemShowViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MDCCollectionViewTextCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    
     
     // Configure the cell
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = self.model.name;
-            break;
-        case 1:
-            cell.titleLabel.text = self.model.account;
-            break;
-        case 2:
-            cell.titleLabel.text = self.model.password;
-            break;
-        case 3:
-            cell.titleLabel.text = self.model.type;
-            break;
-        case 4:
-            cell.titleLabel.text = self.model.remark;
-            break;
-        case 5:
-            cell.titleLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
-            break;
-        default:
-            break;
-    }
+//    switch (indexPath.row) {
+//        case 0:
+//            cell.titleLabel.text = self.model.name;
+//            break;
+//        case 1:
+//            cell.titleLabel.text = self.model.account;
+//            break;
+//        case 2:
+//            cell.titleLabel.text = self.model.password;
+//            break;
+//        case 3:
+//            cell.titleLabel.text = self.model.type;
+//            break;
+//        case 4:
+//            cell.titleLabel.text = self.model.remark;
+//            break;
+//        case 5:
+//            cell.titleLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
+//            break;
+//        default:
+//            break;
+//    }
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = self.model.name;
+//                cell.detailTextLabel.text = @"标题";
+                break;
+            case 1:
+                cell.textLabel.text = self.model.account;
+                cell.detailTextLabel.text = @"账号";
+                break;
+            case 2:
+                cell.textLabel.text = self.model.password;
+                cell.detailTextLabel.text = @"密码";
+                break;
+            case 3:
+                cell.textLabel.text = self.model.type;
+                cell.detailTextLabel.text = @"标签";
+                break;
+            case 4:
+                cell.textLabel.text = self.model.remark;
+                cell.detailTextLabel.text = @"备注";
+                break;
+            case 5:
+                cell.textLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
+                break;
+            default:
+                break;
+        }
+
     
     return cell;
 }

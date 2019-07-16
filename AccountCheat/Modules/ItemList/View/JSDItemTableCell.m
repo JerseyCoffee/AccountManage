@@ -29,6 +29,7 @@
 //    [self.collectionButton setImage:JSDImageOfFile(@"collection_default") forState:UIControlStateNormal];
 //    [self.collectionButton setImage:JSDImageOfFile(@"collection_selected") forState:UIControlStateSelected];
     
+    self.collectionButton = nil;
     [self.collectionButton setBackgroundImage:JSDImageOfFile(@"collection_default") forState:UIControlStateNormal];
     [self.collectionButton setBackgroundImage:JSDImageOfFile(@"collection_selected") forState:UIControlStateSelected];
     [self.collectionButton addTarget:self action:@selector(onTouchCollection:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,11 +45,10 @@
     
     _viewModel = viewModel;
     self.flagBackgroundView.backgroundColor = [UIColor redColor];
-    self.titleLabel.text = viewModel.name;
+    self.titleLabel.text = viewModel.name.length ? viewModel.name : @"标题";
     self.accountLabel.text = viewModel.account;
     self.passwrodLabel.text = viewModel.password;
     self.collectionButton.selected = viewModel.isCollection;
-    
 }
 
 - (void)onTouchCollection:(MDCButton *)sender {

@@ -8,6 +8,7 @@
 
 #import "JSDHomeCollectionViewCell.h"
 
+#import "UIColor+JSDStyle.h"
 @interface JSDHomeCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
@@ -20,10 +21,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    self.titleLabel.font = [UIFont systemFontOfSize:20];
+    self.layer.cornerRadius = 10;
+    self.layer.masksToBounds = YES;
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
     self.iconImageView.backgroundColor = [UIColor grayColor];
-    self.iconImageView.layer.cornerRadius = 20;
+    self.iconImageView.layer.cornerRadius = self.iconImageView.frame.size.width / 2;
 }
 
 - (void)setModel:(JSDHomeModel *)model {
