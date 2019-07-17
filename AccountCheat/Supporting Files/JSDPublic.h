@@ -14,5 +14,7 @@
 #import <MaterialComponents/MaterialButtons.h>
 #import "JSDItemListViewModel.h"
 #import <MDCCollectionViewCell.h>
+#import <MaterialTypography.h>
+#import <MaterialSnackbar.h>
 
 #endif /* JSDPublic_h */

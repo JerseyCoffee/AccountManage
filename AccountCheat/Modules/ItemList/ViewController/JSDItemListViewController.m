@@ -9,9 +9,9 @@
 #import "JSDItemListViewController.h"
 
 #import <MDCCollectionViewFlowLayout.h>
-#import "JSDEditNoteVC.h"
 #import "JSDPublic.h"
 #import "JSDItemShowVC.h"
+#import "JSDAddNoteVC.h"
 
 @interface JSDItemListViewController () 
 
@@ -145,10 +145,10 @@
 
 - (void)touchAddItemSender:(MDCButton *)sender {
     
-    JSDEditNoteVC* editNoteVC = [[JSDEditNoteVC alloc] init];
-    editNoteVC.viewModel = self.viewModel;
+    JSDAddNoteVC* addNoteVC = [[JSDAddNoteVC alloc] init];
+    addNoteVC.viewModel = self.viewModel;
     
-    [self.navigationController pushViewController:editNoteVC animated:YES];
+    [self.navigationController pushViewController:addNoteVC animated:YES];
 }
 
 #pragma mark - 6.Private Methods

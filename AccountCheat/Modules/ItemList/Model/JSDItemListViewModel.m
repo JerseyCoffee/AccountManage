@@ -12,6 +12,15 @@ NSString* const kItemListFilePathName = @"itemList.json";
 
 @implementation JSDItemListViewModel
 
+- (instancetype)initWithType:(NSString *)type {
+    
+    self = [super init];
+    if (self) {
+        self.type = type;
+    }
+    return self;
+}
+
 - (NSMutableArray<JSDItemListModel *> *)itemList {
     
     if (!_itemList) {
@@ -66,6 +75,11 @@ NSString* const kItemListFilePathName = @"itemList.json";
     [self.itemList replaceObjectAtIndex:index withObject:model];
     
     [self saveItemListWithcomplectionBlock:complectionBlock];
+}
+
+- (void)updateItemModel:(JSDItemListModel *)model complectionBlock:(void (^)(void))complectionBlock {
+    
+    
 }
 
 #pragma mark -- 保存到磁盘

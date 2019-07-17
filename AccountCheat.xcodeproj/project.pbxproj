@@ -32,6 +32,7 @@
 		5593332922DDC8A3001D37D6 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332822DDC8A2001D37D6 /* add.png */; };
 		5593332C22DDCB6A001D37D6 /* collection_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332A22DDCB6A001D37D6 /* collection_default.png */; };
 		5593332D22DDCB6A001D37D6 /* collection_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332B22DDCB6A001D37D6 /* collection_selected.png */; };
+		5593333022DEBCF5001D37D6 /* JSDAddNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
@@ -86,6 +87,8 @@
 		5593332822DDC8A2001D37D6 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		5593332A22DDCB6A001D37D6 /* collection_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_default.png; sourceTree = "<group>"; };
 		5593332B22DDCB6A001D37D6 /* collection_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_selected.png; sourceTree = "<group>"; };
+		5593332E22DEBCF5001D37D6 /* JSDAddNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddNoteVC.h; sourceTree = "<group>"; };
+		5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddNoteVC.m; sourceTree = "<group>"; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 			children = (
 				6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */,
 				6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */,
+				5593332E22DEBCF5001D37D6 /* JSDAddNoteVC.h */,
+				5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */,
 			);
 			path = ViewComtroller;
 			sourceTree = "<group>";
@@ -694,6 +699,7 @@
 			files = (
 				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
 				559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */,
+				5593333022DEBCF5001D37D6 /* JSDAddNoteVC.m in Sources */,
 				5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */,
 				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,

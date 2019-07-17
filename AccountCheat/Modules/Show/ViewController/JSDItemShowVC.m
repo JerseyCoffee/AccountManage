@@ -11,6 +11,7 @@
 #import "JSDItemShowViewCell.h"
 #import <MaterialSnackbar.h>
 #import <MDCCollectionViewTextCell.h>
+#import "JSDEditNoteVC.h"
 
 @interface JSDItemShowVC ()
 
@@ -19,28 +20,67 @@
 @implementation JSDItemShowVC
 
 static NSString * const reuseIdentifier = @"Cell";
+#pragma mark - 1.View Controller Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-//    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDItemShowViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
-    [self.collectionView registerClass:[MDCCollectionViewTextCell class] forCellWithReuseIdentifier: reuseIdentifier];
-    
     // Do any additional setup after loading the view.
     
-    [self setupNavigation];
-}
-
-- (void)setupNavigation {
+    //1.设置导航栏
+    [self setupNavBar];
+    //2.设置view
+    [self setupView];
+    //3.请求数据
+    [self setupData];
+    //4.设置通知
+    [self setupNotification];
     
-    self.navigationItem.title = @"详情";
 }
 
-#pragma mark <UICollectionViewDataSource>
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
+}
+
+#pragma mark - 2.SettingView and Style
+
+- (void)setupNavBar {
+    
+    self.navigationItem.title = @"";
+    self.navigationItem.title = @"详情";
+    
+    MDCFlatButton* editButton = [[MDCFlatButton alloc] init];
+    [editButton setTitle:@"编辑" forState: UIControlStateNormal];
+    [editButton addTarget:self action:@selector(onTouchEdit:) forControlEvents: UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:editButton];
+}
+
+- (void)setupView {
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDItemShowViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+}
+
+- (void)reloadView {
+    
+}
+
+#pragma mark - 3.Request Data
+
+- (void)setupData {
+    
+}
+
+#pragma mark -4 <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
@@ -50,99 +90,52 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 6;
+    return 5;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MDCCollectionViewTextCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    
+    JSDItemShowViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-//    switch (indexPath.row) {
-//        case 0:
-//            cell.titleLabel.text = self.model.name;
-//            break;
-//        case 1:
-//            cell.titleLabel.text = self.model.account;
-//            break;
-//        case 2:
-//            cell.titleLabel.text = self.model.password;
-//            break;
-//        case 3:
-//            cell.titleLabel.text = self.model.type;
-//            break;
-//        case 4:
-//            cell.titleLabel.text = self.model.remark;
-//            break;
-//        case 5:
-//            cell.titleLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
-//            break;
-//        default:
-//            break;
-//    }
-        switch (indexPath.row) {
-            case 0:
-                cell.textLabel.text = self.model.name;
-//                cell.detailTextLabel.text = @"标题";
-                break;
-            case 1:
-                cell.textLabel.text = self.model.account;
-                cell.detailTextLabel.text = @"账号";
-                break;
-            case 2:
-                cell.textLabel.text = self.model.password;
-                cell.detailTextLabel.text = @"密码";
-                break;
-            case 3:
-                cell.textLabel.text = self.model.type;
-                cell.detailTextLabel.text = @"标签";
-                break;
-            case 4:
-                cell.textLabel.text = self.model.remark;
-                cell.detailTextLabel.text = @"备注";
-                break;
-            case 5:
-                cell.textLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
-                break;
-            default:
-                break;
-        }
-
+    switch (indexPath.row) {
+        case 0:
+            cell.titleLabel.text = self.model.name;
+            cell.detailLabel.text = @"标题";
+            break;
+        case 1:
+            cell.titleLabel.text = self.model.account;
+            cell.detailLabel.text = @"账号";
+            break;
+        case 2:
+            cell.titleLabel.text = self.model.password;
+            cell.detailLabel.text = @"密码";
+            break;
+        case 3:
+            cell.titleLabel.text = self.model.type;
+            cell.detailLabel.text = @"标签";
+            break;
+        case 4:
+            cell.titleLabel.text = self.model.remark;
+            cell.detailLabel.text = @"备注";
+            break;
+        case 5:
+            cell.titleLabel.text = self.model.isCollection ? @"已收藏" : @"未收藏";
+            cell.detailLabel.text = @"收藏";
+            break;
+        default:
+            break;
+    }
+    if (indexPath.row == 4) {
+        cell.titleLabel.numberOfLines = 0;
+    } else {
+        cell.titleLabel.numberOfLines = 2;
+    }
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -180,4 +173,40 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
+#pragma mark UICollectionLayoutDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 4) {
+        return CGSizeMake(ScreenWidth - 20, 200);
+    }
+   return [super collectionView:collectionView layout:collectionViewLayout sizeForItemAtIndexPath:indexPath];
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+#pragma mark - 5.Event Response
+
+//TODO: 编辑功能未实现; 唯一标识问题
+- (void)onTouchEdit:(id) sender {
+    
+    JSDEditNoteVC* editVC = [[JSDEditNoteVC alloc] init];
+    
+    editVC.model = self.model;
+    editVC.viewModel = self.viewModel;
+    [self.navigationController pushViewController:editVC animated:YES];
+}
+
+#pragma mark - 6.Private Methods
+
+- (void)setupNotification {
+    
+}
+
+#pragma mark - 7.GET & SET
+
 @end
+

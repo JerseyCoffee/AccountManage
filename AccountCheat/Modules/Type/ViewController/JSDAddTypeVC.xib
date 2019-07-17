@@ -29,9 +29,9 @@
                     </constraints>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-Qa-oGO" customClass="MDCTextField">
-                    <rect key="frame" x="15" y="184" width="384" height="60"/>
+                    <rect key="frame" x="15" y="184" width="384" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="d9q-Os-b7V"/>
+                        <constraint firstAttribute="height" constant="80" id="d9q-Os-b7V"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

@@ -27,10 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray<JSDItemListModel* >* itemList;
 @property (nonatomic, copy) NSString* type;
 
+- (instancetype)initWithType:(NSString *)type;
+
 - (void)updata;
 - (void)addItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
 - (void)removeItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
-- (void)replaceItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
+- (void)replaceItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock; //TODO:
+- (void)updateItemModel:(JSDItemListModel *)model complectionBlock:(void(^)(void))complectionBlock;
+
 
 @end
 

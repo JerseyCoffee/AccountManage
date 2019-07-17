@@ -152,10 +152,10 @@ static NSString * const reuseIdentifier = @"Cell";
     return CGSizeMake(self.collectionView.jsd_width, 50);
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    
-    return CGSizeMake(self.collectionView.jsd_width, 1);
-}
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+//
+//    return CGSizeMake(self.collectionView.jsd_width, 1);
+//}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
@@ -163,6 +163,15 @@ static NSString * const reuseIdentifier = @"Cell";
         return CGSizeMake(self.collectionView.jsd_width, 50);
     } else {
         return CGSizeZero;
+    }
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    if (section == 0) {
+        return UIEdgeInsetsMake(5, 0, 0, 0);
+    } else {
+        return UIEdgeInsetsMake(1, 0, 0, 0);
     }
 }
 

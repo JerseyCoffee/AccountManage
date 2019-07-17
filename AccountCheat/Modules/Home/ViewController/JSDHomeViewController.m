@@ -29,6 +29,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 @property (nonatomic, strong) JSDHomeViewModel* viewModel;
 @property (nonatomic, strong) MDCFloatingButton* addTypeButton;
 @property (nonatomic, strong) MDCFloatingButton* searchButton;
+@property (nonatomic, strong) UISearchBar* searchBar;
 
 @end
 
@@ -84,13 +85,6 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 - (void)setupNavBar {
     
-//    self.bottomNavBar = [[MDCBottomNavigationBar alloc] init];
-//    
-//    // Disable inclusion of safe area in size calculations.
-//    self.bottomNavBar.sizeThatFitsIncludesSafeArea = YES;
-//    [self.view addSubview:self.bottomNavBar];
-//    [self layoutBottomNavBar];
-    
     self.navigationItem.title = @"首页";
 }
 
@@ -111,15 +105,24 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        if (@available(iOS 11.0,*)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        }else{
+            make.bottom.mas_equalTo(0);
+        }
+    }];
+    
     [self.collectionView registerNib:[UINib nibWithNibName:@"JSDHomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
     
     [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
 
     _addTypeButton = [[MDCFloatingButton alloc] init];
-    [_addTypeButton jsd_setsize:CGSizeMake(65, 65)];
+    [_addTypeButton jsd_setsize:CGSizeMake(50, 50)];
     [_addTypeButton setcenterX:ScreenWidth / 2];
-    [_addTypeButton jsd_setbottom:ScreenHeight - 30];
+    [_addTypeButton jsd_setbottom:ScreenHeight - 45];
     [_addTypeButton addTarget:self action:@selector(touchAddTypeSender:) forControlEvents:UIControlEventTouchUpInside];
     [_addTypeButton setBackgroundImage:JSDImageOfFile(@"add") forState:UIControlStateNormal];
     _addTypeButton.backgroundColor = [UIColor clearColor];

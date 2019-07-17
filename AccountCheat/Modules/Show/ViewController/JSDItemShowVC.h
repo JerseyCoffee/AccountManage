@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDItemShowVC : MDCCollectionViewController
 
 @property (nonatomic, strong) JSDItemListModel* model;
+@property (nonatomic, copy) NSString* typeName;
+@property (nonatomic, strong) JSDItemListViewModel* viewModel;
 
 @end
 

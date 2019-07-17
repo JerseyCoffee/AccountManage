@@ -11,6 +11,7 @@
 #import "JSDItemTableCell.h"
 #import "JSDPublic.h"
 #import "JSDItemShowVC.h"
+#import "JSDAddNoteVC.h"
 #import "JSDEditNoteVC.h"
 
 static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
@@ -75,9 +76,9 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     }];
     
     _addItemButton = [[MDCFloatingButton alloc] init];
-    [_addItemButton jsd_setsize:CGSizeMake(65, 65)];
-    [_addItemButton jsd_setright:ScreenWidth - 30];
-    [_addItemButton jsd_setbottom:ScreenHeight - 30];
+    [_addItemButton jsd_setsize:CGSizeMake(50, 50)];
+    [_addItemButton setcenterX:ScreenWidth / 2];
+    [_addItemButton jsd_setbottom:ScreenHeight - 45];
     [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_addItemButton];
@@ -191,6 +192,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 #pragma mark - JSDItemTableCellDelegate
 
+//TODO:
 - (void)onTouchCollectionWithModel:(JSDItemListModel *)model {
     
     NSLog(@"点击收藏");
@@ -205,10 +207,10 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (void)touchAddItemSender:(MDCButton *)sender {
     
-    JSDEditNoteVC* editNoteVC = [[JSDEditNoteVC alloc] init];
-    editNoteVC.viewModel = self.viewModel;
+    JSDAddNoteVC* addNoteVC = [[JSDAddNoteVC alloc] init];
+    addNoteVC.viewModel = self.viewModel;
     
-    [self.navigationController pushViewController:editNoteVC animated:YES];
+    [self.navigationController pushViewController:addNoteVC animated:YES];
 }
 
 #pragma mark - 6.Private Methods
@@ -231,6 +233,8 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     JSDItemShowVC* showVC = [[JSDItemShowVC alloc] init];
     showVC.model = model;
     showVC.title = model.name;
+//    showVC.typeName = self.viewModel.type;
+    showVC.viewModel = self.viewModel;
     
     [self.navigationController pushViewController:showVC animated:YES];
 }
@@ -239,6 +243,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     
     JSDEditNoteVC* editVC = [[JSDEditNoteVC alloc] init];
     editVC.model = model;
+    editVC.viewModel = self.viewModel;
     
     [self.navigationController pushViewController:editVC animated:YES];
 }

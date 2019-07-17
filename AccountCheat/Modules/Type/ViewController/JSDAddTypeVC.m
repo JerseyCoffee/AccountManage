@@ -70,13 +70,14 @@
     
     self.addIconButton.layer.cornerRadius = self.addIconButton.jsd_width / 2;
     self.iconImageView.layer.cornerRadius = self.addIconButton.jsd_width / 2;
-    self.iconImageView.backgroundColor = [UIColor grayColor];
+    self.iconImageView.backgroundColor = [UIColor jsd_grayColor];
     
     self.nameController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:self.nameTextField];
     self.nameController.activeColor = [UIColor blueColor];
-    self.nameController.normalColor = [UIColor grayColor];
-    self.nameController.borderFillColor = [UIColor grayColor];
-    self.nameController.placeholderText = @"分类名称";
+    self.nameController.normalColor = ColorWithFROMRGB(0xdddddd, 1);
+    self.nameController.borderFillColor = [UIColor whiteColor];
+    self.nameController.placeholderText = @"分类名称(最长15个字符)";
+    self.nameController.characterCountMax = 15;
 }
 
 - (void)reloadView {
@@ -101,19 +102,36 @@
 
 - (void)touchesSaveSender:(MDCButton *)sender {
     
+    
     JSDHomeModel* model = [[JSDHomeModel alloc] init];
     model.image = self.iconImageView.image ? model.image : @"";
     model.title = self.nameTextField.text.length ? self.nameTextField.text : @"";
     JSDHomeViewModel* viewModel = [[JSDHomeViewModel alloc] init];
-    [viewModel.typeArray addObject:model];
     
-    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kTypeFilePathName];
-    NSMutableArray* dataArray = [JSDHomeModel mj_keyValuesArrayWithObjectArray:viewModel.typeArray];
-    NSData* data = dataArray.mj_JSONData;
-    [data writeToFile:path atomically:YES];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    BOOL isContent = NO;
+    for (NSInteger i = 0; i < viewModel.typeArray.count; i++ ) {
+        if ([viewModel.typeArray[i].title isEqualToString: self.nameTextField.text]) {
+            isContent = YES;
+            break;
+        }
+    }
+    if (isContent) {
+        self.saveButton.enabled = NO;
+        MDCSnackbarManager* manage = [MDCSnackbarManager defaultManager];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"已存在该分类, 请重新输入"];
+        [manage showMessage:message];
+        
+    } else {
+        [viewModel.typeArray addObject:model];
+        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+        NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kTypeFilePathName];
+        NSMutableArray* dataArray = [JSDHomeModel mj_keyValuesArrayWithObjectArray:viewModel.typeArray];
+        NSData* data = dataArray.mj_JSONData;
+        [data writeToFile:path atomically:YES];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
 }
 
 #pragma mark - 6.Private Methods
@@ -124,8 +142,10 @@
 }
 
 - (void)textFieldWillChange:(NSNotification *)notification {
+    
+    BOOL name = !(self.nameController.characterCountMax && [self.nameController performSelector:@selector(characterCount)] > self.nameController.characterCountMax);
 
-    self.saveButton.enabled = self.nameTextField.text.length;
+    self.saveButton.enabled = self.nameTextField.text.length && name;
 }
 
 #pragma mark - 7.GET & SET
