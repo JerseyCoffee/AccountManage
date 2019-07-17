@@ -11,6 +11,7 @@
 #import "JSDPublic.h"
 #import "JSDAddTypeVC.h"
 #import "JSDBaseNavigationController.h"
+#import "JSDAddNoteToTypeVC.h"
 
 @implementation JSDPlusButton
 
@@ -24,12 +25,22 @@
 }
 
 + (UIViewController *)plusChildViewController {
-    
+
     JSDAddTypeVC* addTypeVC = [[JSDAddTypeVC alloc] init];
     JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addTypeVC];
-    
+
     return addTypenavigationVC;
 }
+
+//+ (UIViewController *)plusChildViewController {
+//
+//    JSDAddNoteToTypeVC* addNoteToTypeVC = [[JSDAddNoteToTypeVC alloc] init];
+//    JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addNoteToTypeVC];
+//
+//    addNoteToTypeVC.viewModel = [[JSDItemListViewModel alloc] initWithType:@"密钥"];
+//
+//    return addTypenavigationVC;
+//}
 
 + (NSUInteger)indexOfPlusButtonInTabBar {
     

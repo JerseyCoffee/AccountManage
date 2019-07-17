@@ -84,6 +84,7 @@
     self.addIconButton.layer.cornerRadius = self.addIconButton.jsd_width / 2;
     self.iconImageView.layer.cornerRadius = self.addIconButton.jsd_width / 2;
     self.iconImageView.backgroundColor = [UIColor jsd_grayColor];
+    self.iconImageView.image = [UIImage jsd_imageName:@"macNote"];
     
     self.nameController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:self.nameTextField];
     self.nameController.activeColor = [UIColor blueColor];
@@ -116,7 +117,8 @@
 - (void)touchesSaveSender:(MDCButton *)sender {
     
     JSDHomeModel* model = [[JSDHomeModel alloc] init];
-    model.image = self.iconImageView.image ? model.image : @"macNote";
+//    model.image = self.iconImageView.image ? model.image : @"macNote";
+    model.image = @"macNote";
     model.title = self.nameTextField.text.length ? self.nameTextField.text : @"";
     JSDHomeViewModel* viewModel = [[JSDHomeViewModel alloc] init];
     

@@ -40,19 +40,20 @@
 
 - (void)customizeTabBarAppearance:(CYLTabBarController *)tabBarController {
     
+    [tabBarController setTintColor:[UIColor colorWithRed:170 / 255.0f green:230/ 255.0f blue:245/ 255.0f alpha:1.0f]];
     
 }
 
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
         CYLTabBarItemTitle : @"首页",
-        CYLTabBarItemImage : @"",
-        CYLTabBarItemSelectedImage : @"",  /* NSString and UIImage are supported*/
+        CYLTabBarItemImage : @"home_defalut",
+        CYLTabBarItemSelectedImage : @"home_selected",  /* NSString and UIImage are supported*/
     };
     NSDictionary *secondTabBarItemsAttributes = @{
         CYLTabBarItemTitle : @"个人中心",
-        CYLTabBarItemImage : @"",
-        CYLTabBarItemSelectedImage : @"",
+        CYLTabBarItemImage : @"my_defalut",
+        CYLTabBarItemSelectedImage : @"my_selected",
     };
     
     NSArray *tabBarItemsAttributes = @[

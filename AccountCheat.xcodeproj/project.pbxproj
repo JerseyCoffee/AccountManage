@@ -60,6 +60,9 @@
 		6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897022DCC273007CF7E9 /* JSDItemListVC.m */; };
 		6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897322DCC50E007CF7E9 /* JSDItemTableCell.m */; };
 		6081897622DCC50E007CF7E9 /* JSDItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081897422DCC50E007CF7E9 /* JSDItemTableCell.xib */; };
+		6081897922DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897822DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m */; };
+		6081897C22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897B22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m */; };
+		6081897E22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081897D22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib */; };
 		60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */; };
 		60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BE22D7770000D05534 /* UIView+JSDFrame.m */; };
 		60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709CB22D7770100D05534 /* JSDTabBarController.m */; };
@@ -146,6 +149,11 @@
 		6081897222DCC50E007CF7E9 /* JSDItemTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemTableCell.h; sourceTree = "<group>"; };
 		6081897322DCC50E007CF7E9 /* JSDItemTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemTableCell.m; sourceTree = "<group>"; };
 		6081897422DCC50E007CF7E9 /* JSDItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDItemTableCell.xib; sourceTree = "<group>"; };
+		6081897722DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddNoteToTypeVC.h; sourceTree = "<group>"; };
+		6081897822DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddNoteToTypeVC.m; sourceTree = "<group>"; };
+		6081897A22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddNoteToTypeView.h; sourceTree = "<group>"; };
+		6081897B22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddNoteToTypeView.m; sourceTree = "<group>"; };
+		6081897D22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddNoteToTypeView.xib; sourceTree = "<group>"; };
 		60F709BB22D7770000D05534 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		60F709BE22D7770000D05534 /* UIView+JSDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSDFrame.m"; sourceTree = "<group>"; };
@@ -384,6 +392,8 @@
 				6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */,
 				5593332E22DEBCF5001D37D6 /* JSDAddNoteVC.h */,
 				5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */,
+				6081897722DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.h */,
+				6081897822DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m */,
 			);
 			path = ViewComtroller;
 			sourceTree = "<group>";
@@ -394,6 +404,9 @@
 				6081896122DAE56C007CF7E9 /* JSDEditNoteView.h */,
 				6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */,
 				6081896622DAE59E007CF7E9 /* JSDEditNoteView.xib */,
+				6081897A22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.h */,
+				6081897B22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m */,
+				6081897D22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -672,6 +685,7 @@
 			files = (
 				5593335322DECFF8001D37D6 /* web.png in Resources */,
 				5593334F22DECFF8001D37D6 /* github.png in Resources */,
+				6081897E22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib in Resources */,
 				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
 				5593334722DECFF8001D37D6 /* password.png in Resources */,
@@ -819,8 +833,10 @@
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
 				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
 				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
+				6081897922DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m in Sources */,
 				6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */,
 				60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */,
+				6081897C22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m in Sources */,
 				5593332422DDA933001D37D6 /* JSDSearchViewCell.m in Sources */,
 				6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */,
 				5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */,

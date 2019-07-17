@@ -1,8 +1,8 @@
 //
-//  JSDEditNoteView.h
+//  JSDAddNoteToTypeView.h
 //  AccountCheat
 //
-//  Created by ada on 2019/7/14.
+//  Created by ada on 2019/7/17.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
@@ -10,10 +10,9 @@
 
 #import <MaterialComponents/MaterialTextFields.h>
 #import <MDCChipField.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDEditNoteView : UIView
+@interface JSDAddNoteToTypeView : UIView
 
 @property (weak, nonatomic) IBOutlet MDCTextField *nameTextField;
 @property (weak, nonatomic) IBOutlet MDCTextField *accountTextField;

@@ -239,8 +239,8 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertVC dismissViewControllerAnimated:YES completion:nil];
     }];
-    [alertVC addAction:confirmAction];
     [alertVC addAction:cancelAction];
+    [alertVC addAction:confirmAction];
     
     [self presentViewController:alertVC animated:YES completion:nil];
 }
