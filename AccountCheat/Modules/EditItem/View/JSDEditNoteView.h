@@ -22,8 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet MDCMultilineTextField *remarkTextField;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *selectedFlagView;
+@property (weak, nonatomic) IBOutlet UILabel *flagTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedFlagImageView;
+@property (weak, nonatomic) IBOutlet UILabel *selectedFlagLabel;
 
-
+@property (nonatomic, copy, nullable) NSString* selectedFlagColorName;
 
 @end
 

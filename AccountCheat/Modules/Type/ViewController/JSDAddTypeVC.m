@@ -48,6 +48,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+//    [self.nameTextField becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [self.nameTextField endEditing:YES];
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
@@ -61,7 +75,6 @@
     _saveButton.enabled = NO;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_saveButton];
-    
 }
 
 - (void)setupView {
@@ -102,9 +115,8 @@
 
 - (void)touchesSaveSender:(MDCButton *)sender {
     
-    
     JSDHomeModel* model = [[JSDHomeModel alloc] init];
-    model.image = self.iconImageView.image ? model.image : @"";
+    model.image = self.iconImageView.image ? model.image : @"macNote";
     model.title = self.nameTextField.text.length ? self.nameTextField.text : @"";
     JSDHomeViewModel* viewModel = [[JSDHomeViewModel alloc] init];
     
@@ -129,7 +141,13 @@
         NSData* data = dataArray.mj_JSONData;
         [data writeToFile:path atomically:YES];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        MDCSnackbarManager* manage = [MDCSnackbarManager defaultManager];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"新增分类成功!"];
+        [manage showMessage:message];
+        //切换回首页
+        [self updateView];
+        self.tabBarController.selectedIndex = 0;
+        
     }
 
 }
@@ -146,6 +164,13 @@
     BOOL name = !(self.nameController.characterCountMax && [self.nameController performSelector:@selector(characterCount)] > self.nameController.characterCountMax);
 
     self.saveButton.enabled = self.nameTextField.text.length && name;
+}
+
+- (void)updateView {
+    
+    self.saveButton.enabled = NO;
+    self.nameTextField.text = nil;
+    self.iconImageView.image = nil;
 }
 
 #pragma mark - 7.GET & SET

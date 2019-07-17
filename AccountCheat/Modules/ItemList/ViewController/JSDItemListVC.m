@@ -82,7 +82,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_addItemButton];
-    [_addItemButton setBackgroundImage:JSDImageOfFile(@"add") forState:UIControlStateNormal];
+    [_addItemButton setBackgroundImage:[UIImage jsd_imageName:@"add"] forState:UIControlStateNormal];
     _addItemButton.backgroundColor = [UIColor clearColor];
 }
 
@@ -221,11 +221,28 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (void)deleteItemModel:(JSDItemListModel *)model {
     
+    UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"确认要删除此条账号吗(无法恢复)?" preferredStyle:UIAlertControllerStyleAlert];
+
     @weakify(self)
-    [self.viewModel removeItemModel:model complectionBlock:^{
+    UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertVC dismissViewControllerAnimated:YES completion:^{
+        }];
         @strongify(self)
-        [self.tableView reloadData];
+        [self.viewModel removeItemModel:model complectionBlock:^{
+            MDCSnackbarManager* manage = [MDCSnackbarManager defaultManager];
+            MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"删除成功!"];
+            [manage showMessage:message];
+            @strongify(self)
+            [self.tableView reloadData];
+        }];
     }];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertVC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertVC addAction:confirmAction];
+    [alertVC addAction:cancelAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 - (void)showItemModel:(JSDItemListModel *)model {
@@ -233,7 +250,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     JSDItemShowVC* showVC = [[JSDItemShowVC alloc] init];
     showVC.model = model;
     showVC.title = model.name;
-//    showVC.typeName = self.viewModel.type;
+    
     showVC.viewModel = self.viewModel;
     
     [self.navigationController pushViewController:showVC animated:YES];

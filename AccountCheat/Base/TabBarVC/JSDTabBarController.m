@@ -9,6 +9,8 @@
 #import "JSDTabBarController.h"
 #import "JSDHomeViewController.h"
 #import "JSDBaseNavigationController.h"
+#import "JSDMyCenterVC.h"
+#import "JSDPlusButton.h"
 
 @interface JSDTabBarController ()
 
@@ -43,16 +45,15 @@
 
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
-        CYLTabBarItemTitle : @"Primary",
-        CYLTabBarItemImage : @"home_highlight",
-        CYLTabBarItemSelectedImage : @"home_highlight",  /* NSString and UIImage are supported*/
+        CYLTabBarItemTitle : @"首页",
+        CYLTabBarItemImage : @"",
+        CYLTabBarItemSelectedImage : @"",  /* NSString and UIImage are supported*/
     };
     NSDictionary *secondTabBarItemsAttributes = @{
-        CYLTabBarItemTitle : @"Secondary",
-        CYLTabBarItemImage : @"fishpond_highlight",
-        CYLTabBarItemSelectedImage : @"fishpond_highlight",
+        CYLTabBarItemTitle : @"个人中心",
+        CYLTabBarItemImage : @"",
+        CYLTabBarItemSelectedImage : @"",
     };
-    
     
     NSArray *tabBarItemsAttributes = @[
         firstTabBarItemsAttributes,
@@ -64,22 +65,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [JSDPlusButton registerPlusButton];
 }
 
 #pragma mark -- set  && get
 
 - (NSArray *)viewControllers {
-    UIViewController *firstViewController = [[JSDHomeViewController alloc] init];
-    UIViewController *firstNavigationController = [[JSDBaseNavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
-    [firstViewController cyl_setHideNavigationBarSeparator:NO];
-    UIViewController *secondViewController = [[JSDHomeViewController alloc] init];
-    UIViewController *secondNavigationController = [[JSDBaseNavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
-    [secondViewController cyl_setHideNavigationBarSeparator:NO];
+    
+    UIViewController *homeViewController = [[JSDHomeViewController alloc] init];
+    UIViewController *homeNavigationController = [[JSDBaseNavigationController alloc]
+                                                   initWithRootViewController:homeViewController];
+    [homeViewController cyl_setHideNavigationBarSeparator:NO];
+    UIViewController *myCenterVC = [[JSDMyCenterVC alloc] init];
+    UIViewController *myCenterNavigationController = [[JSDBaseNavigationController alloc]
+                                                    initWithRootViewController:myCenterVC];
+    [myCenterVC cyl_setHideNavigationBarSeparator:NO];
     NSArray *viewControllers = @[
-        firstNavigationController,
-        secondNavigationController,
+        homeNavigationController,
+        myCenterNavigationController,
     ];
     return viewControllers;
 }

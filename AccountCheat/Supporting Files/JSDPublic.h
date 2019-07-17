@@ -16,5 +16,7 @@
 #import <MDCCollectionViewCell.h>
 #import <MaterialTypography.h>
 #import <MaterialSnackbar.h>
+#import "UIImage+Tool.h"
+#import <MaterialComponents/MaterialPalettes.h>
 
 #endif /* JSDPublic_h */

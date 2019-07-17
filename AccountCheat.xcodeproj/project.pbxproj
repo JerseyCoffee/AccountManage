@@ -33,6 +33,26 @@
 		5593332C22DDCB6A001D37D6 /* collection_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332A22DDCB6A001D37D6 /* collection_default.png */; };
 		5593332D22DDCB6A001D37D6 /* collection_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593332B22DDCB6A001D37D6 /* collection_selected.png */; };
 		5593333022DEBCF5001D37D6 /* JSDAddNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */; };
+		5593333522DECBA3001D37D6 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593333422DECBA3001D37D6 /* UIImage+Tool.m */; };
+		5593334622DECFF8001D37D6 /* game2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333622DECFF6001D37D6 /* game2.png */; };
+		5593334722DECFF8001D37D6 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333722DECFF6001D37D6 /* password.png */; };
+		5593334822DECFF8001D37D6 /* password2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333822DECFF6001D37D6 /* password2.png */; };
+		5593334922DECFF8001D37D6 /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333922DECFF7001D37D6 /* contact.png */; };
+		5593334A22DECFF8001D37D6 /* mac_note.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333A22DECFF7001D37D6 /* mac_note.png */; };
+		5593334B22DECFF8001D37D6 /* password3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333B22DECFF7001D37D6 /* password3.png */; };
+		5593334C22DECFF8001D37D6 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333C22DECFF7001D37D6 /* note.png */; };
+		5593334D22DECFF8001D37D6 /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333D22DECFF7001D37D6 /* game.png */; };
+		5593334E22DECFF8001D37D6 /* github2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333E22DECFF7001D37D6 /* github2.png */; };
+		5593334F22DECFF8001D37D6 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333F22DECFF7001D37D6 /* github.png */; };
+		5593335022DECFF8001D37D6 /* macNote.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334022DECFF7001D37D6 /* macNote.png */; };
+		5593335122DECFF8001D37D6 /* icard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334122DECFF7001D37D6 /* icard.png */; };
+		5593335222DECFF8001D37D6 /* password4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334222DECFF8001D37D6 /* password4.png */; };
+		5593335322DECFF8001D37D6 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334322DECFF8001D37D6 /* web.png */; };
+		5593335422DECFF8001D37D6 /* impression.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334422DECFF8001D37D6 /* impression.png */; };
+		5593335522DECFF8001D37D6 /* mac_note2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334522DECFF8001D37D6 /* mac_note2.png */; };
+		5593335822DED9A6001D37D6 /* JSDMyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */; };
+		5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335A22DEDC21001D37D6 /* JSDPlusButton.m */; };
+		559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559333B822DF2005001D37D6 /* JSDFlagColorModel.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
@@ -89,6 +109,30 @@
 		5593332B22DDCB6A001D37D6 /* collection_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_selected.png; sourceTree = "<group>"; };
 		5593332E22DEBCF5001D37D6 /* JSDAddNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddNoteVC.h; sourceTree = "<group>"; };
 		5593332F22DEBCF5001D37D6 /* JSDAddNoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddNoteVC.m; sourceTree = "<group>"; };
+		5593333322DECBA3001D37D6 /* UIImage+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		5593333422DECBA3001D37D6 /* UIImage+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
+		5593333622DECFF6001D37D6 /* game2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game2.png; sourceTree = "<group>"; };
+		5593333722DECFF6001D37D6 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		5593333822DECFF6001D37D6 /* password2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password2.png; sourceTree = "<group>"; };
+		5593333922DECFF7001D37D6 /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
+		5593333A22DECFF7001D37D6 /* mac_note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac_note.png; sourceTree = "<group>"; };
+		5593333B22DECFF7001D37D6 /* password3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password3.png; sourceTree = "<group>"; };
+		5593333C22DECFF7001D37D6 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		5593333D22DECFF7001D37D6 /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
+		5593333E22DECFF7001D37D6 /* github2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github2.png; sourceTree = "<group>"; };
+		5593333F22DECFF7001D37D6 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		5593334022DECFF7001D37D6 /* macNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macNote.png; sourceTree = "<group>"; };
+		5593334122DECFF7001D37D6 /* icard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icard.png; sourceTree = "<group>"; };
+		5593334222DECFF8001D37D6 /* password4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password4.png; sourceTree = "<group>"; };
+		5593334322DECFF8001D37D6 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		5593334422DECFF8001D37D6 /* impression.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = impression.png; sourceTree = "<group>"; };
+		5593334522DECFF8001D37D6 /* mac_note2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac_note2.png; sourceTree = "<group>"; };
+		5593335622DED9A6001D37D6 /* JSDMyCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterVC.h; sourceTree = "<group>"; };
+		5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterVC.m; sourceTree = "<group>"; };
+		5593335922DEDC21001D37D6 /* JSDPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPlusButton.h; sourceTree = "<group>"; };
+		5593335A22DEDC21001D37D6 /* JSDPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPlusButton.m; sourceTree = "<group>"; };
+		559333B722DF2005001D37D6 /* JSDFlagColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDFlagColorModel.h; path = AccountCheat/Base/TabBarVC/JSDFlagColorModel.h; sourceTree = SOURCE_ROOT; };
+		559333B822DF2005001D37D6 /* JSDFlagColorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDFlagColorModel.m; path = AccountCheat/Base/TabBarVC/JSDFlagColorModel.m; sourceTree = SOURCE_ROOT; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
@@ -266,6 +310,42 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5593333122DECB75001D37D6 /* ImageAssets */ = {
+			isa = PBXGroup;
+			children = (
+				5593333922DECFF7001D37D6 /* contact.png */,
+				5593333D22DECFF7001D37D6 /* game.png */,
+				5593333622DECFF6001D37D6 /* game2.png */,
+				5593333F22DECFF7001D37D6 /* github.png */,
+				5593333E22DECFF7001D37D6 /* github2.png */,
+				5593334122DECFF7001D37D6 /* icard.png */,
+				5593334422DECFF8001D37D6 /* impression.png */,
+				5593333A22DECFF7001D37D6 /* mac_note.png */,
+				5593334522DECFF8001D37D6 /* mac_note2.png */,
+				5593334022DECFF7001D37D6 /* macNote.png */,
+				5593333C22DECFF7001D37D6 /* note.png */,
+				5593333722DECFF6001D37D6 /* password.png */,
+				5593333822DECFF6001D37D6 /* password2.png */,
+				5593333B22DECFF7001D37D6 /* password3.png */,
+				5593334222DECFF8001D37D6 /* password4.png */,
+				5593334322DECFF8001D37D6 /* web.png */,
+				5593332A22DDCB6A001D37D6 /* collection_default.png */,
+				5593332B22DDCB6A001D37D6 /* collection_selected.png */,
+				5593332822DDC8A2001D37D6 /* add.png */,
+				5593332622DDC647001D37D6 /* search.png */,
+			);
+			path = ImageAssets;
+			sourceTree = "<group>";
+		};
+		5593333222DECB8F001D37D6 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				5593333322DECBA3001D37D6 /* UIImage+Tool.h */,
+				5593333422DECBA3001D37D6 /* UIImage+Tool.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		6081895522D9DC1C007CF7E9 /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +401,8 @@
 		6081896022DAE558007CF7E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				559333B722DF2005001D37D6 /* JSDFlagColorModel.h */,
+				559333B822DF2005001D37D6 /* JSDFlagColorModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +428,7 @@
 		60F709B922D7770000D05534 /* CategoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				5593333222DECB8F001D37D6 /* UIImage */,
 				60F709BA22D7770000D05534 /* UIStyle */,
 				60F709BD22D7770000D05534 /* UIView */,
 			);
@@ -450,6 +533,8 @@
 		60F709C822D7770000D05534 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5593335622DED9A6001D37D6 /* JSDMyCenterVC.h */,
+				5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -466,8 +551,10 @@
 		60F709CA22D7770100D05534 /* TabBarVC */ = {
 			isa = PBXGroup;
 			children = (
-				60F709CB22D7770100D05534 /* JSDTabBarController.m */,
 				60F709CC22D7770100D05534 /* JSDTabBarController.h */,
+				60F709CB22D7770100D05534 /* JSDTabBarController.m */,
+				5593335922DEDC21001D37D6 /* JSDPlusButton.h */,
+				5593335A22DEDC21001D37D6 /* JSDPlusButton.m */,
 			);
 			path = TabBarVC;
 			sourceTree = "<group>";
@@ -486,10 +573,7 @@
 		60F709D222D7770100D05534 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5593332A22DDCB6A001D37D6 /* collection_default.png */,
-				5593332B22DDCB6A001D37D6 /* collection_selected.png */,
-				5593332822DDC8A2001D37D6 /* add.png */,
-				5593332622DDC647001D37D6 /* search.png */,
+				5593333122DECB75001D37D6 /* ImageAssets */,
 				60F709DB22D77E3200D05534 /* JSDMacro.h */,
 				60F709DC22D77E3200D05534 /* JSDPrefixHeader.pch */,
 				60F709DD22D77E3200D05534 /* JSDPublic.h */,
@@ -586,20 +670,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5593335322DECFF8001D37D6 /* web.png in Resources */,
+				5593334F22DECFF8001D37D6 /* github.png in Resources */,
 				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
+				5593334722DECFF8001D37D6 /* password.png in Resources */,
 				5593332D22DDCB6A001D37D6 /* collection_selected.png in Resources */,
 				5593332522DDA933001D37D6 /* JSDSearchViewCell.xib in Resources */,
 				5593332922DDC8A3001D37D6 /* add.png in Resources */,
+				5593335222DECFF8001D37D6 /* password4.png in Resources */,
+				5593334922DECFF8001D37D6 /* contact.png in Resources */,
+				5593335422DECFF8001D37D6 /* impression.png in Resources */,
 				5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */,
+				5593335122DECFF8001D37D6 /* icard.png in Resources */,
 				5593332C22DDCB6A001D37D6 /* collection_default.png in Resources */,
+				5593335022DECFF8001D37D6 /* macNote.png in Resources */,
 				5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */,
+				5593335522DECFF8001D37D6 /* mac_note2.png in Resources */,
+				5593334A22DECFF8001D37D6 /* mac_note.png in Resources */,
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
+				5593334E22DECFF8001D37D6 /* github2.png in Resources */,
+				5593334822DECFF8001D37D6 /* password2.png in Resources */,
+				5593334B22DECFF8001D37D6 /* password3.png in Resources */,
 				5593332722DDC648001D37D6 /* search.png in Resources */,
 				6081897622DCC50E007CF7E9 /* JSDItemTableCell.xib in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,
+				5593334622DECFF8001D37D6 /* game2.png in Resources */,
 				559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */,
+				5593334C22DECFF8001D37D6 /* note.png in Resources */,
+				5593334D22DECFF8001D37D6 /* game.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,17 +799,21 @@
 			files = (
 				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
 				559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */,
+				5593333522DECBA3001D37D6 /* UIImage+Tool.m in Sources */,
 				5593333022DEBCF5001D37D6 /* JSDAddNoteVC.m in Sources */,
 				5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */,
 				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
 				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
 				5593332022DD7DD8001D37D6 /* JSDSearchViewModel.m in Sources */,
+				559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */,
+				5593335822DED9A6001D37D6 /* JSDMyCenterVC.m in Sources */,
 				559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
 				5593331522DD6F51001D37D6 /* JSDItemShowViewCell.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
 				5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */,
+				5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */,
 				6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,

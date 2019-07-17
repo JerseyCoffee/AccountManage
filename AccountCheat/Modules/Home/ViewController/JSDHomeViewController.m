@@ -22,7 +22,7 @@
 
 static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
-@interface JSDHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface JSDHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MDCBottomNavigationBarDelegate>
 
 @property (strong, nonatomic) MDCCollectionViewFlowLayout *layout;
 @property (strong, nonatomic) MDCBottomNavigationBar *bottomNavBar;
@@ -65,12 +65,12 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 //- (void)viewWillLayoutSubviews {
 //    [super viewWillLayoutSubviews];
-//    CGSize size = [_bottomNavigationBar sizeThatFits:self.view.bounds.size];
+//    CGSize size = [_bottomNavBar sizeThatFits:self.view.bounds.size];
 //    CGRect bottomNavBarFrame = CGRectMake(0,
 //                                          CGRectGetHeight(self.view.bounds) - size.height,
 //                                          size.width,
 //                                          size.height);
-//    _bottomNavigationBar.frame = bottomNavBarFrame;
+//    _bottomNavBar.frame = bottomNavBarFrame;
 //}
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,9 +86,27 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 - (void)setupNavBar {
     
     self.navigationItem.title = @"首页";
+    
+//    [self layoutBottomNavBar];
+//
+//    UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage jsd_imageName:@"contact"] tag:0];
+//    item.selectedImage = [UIImage jsd_imageName:@"game"];
+//
+//    UITabBarItem* item2 = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage jsd_imageName:@"contact"] tag:0];
+//
+//    self.bottomNavBar.items = @[item,item2];
 }
 
 - (void)layoutBottomNavBar {
+    
+    self.bottomNavBar = [[MDCBottomNavigationBar alloc] init];
+    self.bottomNavBar.delegate = self;
+    
+    // Disable inclusion of safe area in size calculations.
+    self.bottomNavBar.sizeThatFitsIncludesSafeArea = NO;
+    
+    [self.view addSubview:self.bottomNavBar];
+    
     CGRect viewBounds = CGRectStandardize(self.view.bounds);
     CGSize size = [self.bottomNavBar sizeThatFits:viewBounds.size];
     UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
@@ -118,23 +136,23 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     [self.collectionView registerNib:[UINib nibWithNibName:@"JSDHomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
     
     [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-
-    _addTypeButton = [[MDCFloatingButton alloc] init];
-    [_addTypeButton jsd_setsize:CGSizeMake(50, 50)];
-    [_addTypeButton setcenterX:ScreenWidth / 2];
-    [_addTypeButton jsd_setbottom:ScreenHeight - 45];
-    [_addTypeButton addTarget:self action:@selector(touchAddTypeSender:) forControlEvents:UIControlEventTouchUpInside];
-    [_addTypeButton setBackgroundImage:JSDImageOfFile(@"add") forState:UIControlStateNormal];
-    _addTypeButton.backgroundColor = [UIColor clearColor];
     
-    [self.view addSubview:_addTypeButton];
+//    _addTypeButton = [[MDCFloatingButton alloc] init];
+//    [_addTypeButton jsd_setsize:CGSizeMake(50, 50)];
+//    [_addTypeButton setcenterX:ScreenWidth / 2];
+//    [_addTypeButton jsd_setbottom:ScreenHeight - 45];
+//    [_addTypeButton addTarget:self action:@selector(touchAddTypeSender:) forControlEvents:UIControlEventTouchUpInside];
+//    [_addTypeButton setBackgroundImage:[UIImage jsd_imageName:@"add"] forState:UIControlStateNormal];
+//    _addTypeButton.backgroundColor = [UIColor clearColor];
+//
+//    [self.view addSubview:_addTypeButton];
     
     _searchButton = [[MDCFloatingButton alloc] init];
     [_searchButton jsd_setsize:CGSizeMake(50, 50)];
     [_searchButton jsd_setright:ScreenWidth - 30];
     [_searchButton jsd_setbottom:ScreenHeight - 30];
     [_searchButton addTarget:self action:@selector(touchSearchSender:) forControlEvents:UIControlEventTouchUpInside];
-    [_searchButton setBackgroundImage:JSDImageOfFile(@"search") forState:UIControlStateNormal];
+    [_searchButton setBackgroundImage:[UIImage jsd_imageName:@"search"] forState:UIControlStateNormal];
     _searchButton.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:_searchButton];
@@ -167,7 +185,6 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 //
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
     JSDHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJSDHomeCellIdentifier forIndexPath:indexPath];
     
     [cell setModel:self.viewModel.typeArray[indexPath.row]];
@@ -180,18 +197,6 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 {
     return CGSizeMake((ScreenWidth - 50) / 2, 100);
 }
-
-//footer的size
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
-//{
-//    return CGSizeMake(10, 10);
-//}
-
-//header的size
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
-//{
-//    return CGSizeMake(10, 10);
-//}
 
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -267,6 +272,9 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     }
     return _viewModel;
 }
+
+#pragma mark -- NavigationDelegate
+
 
 @end
 

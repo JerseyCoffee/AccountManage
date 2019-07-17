@@ -24,8 +24,8 @@
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
     self.titleLabel.font = [UIFont systemFontOfSize:16];
-    self.iconImageView.backgroundColor = [UIColor grayColor];
-    self.iconImageView.layer.cornerRadius = self.iconImageView.frame.size.width / 2;
+//    self.iconImageView.backgroundColor = [UIColor grayColor];
+//    self.iconImageView.layer.cornerRadius = self.iconImageView.frame.size.width / 2;
 }
 
 - (void)setModel:(JSDHomeModel *)model {

@@ -44,7 +44,7 @@
 - (void)setViewModel:(JSDItemListModel *)viewModel {
     
     _viewModel = viewModel;
-    self.flagBackgroundView.backgroundColor = [UIColor redColor];
+    self.flagBackgroundView.backgroundColor = [UIColor jsd_colorWithHexString:viewModel.type];
     self.titleLabel.text = viewModel.name.length ? viewModel.name : @"标题";
     self.accountLabel.text = viewModel.account;
     self.passwrodLabel.text = viewModel.password;

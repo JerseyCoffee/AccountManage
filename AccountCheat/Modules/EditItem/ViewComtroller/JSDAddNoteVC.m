@@ -15,11 +15,11 @@
 @interface JSDAddNoteVC ()
 
 @property (strong, nonatomic) JSDEditNoteView *editNoteView;
-@property (strong, nonatomic) MDCTextInputControllerUnderline *textFieldControllerFloating;
-@property (strong, nonatomic) MDCTextInputControllerUnderline *accountController;
-@property (strong, nonatomic) MDCTextInputControllerUnderline *passwrodController;
-@property (strong, nonatomic) MDCTextInputControllerUnderline *typeController;
-@property (strong, nonatomic) MDCTextInputControllerLegacyDefault *remarkController;
+@property (strong, nonatomic) MDCTextInputControllerFilled *textFieldControllerFloating;
+@property (strong, nonatomic) MDCTextInputControllerFilled *accountController;
+@property (strong, nonatomic) MDCTextInputControllerFilled *passwrodController;
+@property (strong, nonatomic) MDCTextInputControllerFilled *typeController;
+@property (strong, nonatomic) MDCTextInputControllerFilled *remarkController;
 @property (nonatomic, strong) MDCRaisedButton* saveButton;
 
 @end
@@ -97,13 +97,16 @@
     model.name = self.editNoteView.nameTextField.text.length ? self.editNoteView.nameTextField.text : @"";
     model.account = self.editNoteView.accountTextField.text.length ? self.editNoteView.accountTextField.text : @"";
     model.password = self.editNoteView.passwordTextField.text.length ? self.editNoteView.passwordTextField.text : @"";
-    model.type = self.editNoteView.typeTextField.text.length ? self.editNoteView.typeTextField.text : @"";
+    model.type = self.editNoteView.selectedFlagColorName.length ? self.editNoteView.selectedFlagColorName : @"";
     //    model.remark = self.editNoteView.remarkTextField.text.length ? self.editNoteView.remarkTextField.text : @"";
     model.remark = self.editNoteView.remarkTextField.text.length ? self.editNoteView.remarkTextField.text : @"";
     
     @weakify(self)
     [self.viewModel addItemModel:model complectionBlock:^{
         @strongify(self)
+        MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"添加成功"];
+        [manager showMessage:message];
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }
@@ -122,10 +125,10 @@
     BOOL name = !(self.textFieldControllerFloating.characterCountMax && [self.textFieldControllerFloating performSelector:@selector(characterCount)] > self.textFieldControllerFloating.characterCountMax);
     BOOL account = !(self.accountController.characterCountMax && [self.accountController performSelector:@selector(characterCount)] > self.accountController.characterCountMax);
     BOOL password = !(self.passwrodController.characterCountMax && [self.passwrodController performSelector:@selector(characterCount)] > self.passwrodController.characterCountMax);
-    BOOL flag = !(self.typeController.characterCountMax && [self.typeController performSelector:@selector(characterCount)] > self.typeController.characterCountMax);
+//    BOOL flag = !(self.typeController.characterCountMax && [self.typeController performSelector:@selector(characterCount)] > self.typeController.characterCountMax);
     BOOL remark = !(self.remarkController.characterCountMax && [self.remarkController performSelector:@selector(characterCount)] > self.remarkController.characterCountMax);
     
-    self.saveButton.enabled = self.editNoteView.nameTextField.text.length && name && account && password && flag && remark;
+    self.saveButton.enabled = self.editNoteView.nameTextField.text.length && name && account && password && remark;
 }
 
 #pragma mark - 7.GET & SET
@@ -136,54 +139,53 @@
         _editNoteView = [[NSBundle mainBundle] loadNibNamed:@"JSDEditNoteView" owner:nil options:nil].lastObject;
         _editNoteView.frame = self.view.bounds;
         self.textFieldControllerFloating.textInput = _editNoteView.nameTextField;
-        self.textFieldControllerFloating.normalColor = ColorWithFROMRGB(0xdddddd, 1);
-        self.textFieldControllerFloating.activeColor = [UIColor blueColor];
-        self.textFieldControllerFloating.borderFillColor = [UIColor lightGrayColor];
+//        self.textFieldControllerFloating.normalColor = ColorWithFROMRGB(0xdddddd, 1);
+//        self.textFieldControllerFloating.activeColor = [UIColor blueColor];
+//        self.textFieldControllerFloating.borderFillColor = [UIColor lightGrayColor];
         self.textFieldControllerFloating.placeholderText = @"标题(最长10个字符)";
         self.textFieldControllerFloating.characterCountMax = 10;
-        self.textFieldControllerFloating.borderFillColor = [UIColor whiteColor];
-        //        self.textFieldControllerFloating.leadingUnderlineLabelTextColor = []
         
-        MDCTextInputControllerUnderline* accountController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.accountTextField];
+        MDCTextInputControllerFilled* accountController = [[MDCTextInputControllerFilled alloc] initWithTextInput:_editNoteView.accountTextField];
         //       accountController.textInput = _editNoteView.nameTextField;
-        accountController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
-        accountController.activeColor = [UIColor blueColor];
-        accountController.borderFillColor = [UIColor whiteColor];
+//        accountController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
+//        accountController.activeColor = [UIColor blueColor];
+//        accountController.borderFillColor = [UIColor whiteColor];
         accountController.placeholderText = @"账号(最长50个字符)";
         _accountController = accountController;
         accountController.characterCountMax = 50;
         
-        MDCTextInputControllerUnderline* passwordController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.passwordTextField];
+        MDCTextInputControllerFilled* passwordController = [[MDCTextInputControllerFilled alloc] initWithTextInput:_editNoteView.passwordTextField];
         _passwrodController = passwordController;
-        passwordController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
-        passwordController.activeColor = [UIColor blueColor];
-        passwordController.borderFillColor = [UIColor whiteColor];
+//        passwordController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
+//        passwordController.activeColor = [UIColor blueColor];
+//        passwordController.borderFillColor = [UIColor whiteColor];
         passwordController.placeholderText = @"密码(最长50个字符)";
         passwordController.characterCountMax = 50;
         
-        MDCTextInputControllerUnderline* typeController = [[MDCTextInputControllerUnderline alloc] initWithTextInput:_editNoteView.typeTextField];
-        _typeController = typeController;
-        typeController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
-        typeController.activeColor = [UIColor blueColor];
-        typeController.borderFillColor = [UIColor whiteColor];
-        typeController.placeholderText = @"标签(最长50个字符)";
-        typeController.characterCountMax = 50;
+//        MDCTextInputControllerFilled* typeController = [[MDCTextInputControllerFilled alloc] initWithTextInput:_editNoteView.typeTextField];
+//        _typeController = typeController;
+////        typeController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
+////        typeController.activeColor = [UIColor blueColor];
+////        typeController.borderFillColor = [UIColor whiteColor];
+//        typeController.placeholderText = @"标签(最长50个字符)";
+//        typeController.characterCountMax = 50;
         
-        MDCTextInputControllerLegacyDefault* remarkController = [[MDCTextInputControllerLegacyDefault alloc] initWithTextInput:_editNoteView.remarkTextField];
+        MDCTextInputControllerFilled* remarkController = [[MDCTextInputControllerFilled alloc] initWithTextInput:_editNoteView.remarkTextField];
         _remarkController = remarkController;
-        remarkController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
-        remarkController.activeColor = [UIColor blueColor];
-        remarkController.borderFillColor = [UIColor whiteColor];
+//        remarkController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
+//        remarkController.activeColor = [UIColor blueColor];
+//        remarkController.borderFillColor = [UIColor whiteColor];
         remarkController.placeholderText = @"备注(最长250个字符)";
         remarkController.characterCountMax = 250;
+        remarkController.characterCountViewMode = UITextFieldViewModeWhileEditing;
     }
     return _editNoteView;
 }
 
-- (MDCTextInputControllerUnderline *)textFieldControllerFloating {
+- (MDCTextInputControllerFilled *)textFieldControllerFloating {
     
     if (!_textFieldControllerFloating) {
-        _textFieldControllerFloating = [[MDCTextInputControllerUnderline alloc] init];
+        _textFieldControllerFloating = [[MDCTextInputControllerFilled alloc] init];
     }
     return _textFieldControllerFloating;
 }

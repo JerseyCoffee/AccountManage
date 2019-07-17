@@ -65,14 +65,17 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.view addSubview:self.editNoteView];
     
     self.editNoteView.nameTextField.text = self.model.name;
     self.editNoteView.accountTextField.text = self.model.account;
     self.editNoteView.passwordTextField.text = self.model.password;
-    self.editNoteView.typeTextField.text = self.model.type;
     self.editNoteView.remarkTextField.text = self.model.remark;
+    if (JSDIsString(self.model.type)) {
+        self.editNoteView.selectedFlagImageView.backgroundColor = [UIColor jsd_colorWithHexString:self.model.type];
+    } else {
+        
+    }
     
 }
 
@@ -110,13 +113,16 @@
         self.model.name = self.editNoteView.nameTextField.text.length ? self.editNoteView.nameTextField.text : @"";
         self.model.account = self.editNoteView.accountTextField.text.length ? self.editNoteView.accountTextField.text : @"";
         self.model.password = self.editNoteView.passwordTextField.text.length ? self.editNoteView.passwordTextField.text : @"";
-        self.model.type = self.editNoteView.typeTextField.text.length ? self.editNoteView.typeTextField.text : @"";
+        self.model.type = self.editNoteView.selectedFlagColorName.length ? self.editNoteView.selectedFlagColorName : @"";
         //    model.remark = self.editNoteView.remarkTextField.text.length ? self.editNoteView.remarkTextField.text : @"";
         self.model.remark = self.editNoteView.remarkTextField.text.length ? self.editNoteView.remarkTextField.text : @"";
     
     @weakify(self)
     [self.viewModel replaceItemModel:self.model complectionBlock:^{
         @strongify(self)
+        MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"编辑成功"];
+        [manager showMessage:message];
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }
@@ -134,10 +140,10 @@
     BOOL name = !(self.textFieldControllerFloating.characterCountMax && [self.textFieldControllerFloating performSelector:@selector(characterCount)] > self.textFieldControllerFloating.characterCountMax);
     BOOL account = !(self.accountController.characterCountMax && [self.accountController performSelector:@selector(characterCount)] > self.accountController.characterCountMax);
     BOOL password = !(self.passwrodController.characterCountMax && [self.passwrodController performSelector:@selector(characterCount)] > self.passwrodController.characterCountMax);
-    BOOL flag = !(self.typeController.characterCountMax && [self.typeController performSelector:@selector(characterCount)] > self.typeController.characterCountMax);
+//    BOOL flag = !(self.typeController.characterCountMax && [self.typeController performSelector:@selector(characterCount)] > self.typeController.characterCountMax);
     BOOL remark = !(self.remarkController.characterCountMax && [self.remarkController performSelector:@selector(characterCount)] > self.remarkController.characterCountMax);
     
-    self.saveButton.enabled = self.editNoteView.nameTextField.text.length && name && account && password && flag && remark;
+    self.saveButton.enabled = self.editNoteView.nameTextField.text.length && name && account && password && remark;
 }
 
 #pragma mark - 7.GET & SET

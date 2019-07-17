@@ -30,6 +30,8 @@
     _detailLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     _detailLabel.numberOfLines = 1;
     
+    
+    
 }
 
 
