@@ -1,18 +1,19 @@
 //
-//  JSDMyCenterVC.m
+//  JSDAboutWeVC.m
 //  AccountCheat
 //
-//  Created by Jersey on 2019/7/17.
+//  Created by Jersey on 2019/7/18.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDMyCenterVC.h"
+#import "JSDAboutWeVC.h"
 
-@interface JSDMyCenterVC ()
+#import "JSDPublic.h"
+@interface JSDAboutWeVC ()
 
 @end
 
-@implementation JSDMyCenterVC
+@implementation JSDAboutWeVC
 
 #pragma mark - 1.View Controller Life Cycle
 
@@ -39,12 +40,12 @@
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"个人中心";
+    self.navigationItem.title = @"关于我们";
 }
 
 - (void)setupView {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor jsd_grayColor];
 }
 
 - (void)reloadView {

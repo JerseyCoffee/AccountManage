@@ -59,6 +59,7 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (void)setupNavBar {
     
+    
 }
 
 - (void)setupView {

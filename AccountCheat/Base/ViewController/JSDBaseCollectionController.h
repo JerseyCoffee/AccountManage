@@ -1,18 +1,16 @@
 //
-//  JSDSearchViewController.h
+//  JSDBaseCollectionController.h
 //  AccountCheat
 //
-//  Created by Jersey on 2019/7/16.
+//  Created by Jersey on 2019/7/18.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
 #import "MDCCollectionViewController.h"
 
-#import "JSDPublic.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDSearchViewController : MDCCollectionViewController
+@interface JSDBaseCollectionController : MDCCollectionViewController
 
 @end
 

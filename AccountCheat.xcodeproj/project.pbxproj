@@ -12,7 +12,15 @@
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */; };
+		5577759522E01F6F00EBC77E /* JSDMyCenterTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */; };
+		5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759722E01F8A00EBC77E /* JSDMyCenterViewModel.m */; };
+		557775AC22E02E6F00EBC77E /* JSDAboutWeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 557775AB22E02E6F00EBC77E /* JSDAboutWeVC.m */; };
+		557775AF22E046E200EBC77E /* JSDBaseBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557775AE22E046E200EBC77E /* JSDBaseBackViewController.m */; };
+		557775B222E04E2600EBC77E /* JSDBaseCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557775B122E04E2600EBC77E /* JSDBaseCollectionController.m */; };
 		55868B6022E0079E0038903C /* web_.png in Resources */ = {isa = PBXBuildFile; fileRef = 55868B5F22E0079E0038903C /* web_.png */; };
+		55868B6422E00F4B0038903C /* JSDMyCenterContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55868B6322E00F4B0038903C /* JSDMyCenterContentVC.m */; };
+		55868B6722E010690038903C /* JSDMyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55868B6622E010690038903C /* JSDMyCenterVC.m */; };
 		559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */; };
 		559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */; };
 		559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332F322DC359F001D37D6 /* JSDHomeModel.m */; };
@@ -51,7 +59,6 @@
 		5593335322DECFF8001D37D6 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334322DECFF8001D37D6 /* web.png */; };
 		5593335422DECFF8001D37D6 /* impression.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334422DECFF8001D37D6 /* impression.png */; };
 		5593335522DECFF8001D37D6 /* mac_note2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334522DECFF8001D37D6 /* mac_note2.png */; };
-		5593335822DED9A6001D37D6 /* JSDMyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */; };
 		5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335A22DEDC21001D37D6 /* JSDPlusButton.m */; };
 		559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559333B822DF2005001D37D6 /* JSDFlagColorModel.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
@@ -81,7 +88,22 @@
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5577759122E01F6F00EBC77E /* JSDMyCenterTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterTextCell.h; sourceTree = "<group>"; };
+		5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterTextCell.m; sourceTree = "<group>"; };
+		5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMyCenterTextCell.xib; sourceTree = "<group>"; };
+		5577759622E01F8A00EBC77E /* JSDMyCenterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterViewModel.h; sourceTree = "<group>"; };
+		5577759722E01F8A00EBC77E /* JSDMyCenterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterViewModel.m; sourceTree = "<group>"; };
+		557775AA22E02E6F00EBC77E /* JSDAboutWeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAboutWeVC.h; sourceTree = "<group>"; };
+		557775AB22E02E6F00EBC77E /* JSDAboutWeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAboutWeVC.m; sourceTree = "<group>"; };
+		557775AD22E046E200EBC77E /* JSDBaseBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseBackViewController.h; sourceTree = "<group>"; };
+		557775AE22E046E200EBC77E /* JSDBaseBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseBackViewController.m; sourceTree = "<group>"; };
+		557775B022E04E2600EBC77E /* JSDBaseCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseCollectionController.h; sourceTree = "<group>"; };
+		557775B122E04E2600EBC77E /* JSDBaseCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseCollectionController.m; sourceTree = "<group>"; };
 		55868B5F22E0079E0038903C /* web_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web_.png; sourceTree = "<group>"; };
+		55868B6222E00F4B0038903C /* JSDMyCenterContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterContentVC.h; sourceTree = "<group>"; };
+		55868B6322E00F4B0038903C /* JSDMyCenterContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterContentVC.m; sourceTree = "<group>"; };
+		55868B6522E010690038903C /* JSDMyCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterVC.h; sourceTree = "<group>"; };
+		55868B6622E010690038903C /* JSDMyCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterVC.m; sourceTree = "<group>"; };
 		559332ED22DC321A001D37D6 /* JSDHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDHomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -132,8 +154,6 @@
 		5593334322DECFF8001D37D6 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
 		5593334422DECFF8001D37D6 /* impression.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = impression.png; sourceTree = "<group>"; };
 		5593334522DECFF8001D37D6 /* mac_note2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac_note2.png; sourceTree = "<group>"; };
-		5593335622DED9A6001D37D6 /* JSDMyCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterVC.h; sourceTree = "<group>"; };
-		5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterVC.m; sourceTree = "<group>"; };
 		5593335922DEDC21001D37D6 /* JSDPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPlusButton.h; sourceTree = "<group>"; };
 		5593335A22DEDC21001D37D6 /* JSDPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPlusButton.m; sourceTree = "<group>"; };
 		559333B722DF2005001D37D6 /* JSDFlagColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDFlagColorModel.h; path = AccountCheat/Base/TabBarVC/JSDFlagColorModel.h; sourceTree = SOURCE_ROOT; };
@@ -214,6 +234,151 @@
 				60F709D222D7770100D05534 /* Supporting Files */,
 			);
 			path = AccountCheat;
+			sourceTree = "<group>";
+		};
+		5577759922E02C5B00EBC77E /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				5577759C22E02C8E00EBC77E /* Model */,
+				5577759B22E02C8700EBC77E /* View */,
+				5577759A22E02C7B00EBC77E /* ViewController */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		5577759A22E02C7B00EBC77E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5577759B22E02C8700EBC77E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5577759C22E02C8E00EBC77E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5577759D22E02C9E00EBC77E /* About */ = {
+			isa = PBXGroup;
+			children = (
+				557775A722E02D8100EBC77E /* Model */,
+				557775A622E02D8100EBC77E /* View */,
+				557775A822E02D8100EBC77E /* ViewController */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		5577759E22E02D7600EBC77E /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				5577759F22E02D7600EBC77E /* Model */,
+				557775A022E02D7600EBC77E /* View */,
+				557775A122E02D7600EBC77E /* ViewController */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		5577759F22E02D7600EBC77E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		557775A022E02D7600EBC77E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		557775A122E02D7600EBC77E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		557775A222E02D7600EBC77E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				557775A322E02D7600EBC77E /* Model */,
+				557775A422E02D7600EBC77E /* View */,
+				557775A522E02D7600EBC77E /* ViewController */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		557775A322E02D7600EBC77E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		557775A422E02D7600EBC77E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		557775A522E02D7600EBC77E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		557775A622E02D8100EBC77E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		557775A722E02D8100EBC77E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		557775A822E02D8100EBC77E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				557775AA22E02E6F00EBC77E /* JSDAboutWeVC.h */,
+				557775AB22E02E6F00EBC77E /* JSDAboutWeVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		557775A922E02DD400EBC77E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60F709C622D7770000D05534 /* Model */,
+				60F709C722D7770000D05534 /* View */,
+				60F709C822D7770000D05534 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		55868B6122E009410038903C /* AddItemList */ = {
+			isa = PBXGroup;
+			children = (
+				559332F722DC4ADC001D37D6 /* Type */,
+				6081895A22D9EB87007CF7E9 /* EditItem */,
+			);
+			path = AddItemList;
 			sourceTree = "<group>";
 		};
 		559332F722DC4ADC001D37D6 /* Type */ = {
@@ -472,11 +637,10 @@
 		60F709C022D7770000D05534 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				55868B6122E009410038903C /* AddItemList */,
 				5593331722DD75EE001D37D6 /* Search */,
-				6081896A22DCB792007CF7E9 /* Show */,
-				559332F722DC4ADC001D37D6 /* Type */,
-				6081895A22D9EB87007CF7E9 /* EditItem */,
 				6081895522D9DC1C007CF7E9 /* ItemList */,
+				6081896A22DCB792007CF7E9 /* Show */,
 				60F709C122D7770000D05534 /* Home */,
 				60F709C522D7770000D05534 /* My */,
 			);
@@ -525,9 +689,11 @@
 		60F709C522D7770000D05534 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				60F709C622D7770000D05534 /* Model */,
-				60F709C722D7770000D05534 /* View */,
-				60F709C822D7770000D05534 /* ViewController */,
+				557775A922E02DD400EBC77E /* Home */,
+				5577759E22E02D7600EBC77E /* Feedback */,
+				557775A222E02D7600EBC77E /* Security */,
+				5577759D22E02C9E00EBC77E /* About */,
+				5577759922E02C5B00EBC77E /* Password */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -535,6 +701,8 @@
 		60F709C622D7770000D05534 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5577759622E01F8A00EBC77E /* JSDMyCenterViewModel.h */,
+				5577759722E01F8A00EBC77E /* JSDMyCenterViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -542,6 +710,9 @@
 		60F709C722D7770000D05534 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5577759122E01F6F00EBC77E /* JSDMyCenterTextCell.h */,
+				5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */,
+				5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,8 +720,10 @@
 		60F709C822D7770000D05534 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5593335622DED9A6001D37D6 /* JSDMyCenterVC.h */,
-				5593335722DED9A6001D37D6 /* JSDMyCenterVC.m */,
+				55868B6222E00F4B0038903C /* JSDMyCenterContentVC.h */,
+				55868B6322E00F4B0038903C /* JSDMyCenterContentVC.m */,
+				55868B6522E010690038903C /* JSDMyCenterVC.h */,
+				55868B6622E010690038903C /* JSDMyCenterVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -582,6 +755,10 @@
 				60F709D122D7770100D05534 /* JSDBaseNavigationController.m */,
 				60F709D022D7770100D05534 /* JSDBaseViewController.h */,
 				60F709CE22D7770100D05534 /* JSDBaseViewController.m */,
+				557775AD22E046E200EBC77E /* JSDBaseBackViewController.h */,
+				557775AE22E046E200EBC77E /* JSDBaseBackViewController.m */,
+				557775B022E04E2600EBC77E /* JSDBaseCollectionController.h */,
+				557775B122E04E2600EBC77E /* JSDBaseCollectionController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -708,6 +885,7 @@
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
 				5593334E22DECFF8001D37D6 /* github2.png in Resources */,
+				5577759522E01F6F00EBC77E /* JSDMyCenterTextCell.xib in Resources */,
 				5593334822DECFF8001D37D6 /* password2.png in Resources */,
 				5593334B22DECFF8001D37D6 /* password3.png in Resources */,
 				55868B6022E0079E0038903C /* web_.png in Resources */,
@@ -816,21 +994,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F709D722D7770100D05534 /* JSDBaseNavigationController.m in Sources */,
+				55868B6422E00F4B0038903C /* JSDMyCenterContentVC.m in Sources */,
 				559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */,
 				5593333522DECBA3001D37D6 /* UIImage+Tool.m in Sources */,
 				5593333022DEBCF5001D37D6 /* JSDAddNoteVC.m in Sources */,
 				5593330522DC71C6001D37D6 /* JSDItemListCell.m in Sources */,
+				557775AF22E046E200EBC77E /* JSDBaseBackViewController.m in Sources */,
 				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
+				557775B222E04E2600EBC77E /* JSDBaseCollectionController.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
+				557775AC22E02E6F00EBC77E /* JSDAboutWeVC.m in Sources */,
 				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
 				5593332022DD7DD8001D37D6 /* JSDSearchViewModel.m in Sources */,
 				559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */,
-				5593335822DED9A6001D37D6 /* JSDMyCenterVC.m in Sources */,
 				559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */,
 				553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */,
 				5593331522DD6F51001D37D6 /* JSDItemShowViewCell.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
 				5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */,
+				5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */,
 				5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */,
 				6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
@@ -843,6 +1025,8 @@
 				6081897C22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m in Sources */,
 				5593332422DDA933001D37D6 /* JSDSearchViewCell.m in Sources */,
 				6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */,
+				55868B6722E010690038903C /* JSDMyCenterVC.m in Sources */,
+				5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */,
 				5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */,
 				6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */,
 			);

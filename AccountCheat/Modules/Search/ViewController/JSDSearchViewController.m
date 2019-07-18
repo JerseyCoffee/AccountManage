@@ -184,6 +184,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
     JSDItemShowVC* showVC = [[JSDItemShowVC alloc] init];
     showVC.model = self.searchManage.resultArray[indexPath.section];
+    
     [self.navigationController pushViewController:showVC animated:YES];
 }
 

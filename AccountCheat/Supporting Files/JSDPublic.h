@@ -18,5 +18,9 @@
 #import <MaterialSnackbar.h>
 #import "UIImage+Tool.h"
 #import <MaterialComponents/MaterialPalettes.h>
+#import "JSDBaseNavigationController.h"
+#import "JSDBaseViewController.h"
+#import "JSDBaseBackViewController.h"
+#import "JSDBaseCollectionController.h"
 
 #endif /* JSDPublic_h */

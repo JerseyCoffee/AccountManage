@@ -8,6 +8,8 @@
 
 #import "JSDBaseNavigationController.h"
 
+#import "JSDPublic.h"
+
 @interface JSDBaseNavigationController ()
 
 @end
@@ -17,6 +19,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationBar.translucent = NO;
+    
+    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationBar.barTintColor = [UIColor colorWithRed:0 green:0.67f blue:0.55f alpha:1.f];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                   style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(didTapBack:)];
+    UIImage *backImage = [UIImage imageNamed:@"back"];
+    backButton.image = backImage;
+    backButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
+- (void)didTapBack:(id)button {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

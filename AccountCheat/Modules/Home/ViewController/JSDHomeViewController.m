@@ -130,7 +130,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
-        make.height.mas_equalTo(40);
+        make.height.mas_equalTo(55);
     }];
     
     [self.searchBar addSubview:self.searchButton];
@@ -207,7 +207,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
     return cell;
 }
-//
+
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -256,7 +256,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 - (void)touchSearchSender:(MDCFloatingButton *)sender {
     
     JSDSearchViewController* searchVC = [[JSDSearchViewController alloc] init];
-    UINavigationController* navigationVC = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    JSDBaseNavigationController* navigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:searchVC];
     
     [self presentViewController:navigationVC animated:YES completion:nil];
 }
@@ -294,6 +294,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     if (!_searchBar) {
         _searchBar = [[UISearchBar alloc] init];
         _searchBar.backgroundColor = [UIColor jsd_grayColor];
+        _searchBar.barTintColor = [UIColor jsd_grayColor];
         _searchBar.placeholder = @"搜索信息";
     }
     return _searchBar;

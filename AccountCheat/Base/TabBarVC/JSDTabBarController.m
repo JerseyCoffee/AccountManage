@@ -11,6 +11,9 @@
 #import "JSDBaseNavigationController.h"
 #import "JSDMyCenterVC.h"
 #import "JSDPlusButton.h"
+#import "JSDPublic.h"
+#import <MaterialAppBar.h>
+#import "JSDMyCenterContentVC.h"
 
 @interface JSDTabBarController ()
 
@@ -78,13 +81,15 @@
     UIViewController *homeNavigationController = [[JSDBaseNavigationController alloc]
                                                    initWithRootViewController:homeViewController];
     [homeViewController cyl_setHideNavigationBarSeparator:NO];
-    UIViewController *myCenterVC = [[JSDMyCenterVC alloc] init];
-    UIViewController *myCenterNavigationController = [[JSDBaseNavigationController alloc]
-                                                    initWithRootViewController:myCenterVC];
-    [myCenterVC cyl_setHideNavigationBarSeparator:NO];
+    JSDMyCenterContentVC *myCenterVC = [[JSDMyCenterContentVC alloc] init];
+//    MDCFlexibleHeaderContainerViewController* flexibleVC = [[MDCFlexibleHeaderContainerViewController alloc] initWithContentViewController:myCenterVC];
+    
+//    UIViewController *myCenterNavigationController = [[UINavigationController alloc]
+//                                                    initWithRootViewController:flexibleVC.contentViewController];
+//    [myCenterVC cyl_setHideNavigationBarSeparator:NO];
     NSArray *viewControllers = @[
         homeNavigationController,
-        myCenterNavigationController,
+        myCenterVC,
     ];
     return viewControllers;
 }

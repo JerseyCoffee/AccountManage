@@ -1,27 +1,28 @@
 //
-//  JSDBaseViewController.m
-//  MaterialColor
+//  JSDBaseBackViewController.m
+//  AccountCheat
 //
-//  Created by Jersey on 2019/7/8.
+//  Created by Jersey on 2019/7/18.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDBaseViewController.h"
+#import "JSDBaseBackViewController.h"
 
-@interface JSDBaseViewController ()
+@interface JSDBaseBackViewController ()
 
 @end
 
-@implementation JSDBaseViewController
+@implementation JSDBaseBackViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     [self setupNavigation];
 }
 
 - (void)setupNavigation {
-
+ 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone
                                                                   target:self
@@ -32,11 +33,23 @@
     self.navigationItem.leftBarButtonItem = backButton;
     self.navigationItem.rightBarButtonItem = nil;
     
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
 - (void)didTapBack:(id)button {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

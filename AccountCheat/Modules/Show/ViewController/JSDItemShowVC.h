@@ -6,12 +6,12 @@
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "MDCCollectionViewController.h"
+#import "JSDBaseCollectionController.h"
 
 #import "JSDPublic.h"
 NS_ASSUME_NONNULL_BEGIN
-
-@interface JSDItemShowVC : MDCCollectionViewController
+//TODO: 
+@interface JSDItemShowVC : JSDBaseCollectionController
 
 @property (nonatomic, strong) JSDItemListModel* model;
 @property (nonatomic, copy) NSString* typeName;

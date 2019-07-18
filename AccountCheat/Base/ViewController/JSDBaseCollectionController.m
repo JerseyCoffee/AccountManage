@@ -1,27 +1,29 @@
 //
-//  JSDBaseViewController.m
-//  MaterialColor
+//  JSDBaseCollectionController.m
+//  AccountCheat
 //
-//  Created by Jersey on 2019/7/8.
+//  Created by Jersey on 2019/7/18.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDBaseViewController.h"
+#import "JSDBaseCollectionController.h"
 
-@interface JSDBaseViewController ()
+@interface JSDBaseCollectionController ()
 
 @end
 
-@implementation JSDBaseViewController
+@implementation JSDBaseCollectionController
+
+static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     [self setupNavigation];
 }
 
 - (void)setupNavigation {
-
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone
                                                                   target:self
@@ -36,7 +38,8 @@
 
 - (void)didTapBack:(id)button {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    self.navigationController ? [self.navigationController popViewControllerAnimated:YES] : [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
