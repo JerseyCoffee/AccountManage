@@ -8,6 +8,8 @@
 
 #import "JSDModifiPasswordVC.h"
 
+#import "JSDUserDataManage.h"
+
 @interface JSDModifiPasswordVC ()
 
 @property (nonatomic, strong) MDCTextField* originalPasswrod;
@@ -118,14 +120,23 @@
 - (void)onTouchSave:(MDCRaisedButton* )sender {
     JSDSnackManage* manage = [JSDSnackManage sharedInstance];
     if (JSDIsString(self.originalPasswrod.text) && JSDIsString(self.passwrod.text) && JSDIsString(self.confirmPasswrod.text)) {
-        //TODO: 先调用校验原密码
-        if ([self.passwrod.text isEqualToString:self.confirmPasswrod.text]) {
-            //TODO: 调用设置密码接口
-            [self dismissViewControllerAnimated:YES completion:^{
-                [manage showText:@"设置密码成功"];
-            }];
+        
+        JSDUserDataManage* userMamage = [JSDUserDataManage sharedInstance];
+        //校验原密码;
+        if ([self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwrod]) {
+            if ([self.passwrod.text isEqualToString:self.confirmPasswrod.text]) {
+                //TODO: 调用设置密码接口
+                userMamage.passwordModel.passwrod = self.passwrod.text;
+                [self dismissViewControllerAnimated:YES completion:^{
+                    [manage showText:@"设置密码成功"];
+                }];
+            } else {
+                //两次密码不一致
+                [manage showText:@"请确保密码与确认密码一致"];
+            }
         } else {
-            [manage showText:@"请确保密码与确认密码一致"];
+            // 原密码错误;
+            [manage showText:@"请输入正确的原密码"];
         }
     } else {
         [manage showText:@"请输入密码"];

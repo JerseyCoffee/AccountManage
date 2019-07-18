@@ -8,6 +8,8 @@
 
 #import "JSDMyCenterViewModel.h"
 
+#import "JSDUserDataManage.h"
+
 @implementation JSDMyCenterModel
 
 
@@ -19,7 +21,6 @@
 - (NSArray<JSDMyCenterModel *> *)array {
     
     if (!_array) {
-//        _array = [JSDMyCenterModel mj_keyValuesArrayWithObjectArray: [self defaultArray]];
         _array = [JSDMyCenterModel mj_objectArrayWithKeyValuesArray: [self defaultArray]];
     }
     return _array;
@@ -27,9 +28,12 @@
 
 - (NSArray* )defaultArray {
     
-    return @[@{@"title": @"修改密码",
+    JSDUserDataManage* userDataManage = [JSDUserDataManage sharedInstance];
+    BOOL havaPassword = JSDIsString(userDataManage.passwordModel.passwrod) ? YES : NO;
+    
+    return @[@{@"title": havaPassword ? @"修改密码" : @"设置密码",
                @"image": @"mac_note",
-               @"router": @"JSDModifiPasswordVC",
+               @"router": havaPassword ? @"JSDModifiPasswordVC": @"JSDSettingPasswordVC",
               },
              @{@"title": @"密码保护",
                @"image": @"mac_note",

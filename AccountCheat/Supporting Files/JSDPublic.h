@@ -24,5 +24,6 @@
 #import "JSDBaseCollectionController.h"
 #import <MaterialTextFields.h>
 #import "JSDSnackManage.h"
+#import "JSDUserDataManage.h"
 
 #endif /* JSDPublic_h */

@@ -78,6 +78,7 @@
 		6081897922DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897822DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m */; };
 		6081897C22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081897B22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m */; };
 		6081897E22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6081897D22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib */; };
+		6081898222E0AAFC007CF7E9 /* JSDUserDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081898122E0AAFC007CF7E9 /* JSDUserDataManage.m */; };
 		60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */; };
 		60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709BE22D7770000D05534 /* UIView+JSDFrame.m */; };
 		60F709D522D7770100D05534 /* JSDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F709CB22D7770100D05534 /* JSDTabBarController.m */; };
@@ -197,6 +198,8 @@
 		6081897A22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddNoteToTypeView.h; sourceTree = "<group>"; };
 		6081897B22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddNoteToTypeView.m; sourceTree = "<group>"; };
 		6081897D22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddNoteToTypeView.xib; sourceTree = "<group>"; };
+		6081898022E0AAFC007CF7E9 /* JSDUserDataManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDUserDataManage.h; sourceTree = "<group>"; };
+		6081898122E0AAFC007CF7E9 /* JSDUserDataManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDUserDataManage.m; sourceTree = "<group>"; };
 		60F709BB22D7770000D05534 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		60F709BC22D7770000D05534 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		60F709BE22D7770000D05534 /* UIView+JSDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSDFrame.m"; sourceTree = "<group>"; };
@@ -261,6 +264,7 @@
 				60F709C922D7770100D05534 /* Base */,
 				60F709B922D7770000D05534 /* CategoryTool */,
 				60F709C022D7770000D05534 /* Modules */,
+				6081897F22E0AADC007CF7E9 /* Object */,
 				60F709D222D7770100D05534 /* Supporting Files */,
 			);
 			path = AccountCheat;
@@ -646,6 +650,15 @@
 				5593330F22DD6EFD001D37D6 /* JSDItemShowVC.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6081897F22E0AADC007CF7E9 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				6081898022E0AAFC007CF7E9 /* JSDUserDataManage.h */,
+				6081898122E0AAFC007CF7E9 /* JSDUserDataManage.m */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 		60F709B922D7770000D05534 /* CategoryTool */ = {
@@ -1065,6 +1078,7 @@
 				552B5E9E22E07AD3006EACBC /* JSDSecurityCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
+				6081898222E0AAFC007CF7E9 /* JSDUserDataManage.m in Sources */,
 				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
 				60F709D322D7770100D05534 /* UIColor+JSDStyle.m in Sources */,
 				6081897922DF5BC7007CF7E9 /* JSDAddNoteToTypeVC.m in Sources */,
