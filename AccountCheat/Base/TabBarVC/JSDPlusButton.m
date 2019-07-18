@@ -24,23 +24,24 @@
     return flatButton;
 }
 
-+ (UIViewController *)plusChildViewController {
-
-    JSDAddTypeVC* addTypeVC = [[JSDAddTypeVC alloc] init];
-    JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addTypeVC];
-
-    return addTypenavigationVC;
-}
-
+//TODO: 改成添加列表而不是分类
 //+ (UIViewController *)plusChildViewController {
 //
-//    JSDAddNoteToTypeVC* addNoteToTypeVC = [[JSDAddNoteToTypeVC alloc] init];
-//    JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addNoteToTypeVC];
-//
-//    addNoteToTypeVC.viewModel = [[JSDItemListViewModel alloc] initWithType:@"密钥"];
+//    JSDAddTypeVC* addTypeVC = [[JSDAddTypeVC alloc] init];
+//    JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addTypeVC];
 //
 //    return addTypenavigationVC;
 //}
+
++ (UIViewController *)plusChildViewController {
+
+    JSDAddNoteToTypeVC* addNoteToTypeVC = [[JSDAddNoteToTypeVC alloc] init];
+    JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addNoteToTypeVC];
+    //TODO:默认添加到账户;
+    addNoteToTypeVC.viewModel = [[JSDItemListViewModel alloc] initWithType:@"账户"];
+
+    return addTypenavigationVC;
+}
 
 + (NSUInteger)indexOfPlusButtonInTabBar {
     

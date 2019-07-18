@@ -51,7 +51,7 @@
 
 - (void)setupNavBar {
     
-    self.navigationItem.title = @"添加账户";
+    self.navigationItem.title = @"添加账号";
     
     _saveButton = [[MDCRaisedButton alloc] init];
     [_saveButton setTitle:@"保存" forState:UIControlStateNormal];
@@ -108,6 +108,7 @@
         MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"添加成功"];
         [manager showMessage:message];
 //        [self.navigationController popViewControllerAnimated:YES];
+        [self updateView];
         self.tabBarController.selectedIndex = 0;
     }];
 }
@@ -130,6 +131,15 @@
     BOOL remark = !(self.remarkController.characterCountMax && [self.remarkController performSelector:@selector(characterCount)] > self.remarkController.characterCountMax);
     
     self.saveButton.enabled = self.editNoteView.nameTextField.text.length && name && account && password && remark;
+}
+
+- (void)updateView {
+    
+    self.editNoteView.nameTextField.text = nil;
+    self.editNoteView.accountTextField.text = nil;
+    self.editNoteView.passwordTextField.text = nil;
+    self.editNoteView.typeTextField.text = nil;
+    self.editNoteView.remarkTextField.text = nil;
 }
 
 #pragma mark - 7.GET & SET

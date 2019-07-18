@@ -51,7 +51,7 @@
 
 - (void)setupNavBar {
     
-    self.navigationItem.title = @"添加账户";
+    self.navigationItem.title = @"添加账号";
     
     _saveButton = [[MDCRaisedButton alloc] init];
     [_saveButton setTitle:@"保存" forState:UIControlStateNormal];

@@ -36,7 +36,17 @@
 
 - (void)didTapBack:(id)button {
     
-    [self.navigationController popViewControllerAnimated:YES];
+//    self.navigationController ? [self.navigationController popViewControllerAnimated:YES] : [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (self.navigationController) {
+        if (self.navigationController.childViewControllers.count == 1) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end

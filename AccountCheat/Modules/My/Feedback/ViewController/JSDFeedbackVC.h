@@ -1,18 +1,16 @@
 //
-//  JSDBaseBackViewController.h
+//  JSDFeedbackVC.h
 //  AccountCheat
 //
 //  Created by Jersey on 2019/7/18.
 //  Copyright © 2019 Jersey. All rights reserved.
 //
 
-#import "JSDBaseViewController.h"
-
-#import "JSDPublic.h"
+#import "JSDBaseBackViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDBaseBackViewController : JSDBaseViewController
+@interface JSDFeedbackVC : JSDBaseBackViewController
 
 @end
 
