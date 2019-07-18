@@ -12,6 +12,7 @@
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		55868B6022E0079E0038903C /* web_.png in Resources */ = {isa = PBXBuildFile; fileRef = 55868B5F22E0079E0038903C /* web_.png */; };
 		559332F022DC321A001D37D6 /* JSDHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */; };
 		559332F122DC321A001D37D6 /* JSDHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */; };
 		559332F422DC359F001D37D6 /* JSDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559332F322DC359F001D37D6 /* JSDHomeModel.m */; };
@@ -80,6 +81,7 @@
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55868B5F22E0079E0038903C /* web_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web_.png; sourceTree = "<group>"; };
 		559332ED22DC321A001D37D6 /* JSDHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		559332EE22DC321A001D37D6 /* JSDHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		559332EF22DC321A001D37D6 /* JSDHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDHomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				5593333E22DECFF7001D37D6 /* github2.png */,
 				5593334122DECFF7001D37D6 /* icard.png */,
 				5593334422DECFF8001D37D6 /* impression.png */,
+				55868B5F22E0079E0038903C /* web_.png */,
 				5593333A22DECFF7001D37D6 /* mac_note.png */,
 				5593334522DECFF8001D37D6 /* mac_note2.png */,
 				5593334022DECFF7001D37D6 /* macNote.png */,
@@ -707,6 +710,7 @@
 				5593334E22DECFF8001D37D6 /* github2.png in Resources */,
 				5593334822DECFF8001D37D6 /* password2.png in Resources */,
 				5593334B22DECFF8001D37D6 /* password3.png in Resources */,
+				55868B6022E0079E0038903C /* web_.png in Resources */,
 				5593332722DDC648001D37D6 /* search.png in Resources */,
 				6081897622DCC50E007CF7E9 /* JSDItemTableCell.xib in Resources */,
 				553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */,

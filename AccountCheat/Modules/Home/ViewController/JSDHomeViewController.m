@@ -28,7 +28,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 @property (strong, nonatomic) MDCBottomNavigationBar *bottomNavBar;
 @property (nonatomic, strong) JSDHomeViewModel* viewModel;
 @property (nonatomic, strong) MDCFloatingButton* addTypeButton;
-@property (nonatomic, strong) MDCFloatingButton* searchButton;
+@property (nonatomic, strong) MDCButton* searchButton;
 @property (nonatomic, strong) UISearchBar* searchBar;
 
 @end
@@ -86,6 +86,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 - (void)setupNavBar {
     
     self.navigationItem.title = @"首页";
+    self.navigationController.navigationBar.translucent = NO;
     
 //    [self layoutBottomNavBar];
 //
@@ -95,6 +96,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 //    UITabBarItem* item2 = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage jsd_imageName:@"contact"] tag:0];
 //
 //    self.bottomNavBar.items = @[item,item2];
+    
 }
 
 - (void)layoutBottomNavBar {
@@ -122,10 +124,24 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 - (void)setupView {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor jsd_grayColor];
+    
+    [self.view addSubview:self.searchBar];
+    
+    [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        make.height.mas_equalTo(40);
+    }];
+    
+    [self.searchBar addSubview:self.searchButton];
+    
+    [self.searchButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.mas_equalTo(0);
+        make.left.right.mas_equalTo(0);
+        make.top.mas_equalTo(self.searchBar.mas_bottom);
         if (@available(iOS 11.0,*)) {
             make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
         }else{
@@ -147,15 +163,15 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 //
 //    [self.view addSubview:_addTypeButton];
     
-    _searchButton = [[MDCFloatingButton alloc] init];
-    [_searchButton jsd_setsize:CGSizeMake(50, 50)];
-    [_searchButton jsd_setright:ScreenWidth - 30];
-    [_searchButton jsd_setbottom:ScreenHeight - 30];
-    [_searchButton addTarget:self action:@selector(touchSearchSender:) forControlEvents:UIControlEventTouchUpInside];
-    [_searchButton setBackgroundImage:[UIImage jsd_imageName:@"search"] forState:UIControlStateNormal];
-    _searchButton.backgroundColor = [UIColor clearColor];
-    
-    [self.view addSubview:_searchButton];
+//    _searchButton = [[MDCFloatingButton alloc] init];
+//    [_searchButton jsd_setsize:CGSizeMake(50, 50)];
+//    [_searchButton jsd_setright:ScreenWidth - 30];
+//    [_searchButton jsd_setbottom:ScreenHeight - 30];
+//    [_searchButton addTarget:self action:@selector(touchSearchSender:) forControlEvents:UIControlEventTouchUpInside];
+//    [_searchButton setBackgroundImage:[UIImage jsd_imageName:@"search"] forState:UIControlStateNormal];
+//    _searchButton.backgroundColor = [UIColor clearColor];
+//
+//    [self.view addSubview:_searchButton];
 }
 
 - (void)reloadView {
@@ -271,6 +287,26 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
         _viewModel = [[JSDHomeViewModel alloc] init];
     }
     return _viewModel;
+}
+
+- (UISearchBar *)searchBar {
+    
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc] init];
+        _searchBar.backgroundColor = [UIColor jsd_grayColor];
+        _searchBar.placeholder = @"搜索信息";
+    }
+    return _searchBar;
+}
+
+- (MDCButton *)searchButton {
+    
+    if (!_searchButton) {
+        _searchButton = [[MDCButton alloc] init];
+        [_searchButton addTarget:self action:@selector(touchSearchSender:) forControlEvents:UIControlEventTouchUpInside];
+        _searchButton.backgroundColor = [UIColor clearColor];
+    }
+    return _searchButton;
 }
 
 #pragma mark -- NavigationDelegate

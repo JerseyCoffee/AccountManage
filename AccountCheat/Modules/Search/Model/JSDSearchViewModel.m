@@ -9,6 +9,13 @@
 #import "JSDSearchViewModel.h"
 
 #import "JSDHomeModel.h"
+#import "JSDFlagColorModel.h"
+
+@interface JSDSearchViewModel ()
+
+@property (nonatomic, strong) JSDFlagColorModel* colorModel;
+
+@end
 
 @implementation JSDSearchViewModel
 
@@ -30,8 +37,16 @@
             } else if ([itemModel.password localizedCaseInsensitiveContainsString:text]) {
                 [templateArray addObject:itemModel];
                 continue;
-            } else if ([itemModel.type localizedCaseInsensitiveContainsString:text]) {
-                [templateArray addObject:itemModel];
+            } else if ([self.colorModel.colorNameArray containsObject:text]) {
+                if (JSDIsString(itemModel.type)) {
+                    NSInteger index = [self.colorModel.colorNameArray indexOfObject:text];
+                    if ([itemModel.type isEqualToString:self.colorModel.colorArray[index]]) {
+                        [templateArray addObject:itemModel];
+                    }
+                }
+                
+//                [itemModel.type localizedCaseInsensitiveContainsString:text];
+                
                 continue;
             } else if ([itemModel.remark localizedCaseInsensitiveContainsString:text]) {
                 [templateArray addObject:itemModel];
@@ -68,6 +83,14 @@
         _listArray = tempArray;
     }
     return _listArray;
+}
+
+- (JSDFlagColorModel *)colorModel {
+    
+    if (!_colorModel) {
+        _colorModel = [[JSDFlagColorModel alloc] init];
+    }
+    return _colorModel;
 }
 
 @end

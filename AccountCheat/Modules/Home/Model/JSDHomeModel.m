@@ -12,9 +12,7 @@ NSString* const kTypeFilePathName = @"typeData.json";
 
 @implementation JSDHomeModel
 
-
 @end
-
 
 @implementation JSDHomeViewModel
 

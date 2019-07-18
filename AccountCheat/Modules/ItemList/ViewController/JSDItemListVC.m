@@ -63,11 +63,14 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
 
 - (void)setupView {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor jsd_grayColor];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.mas_equalTo(0);
+//        make.left.right.top.mas_equalTo(0);
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
+        make.top.mas_equalTo(0);
         if (@available(iOS 11.0,*)) {
             make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
         }else{
@@ -76,12 +79,16 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     }];
     
     _addItemButton = [[MDCFloatingButton alloc] init];
-    [_addItemButton jsd_setsize:CGSizeMake(50, 50)];
-    [_addItemButton setcenterX:ScreenWidth / 2];
-    [_addItemButton jsd_setbottom:ScreenHeight - 45];
+    [self.view addSubview:_addItemButton];
+    
+    [self.addItemButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(50);
+        make.centerX.mas_equalTo(0);
+        make.bottom.mas_equalTo(-35);
+    }];
     [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:_addItemButton];
+    
     [_addItemButton setBackgroundImage:[UIImage jsd_imageName:@"add"] forState:UIControlStateNormal];
     _addItemButton.backgroundColor = [UIColor clearColor];
 }
