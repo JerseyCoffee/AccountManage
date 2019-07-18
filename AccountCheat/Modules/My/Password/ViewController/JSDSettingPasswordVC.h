@@ -1,5 +1,5 @@
 //
-//  JSDModifiPasswordVC.h
+//  JSDSettingPasswordVC.h
 //  AccountCheat
 //
 //  Created by Jersey on 2019/7/18.
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDModifiPasswordVC : JSDBaseBackViewController
-
-
+@interface JSDSettingPasswordVC : JSDBaseBackViewController
 
 @end
 

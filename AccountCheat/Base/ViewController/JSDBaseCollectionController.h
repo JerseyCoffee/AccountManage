@@ -7,6 +7,7 @@
 //
 
 #import "MDCCollectionViewController.h"
+#import <MDCCollectionViewTextCell.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

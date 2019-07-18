@@ -22,5 +22,7 @@
 #import "JSDBaseViewController.h"
 #import "JSDBaseBackViewController.h"
 #import "JSDBaseCollectionController.h"
+#import <MaterialTextFields.h>
+#import "JSDSnackManage.h"
 
 #endif /* JSDPublic_h */

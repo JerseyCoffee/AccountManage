@@ -12,6 +12,9 @@
 		552B5E8E22E05E57006EACBC /* JSDFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E8D22E05E57006EACBC /* JSDFeedbackVC.m */; };
 		552B5E9122E05EA7006EACBC /* JSDModifiPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9022E05EA7006EACBC /* JSDModifiPasswordVC.m */; };
 		552B5E9422E05EBF006EACBC /* JSDPasswordSecurityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9322E05EBF006EACBC /* JSDPasswordSecurityVC.m */; };
+		552B5E9722E0654F006EACBC /* JSDSettingPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9622E0654F006EACBC /* JSDSettingPasswordVC.m */; };
+		552B5E9B22E06DFB006EACBC /* JSDSnackManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9A22E06DFB006EACBC /* JSDSnackManage.m */; };
+		552B5E9E22E07AD3006EACBC /* JSDSecurityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */; };
 		553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0D922D73C79005D739D /* AppDelegate.m */; };
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
@@ -93,6 +96,12 @@
 		552B5E9022E05EA7006EACBC /* JSDModifiPasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDModifiPasswordVC.m; sourceTree = "<group>"; };
 		552B5E9222E05EBF006EACBC /* JSDPasswordSecurityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPasswordSecurityVC.h; sourceTree = "<group>"; };
 		552B5E9322E05EBF006EACBC /* JSDPasswordSecurityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPasswordSecurityVC.m; sourceTree = "<group>"; };
+		552B5E9522E0654F006EACBC /* JSDSettingPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSettingPasswordVC.h; sourceTree = "<group>"; };
+		552B5E9622E0654F006EACBC /* JSDSettingPasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSettingPasswordVC.m; sourceTree = "<group>"; };
+		552B5E9922E06DFB006EACBC /* JSDSnackManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSnackManage.h; sourceTree = "<group>"; };
+		552B5E9A22E06DFB006EACBC /* JSDSnackManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSnackManage.m; sourceTree = "<group>"; };
+		552B5E9C22E07AD3006EACBC /* JSDSecurityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSecurityCell.h; sourceTree = "<group>"; };
+		552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSecurityCell.m; sourceTree = "<group>"; };
 		553DD0D522D73C79005D739D /* AccountCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DD0D822D73C79005D739D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		553DD0D922D73C79005D739D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -218,6 +227,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552B5E9822E06DE6006EACBC /* SnackManage */ = {
+			isa = PBXGroup;
+			children = (
+				552B5E9922E06DFB006EACBC /* JSDSnackManage.h */,
+				552B5E9A22E06DFB006EACBC /* JSDSnackManage.m */,
+			);
+			path = SnackManage;
+			sourceTree = "<group>";
+		};
 		553DD0CC22D73C78005D739D = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +283,8 @@
 				552B5E9022E05EA7006EACBC /* JSDModifiPasswordVC.m */,
 				552B5E9222E05EBF006EACBC /* JSDPasswordSecurityVC.h */,
 				552B5E9322E05EBF006EACBC /* JSDPasswordSecurityVC.m */,
+				552B5E9522E0654F006EACBC /* JSDSettingPasswordVC.h */,
+				552B5E9622E0654F006EACBC /* JSDSettingPasswordVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -346,6 +366,8 @@
 		557775A422E02D7600EBC77E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				552B5E9C22E07AD3006EACBC /* JSDSecurityCell.h */,
+				552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -629,6 +651,7 @@
 		60F709B922D7770000D05534 /* CategoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				552B5E9822E06DE6006EACBC /* SnackManage */,
 				5593333222DECB8F001D37D6 /* UIImage */,
 				60F709BA22D7770000D05534 /* UIStyle */,
 				60F709BD22D7770000D05534 /* UIView */,
@@ -1024,8 +1047,10 @@
 				557775AF22E046E200EBC77E /* JSDBaseBackViewController.m in Sources */,
 				559332FE22DC4B14001D37D6 /* JSDAddTypeVC.m in Sources */,
 				557775B222E04E2600EBC77E /* JSDBaseCollectionController.m in Sources */,
+				552B5E9B22E06DFB006EACBC /* JSDSnackManage.m in Sources */,
 				60F709D422D7770100D05534 /* UIView+JSDFrame.m in Sources */,
 				557775AC22E02E6F00EBC77E /* JSDAboutWeVC.m in Sources */,
+				552B5E9722E0654F006EACBC /* JSDSettingPasswordVC.m in Sources */,
 				6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */,
 				5593332022DD7DD8001D37D6 /* JSDSearchViewModel.m in Sources */,
 				559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */,
@@ -1037,6 +1062,7 @@
 				5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */,
 				5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */,
 				6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */,
+				552B5E9E22E07AD3006EACBC /* JSDSecurityCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
 				553DD0EB22D73C7C005D739D /* main.m in Sources */,
 				60F709D622D7770100D05534 /* JSDBaseViewController.m in Sources */,
