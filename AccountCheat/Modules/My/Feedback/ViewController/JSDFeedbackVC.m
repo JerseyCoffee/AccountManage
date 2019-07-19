@@ -129,10 +129,8 @@
     }
     // 关闭邮件发送视图
     JSDSnackManage* snackManage = [JSDSnackManage sharedInstance];
-    //TODO: App
     [self dismissViewControllerAnimated:YES completion: ^{
-        [snackManage showText:@"非常感谢您使用 Jersey, 我们会认真查看您反馈的信息, 并且去尝试改进!"];
-        
+        [snackManage showText:@"非常感谢您使用我们App, 我们会认真查看您反馈的信息, 并且去尝试改进!"];
     }];
 }
 

@@ -36,6 +36,7 @@
 + (UIViewController *)plusChildViewController {
 
     JSDAddNoteToTypeVC* addNoteToTypeVC = [[JSDAddNoteToTypeVC alloc] init];
+
     JSDBaseNavigationController* addTypenavigationVC = [[JSDBaseNavigationController alloc] initWithRootViewController:addNoteToTypeVC];
     //TODO:默认添加到账户;
     addNoteToTypeVC.viewModel = [[JSDItemListViewModel alloc] initWithType:@"账户"];

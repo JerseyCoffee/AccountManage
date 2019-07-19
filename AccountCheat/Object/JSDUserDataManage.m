@@ -126,6 +126,8 @@ static id instance;
 //            [NIMKitFileLocationHelper addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:appDocumentPath]];
         });
        _passFilePath =  [appDocumentPath stringByAppendingPathComponent:kJSDUserFiledPath];
+        
+    
     }
     return _passFilePath;
 }

@@ -248,15 +248,12 @@ static NSString * const reuseIdentifier = @"Cell";
             @weakify(self)
             [self.searchManage executeSearchWithText:searchBar.text type:nil complection:^{
                 @strongify(self)
-                //TODO: 记得关掉
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [activityIndicator stopAnimating];
                     if (self.searchManage.resultArray.count) {
                         [self.searchBar endEditing:YES];
                     }
                     self.lastSearchText = searchBar.text;
                     [self.collectionView reloadData];
-                });
             }];
         } else {
         }

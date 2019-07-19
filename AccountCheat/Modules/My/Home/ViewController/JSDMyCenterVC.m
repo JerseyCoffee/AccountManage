@@ -228,14 +228,14 @@ static NSString * const reuseIdentifier = @"Cell";
     pestoHeaderView.autoresizingMask =
     (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     
-    UIImage *image = [UIImage imageNamed:@"PestoLogoLarge"];
+    UIImage *image = [UIImage imageNamed:@""];
     _logoView = [[UIImageView alloc] initWithImage:image];
     _logoView.contentMode = UIViewContentModeScaleAspectFill;
     _logoView.center =
     CGPointMake(pestoHeaderView.frame.size.width / 2.f, pestoHeaderView.frame.size.height / 2.f);
     [pestoHeaderView addSubview:_logoView];
     
-    UIImage *logoSmallImage = [UIImage imageNamed:@"PestoLogoSmall"];
+    UIImage *logoSmallImage = [UIImage jsd_imageName:@"web_"];
     _logoSmallView = [[UIImageView alloc] initWithImage:logoSmallImage];
     _logoSmallView.contentMode = UIViewContentModeScaleAspectFill;
     _logoSmallView.layer.opacity = 0;

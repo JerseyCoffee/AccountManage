@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDAddNoteVC : JSDBaseViewController
 
 @property (nonatomic, strong) JSDItemListViewModel* viewModel;
+//@property (nonatomic, assign) BOOL isTabBarShowVC;
 
 @end
 

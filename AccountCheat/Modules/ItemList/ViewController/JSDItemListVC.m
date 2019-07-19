@@ -83,12 +83,11 @@ static NSString *const kItemCellIdentifier = @"ItemCellIdentifier";
     [self.view addSubview:_addItemButton];
     
     [self.addItemButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(50);
+        make.width.height.mas_equalTo(60);
         make.centerX.mas_equalTo(0);
-        make.bottom.mas_equalTo(-35);
+        make.bottom.mas_equalTo(-40);
     }];
     [_addItemButton addTarget:self action:@selector(touchAddItemSender:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     [_addItemButton setBackgroundImage:[UIImage jsd_imageName:@"add"] forState:UIControlStateNormal];
     _addItemButton.backgroundColor = [UIColor clearColor];

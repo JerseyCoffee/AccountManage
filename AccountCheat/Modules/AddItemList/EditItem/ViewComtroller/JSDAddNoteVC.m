@@ -60,6 +60,10 @@
     [_saveButton addTarget:self action:@selector(touchesSaveSender:) forControlEvents:UIControlEventTouchUpInside];
     _saveButton.enabled = NO;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_saveButton];
+    
+//    if (self.isTabBarShowVC) {
+//        self.navigationItem.leftBarButtonItem = nil;
+//    }
 }
 
 - (void)setupView {
