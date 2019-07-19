@@ -12,6 +12,7 @@
 #import <MaterialComponents/MDCAppBarViewController.h>
 #import <MaterialComponents/MDCAppBarNavigationController.h>
 #import "JSDTabBarController.h"
+#import "JSDUserPasswordCheckManage.h"
 
 @interface AppDelegate ()
 
@@ -52,11 +53,15 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    JSDUserPasswordCheckManage* checkManage = [JSDUserPasswordCheckManage sharedInstance];
+    [checkManage checkPasswrod];// TODO:弹框逻辑待完善
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 

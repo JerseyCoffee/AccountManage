@@ -15,6 +15,9 @@
 #import "JSDMyCenterTextCell.h"
 #import "JSDMyCenterViewModel.h"
 
+
+NSString* const kMyCenterDataUpdateNotifaction = @"myCenterDataUpdateNotifaction";
+
 static CGFloat kMyCenterCollectionViewControllerDefaultHeaderHeight = 164.f;
 static CGFloat kMyCenterCollectionViewControllerSmallHeaderHeight = 64.f;
 //static CGFloat kMyCenterCollectionViewControllerInset = 5.f;
@@ -81,7 +84,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 3.Request Data
 
 - (void)setupData {
-    
+
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -193,7 +196,15 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
+ 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNotication:) name:kMyCenterDataUpdateNotifaction object:nil];
+}
+
+- (void)updateNotication:(id)notifacation {
     
+    self.viewModel.array = nil;
+    
+    [self.collectionView reloadData];
 }
 
 - (void)centerHeaderWithSize:(CGSize)size {

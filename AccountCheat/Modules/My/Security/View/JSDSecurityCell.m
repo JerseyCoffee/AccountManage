@@ -10,4 +10,6 @@
 
 @implementation JSDSecurityCell
 
+
+
 @end

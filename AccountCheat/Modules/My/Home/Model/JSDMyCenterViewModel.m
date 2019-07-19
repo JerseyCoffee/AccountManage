@@ -13,7 +13,6 @@
 @implementation JSDMyCenterModel
 
 
-
 @end
 
 @implementation JSDMyCenterViewModel
@@ -38,7 +37,7 @@
              @{@"title": @"密码保护",
                @"image": @"mac_note",
                @"router": @"JSDPasswordSecurityVC",
-             },
+             }, // 暂时去掉密码保护功能
              @{@"title": @"安全相关",
                @"image": @"password4",
                @"router": @"JSDSecurityVC",

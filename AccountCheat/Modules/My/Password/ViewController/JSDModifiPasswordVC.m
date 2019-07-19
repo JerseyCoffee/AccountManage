@@ -123,7 +123,7 @@
         
         JSDUserDataManage* userMamage = [JSDUserDataManage sharedInstance];
         //校验原密码;
-        if ([self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwrod]) {
+        if ([self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwrod] || [self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwordKey]) {
             if ([self.passwrod.text isEqualToString:self.confirmPasswrod.text]) {
                 //TODO: 调用设置密码接口
                 userMamage.passwordModel.passwrod = self.passwrod.text;
@@ -136,7 +136,7 @@
             }
         } else {
             // 原密码错误;
-            [manage showText:@"请输入正确的原密码"];
+            [manage showText:@"请输入正确的原密码或密保"];
         }
     } else {
         [manage showText:@"请输入密码"];
@@ -203,7 +203,7 @@
         _originalPasswrodController.normalColor = ColorWithFROMRGB(0xdddddd, 1);;
         _originalPasswrodController.activeColor = [UIColor blueColor];
         _originalPasswrodController.borderFillColor = [UIColor whiteColor];
-        _originalPasswrodController.placeholderText = @"原密码(最长32个字符)";
+        _originalPasswrodController.placeholderText = @"原密码或密保(最长32个字符)";
         _originalPasswrodController.characterCountMax = 32;
     }
     return _originalPasswrod;

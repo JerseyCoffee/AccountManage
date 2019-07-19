@@ -15,6 +15,9 @@
 		552B5E9722E0654F006EACBC /* JSDSettingPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9622E0654F006EACBC /* JSDSettingPasswordVC.m */; };
 		552B5E9B22E06DFB006EACBC /* JSDSnackManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9A22E06DFB006EACBC /* JSDSnackManage.m */; };
 		552B5E9E22E07AD3006EACBC /* JSDSecurityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */; };
+		552B5F0122E15412006EACBC /* JSDSecurityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5F0022E15412006EACBC /* JSDSecurityViewModel.m */; };
+		552B5F0422E158AD006EACBC /* JSDSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5F0322E158AD006EACBC /* JSDSwitch.m */; };
+		552B5F0722E170C7006EACBC /* JSDUserPasswordCheckManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B5F0622E170C7006EACBC /* JSDUserPasswordCheckManage.m */; };
 		553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0D922D73C79005D739D /* AppDelegate.m */; };
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
@@ -103,6 +106,12 @@
 		552B5E9A22E06DFB006EACBC /* JSDSnackManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSnackManage.m; sourceTree = "<group>"; };
 		552B5E9C22E07AD3006EACBC /* JSDSecurityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSecurityCell.h; sourceTree = "<group>"; };
 		552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSecurityCell.m; sourceTree = "<group>"; };
+		552B5EFF22E15412006EACBC /* JSDSecurityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSecurityViewModel.h; sourceTree = "<group>"; };
+		552B5F0022E15412006EACBC /* JSDSecurityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSecurityViewModel.m; sourceTree = "<group>"; };
+		552B5F0222E158AD006EACBC /* JSDSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSwitch.h; sourceTree = "<group>"; };
+		552B5F0322E158AD006EACBC /* JSDSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSwitch.m; sourceTree = "<group>"; };
+		552B5F0522E170C7006EACBC /* JSDUserPasswordCheckManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDUserPasswordCheckManage.h; sourceTree = "<group>"; };
+		552B5F0622E170C7006EACBC /* JSDUserPasswordCheckManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDUserPasswordCheckManage.m; sourceTree = "<group>"; };
 		553DD0D522D73C79005D739D /* AccountCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DD0D822D73C79005D739D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		553DD0D922D73C79005D739D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -363,6 +372,8 @@
 		557775A322E02D7600EBC77E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				552B5EFF22E15412006EACBC /* JSDSecurityViewModel.h */,
+				552B5F0022E15412006EACBC /* JSDSecurityViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,6 +383,8 @@
 			children = (
 				552B5E9C22E07AD3006EACBC /* JSDSecurityCell.h */,
 				552B5E9D22E07AD3006EACBC /* JSDSecurityCell.m */,
+				552B5F0222E158AD006EACBC /* JSDSwitch.h */,
+				552B5F0322E158AD006EACBC /* JSDSwitch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,6 +670,8 @@
 			children = (
 				6081898022E0AAFC007CF7E9 /* JSDUserDataManage.h */,
 				6081898122E0AAFC007CF7E9 /* JSDUserDataManage.m */,
+				552B5F0522E170C7006EACBC /* JSDUserPasswordCheckManage.h */,
+				552B5F0622E170C7006EACBC /* JSDUserPasswordCheckManage.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1074,6 +1089,7 @@
 				5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */,
 				5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */,
 				5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */,
+				552B5F0422E158AD006EACBC /* JSDSwitch.m in Sources */,
 				6081897522DCC50E007CF7E9 /* JSDItemTableCell.m in Sources */,
 				552B5E9E22E07AD3006EACBC /* JSDSecurityCell.m in Sources */,
 				5593330922DC71DE001D37D6 /* JSDItemListViewModel.m in Sources */,
@@ -1091,6 +1107,8 @@
 				55868B6722E010690038903C /* JSDMyCenterVC.m in Sources */,
 				5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */,
 				5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */,
+				552B5F0122E15412006EACBC /* JSDSecurityViewModel.m in Sources */,
+				552B5F0722E170C7006EACBC /* JSDUserPasswordCheckManage.m in Sources */,
 				552B5E8B22E05E30006EACBC /* JSDSecurityVC.m in Sources */,
 				6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */,
 			);

@@ -28,8 +28,8 @@ static NSString* const kUseFingerprint = @"useFingerprint";
         [aCoder encodeObject:self.passwrod forKey: kPasswordKey];
     }
     
-    [aCoder encodeBool:self.passwrod forKey: kUsePassword];
-    [aCoder encodeBool:self.passwrod forKey: kUseFingerprint];
+    [aCoder encodeBool:self.usePassword forKey: kUsePassword];
+    [aCoder encodeBool:self.useFingerprint forKey: kUseFingerprint];
 }
 
 - (nullable instancetype)initWithCoder:(nonnull NSCoder *)aDecoder {
@@ -100,13 +100,31 @@ static id instance;
             data = [NSKeyedArchiver archivedDataWithRootObject:_passwordModel];
         }
     }
-    [data writeToFile:self.passFilePath atomically:YES];
+    if (data) {
+        [data writeToFile:self.passFilePath atomically:YES];
+    }
+    
 }
 
 - (NSString *)passFilePath {
     
     if (!_passFilePath) {
-        _passFilePath = [NSHomeDirectory() stringByAppendingPathComponent:kJSDUserFiledPath];
+        static NSString *appDocumentPath = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSString *appKey = @"jersey";
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            appDocumentPath= [[NSString alloc]initWithFormat:@"%@/%@/",[paths objectAtIndex:0],appKey];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:appDocumentPath])
+            {
+                [[NSFileManager defaultManager] createDirectoryAtPath:appDocumentPath
+                                          withIntermediateDirectories:NO
+                                                           attributes:nil
+                                                                error:nil];
+            }
+//            [NIMKitFileLocationHelper addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:appDocumentPath]];
+        });
+       _passFilePath =  [appDocumentPath stringByAppendingPathComponent:kJSDUserFiledPath];
     }
     return _passFilePath;
 }

@@ -8,6 +8,8 @@
 
 #import "JSDSettingPasswordVC.h"
 
+#import "JSDMyCenterVC.h"
+
 @interface JSDSettingPasswordVC ()
 
 @property (nonatomic, strong) MDCTextField* passwrod;
@@ -110,10 +112,10 @@
     JSDSnackManage* manage = [JSDSnackManage sharedInstance];
     if (JSDIsString(self.passwrod.text) && JSDIsString(self.confirmPasswrod.text)) {
         if ([self.passwrod.text isEqualToString:self.confirmPasswrod.text]) {
-            //TODO: 调用设置密码接口
             JSDUserDataManage* userManage = [JSDUserDataManage sharedInstance];
             userManage.passwordModel.passwrod = self.passwrod.text;
             [userManage savePassData];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kMyCenterDataUpdateNotifaction object:nil];
             [self dismissViewControllerAnimated:YES completion:^{
                 //通知到个人中心页; 密码设置成功！
                 [manage showText:@"设置密码成功"];

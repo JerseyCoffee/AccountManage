@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDMyCenterViewModel : NSObject
 
-@property (nonatomic, strong) NSArray<JSDMyCenterModel *>* array;
+@property (nonatomic, strong, nullable) NSArray<JSDMyCenterModel *>* array;
 
 @end
 

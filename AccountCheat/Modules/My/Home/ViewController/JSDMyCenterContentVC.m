@@ -11,6 +11,7 @@
 #import <MDCAppBar.h>
 #import "JSDPublic.h"
 #import "JSDMyCenterVC.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface JSDMyCenterContentVC () <MyCenterCollectionViewControllerDelegate>
 
@@ -79,6 +80,30 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_grayColor];
+    
+//    UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"密码验证" message:@"请输入密码" preferredStyle: UIAlertControllerStyleAlert];
+//    [alertVC addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//        NSLog(@"%@", textField.text);
+//    }];
+//
+//    [self presentViewController:alertVC animated:YES completion:nil];
+//    LAContext* context = [[LAContext alloc] init];
+//    NSError* error = nil;
+//    BOOL canUse = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
+//    if(canUse) {
+//        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Jersey请您验证指纹" reply:^(BOOL success, NSError* error) {
+//            NSLog(@"evaluatePolicy Biometrics %@",error);
+//            if (success) {
+//                //注意我们在执行回调的时候必须使用异步、否则会卡顿。影响体验*
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    NSLog(@"成功");
+//                });
+//            } else {
+//                NSLog(@"失败");
+//            }
+//        }];
+//     }
+    
 }
 
 - (void)reloadView {

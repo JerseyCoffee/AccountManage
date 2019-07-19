@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString* const kMyCenterDataUpdateNotifaction;
 @class MDCCollectionViewCell;
 @protocol MyCenterCollectionViewControllerDelegate <NSObject>
 
