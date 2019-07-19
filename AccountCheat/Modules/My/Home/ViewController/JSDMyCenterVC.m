@@ -75,6 +75,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.view.backgroundColor = [UIColor grayColor];
     
     [self.collectionView registerClass:[JSDMyCenterTextCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    self.collectionView.contentSize = CGSizeMake(self.collectionView.jsd_width, 1500);
 }
 
 - (void)reloadView {
@@ -222,20 +223,22 @@ static NSString * const reuseIdentifier = @"Cell";
    CGRect headerFrame = _flexHeaderContainerVC.headerViewController.headerView.bounds;
     UIView *pestoHeaderView = [[UIView alloc] initWithFrame:headerFrame];
 //    UIColor *teal = [UIColor colorWithRed:0.f green:0.67f blue:0.55f alpha:1.f];
-    UIColor* teal = [UIColor jsd_tealcolor];
-    pestoHeaderView.backgroundColor = teal;
+//    UIColor* teal = [UIColor jsd_tealcolor];
+    pestoHeaderView.backgroundColor = [UIColor jsd_skyBluecolor];
     pestoHeaderView.layer.masksToBounds = YES;
     pestoHeaderView.autoresizingMask =
     (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-    
-    UIImage *image = [UIImage imageNamed:@""];
+//
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"bigLog" ofType:@"jpg"];
+    UIImage* image = [UIImage imageWithContentsOfFile:path];
+//    UIImage *image = [UIImage jsd_imageName:@"about_my"];
     _logoView = [[UIImageView alloc] initWithImage:image];
     _logoView.contentMode = UIViewContentModeScaleAspectFill;
     _logoView.center =
     CGPointMake(pestoHeaderView.frame.size.width / 2.f, pestoHeaderView.frame.size.height / 2.f);
     [pestoHeaderView addSubview:_logoView];
     
-    UIImage *logoSmallImage = [UIImage jsd_imageName:@"web_"];
+    UIImage *logoSmallImage = [UIImage imageNamed:@"smalAppLog2"];
     _logoSmallView = [[UIImageView alloc] initWithImage:logoSmallImage];
     _logoSmallView.contentMode = UIViewContentModeScaleAspectFill;
     _logoSmallView.layer.opacity = 0;

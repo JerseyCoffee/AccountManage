@@ -23,7 +23,8 @@
     self.navigationBar.translucent = NO;
     
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    self.navigationBar.barTintColor = [UIColor colorWithRed:0 green:0.67f blue:0.55f alpha:1.f];
+//    self.navigationBar.barTintColor = [UIColor colorWithRed:0 green:0.67f blue:0.55f alpha:1.f];
+    self.navigationBar.barTintColor = [UIColor jsd_skyBluecolor];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone

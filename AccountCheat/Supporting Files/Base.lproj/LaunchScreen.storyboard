@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,22 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_icon" translatesAutoresizingMaskIntoConstraints="NO" id="76w-CW-fBD">
-                                <rect key="frame" x="186" y="427" width="42" height="42"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applog" translatesAutoresizingMaskIntoConstraints="NO" id="76w-CW-fBD">
+                                <rect key="frame" x="133" y="702" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.36470588235294116" green="0.69803921568627447" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TH2-iD-8y9"/>
+                                    <constraint firstAttribute="width" constant="100" id="kcw-IN-LzV"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为您管理账户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g1-V5-gk6">
-                                <rect key="frame" x="116" y="366" width="182" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="助记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g1-V5-gk6">
+                                <rect key="frame" x="238" y="734" width="60" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.10196078431372549" green="0.66666666666666663" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.36470588235294116" green="0.69803921568627447" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="76w-CW-fBD" firstAttribute="top" secondItem="8g1-V5-gk6" secondAttribute="bottom" constant="25" id="EuV-Ym-yW0"/>
-                            <constraint firstItem="8g1-V5-gk6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Fc1-Vo-ScT"/>
-                            <constraint firstItem="76w-CW-fBD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZMc-BG-5Dp"/>
-                            <constraint firstItem="76w-CW-fBD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cWm-bp-cjB"/>
+                            <constraint firstItem="8g1-V5-gk6" firstAttribute="leading" secondItem="76w-CW-fBD" secondAttribute="trailing" constant="5" id="WsG-zX-ZxS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="76w-CW-fBD" secondAttribute="bottom" constant="60" id="cuE-3G-Dhq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8g1-V5-gk6" secondAttribute="trailing" symbolic="YES" id="qZn-L1-7Mj"/>
+                            <constraint firstItem="76w-CW-fBD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" multiplier="0.88" constant="1" id="ucn-tT-jMp"/>
+                            <constraint firstItem="8g1-V5-gk6" firstAttribute="centerY" secondItem="76w-CW-fBD" secondAttribute="centerY" id="yg9-Hn-ueH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch_icon" width="42" height="42"/>
+        <image name="applog" width="150" height="150"/>
     </resources>
 </document>

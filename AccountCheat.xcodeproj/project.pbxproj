@@ -22,13 +22,10 @@
 		552B5F0F22E1B092006EACBC /* security_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F0E22E1B092006EACBC /* security_setting.png */; };
 		552B5F1122E1B110006EACBC /* add_type.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1022E1B10F006EACBC /* add_type.png */; };
 		552B5F1522E1B1B4006EACBC /* about_my.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1422E1B1B4006EACBC /* about_my.png */; };
-		552B5F1722E1B241006EACBC /* setting_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1622E1B240006EACBC /* setting_password.png */; };
-		552B5F1B22E1B545006EACBC /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1A22E1B545006EACBC /* feedback.png */; };
 		553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0D922D73C79005D739D /* AppDelegate.m */; };
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
-		555A6BEC22E204A1007796FF /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A6BEB22E204A1007796FF /* add.png */; };
 		5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */; };
 		5577759522E01F6F00EBC77E /* JSDMyCenterTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */; };
 		5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759722E01F8A00EBC77E /* JSDMyCenterViewModel.m */; };
@@ -65,6 +62,11 @@
 		5593335422DECFF8001D37D6 /* impression.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334422DECFF8001D37D6 /* impression.png */; };
 		5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335A22DEDC21001D37D6 /* JSDPlusButton.m */; };
 		559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559333B822DF2005001D37D6 /* JSDFlagColorModel.m */; };
+		600ABA5E22E207C10037645C /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA5D22E207C10037645C /* add.png */; };
+		600ABA6022E207D10037645C /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA5F22E207D10037645C /* feedback.png */; };
+		600ABA6222E208000037645C /* setting_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6122E208000037645C /* setting_password.png */; };
+		600ABA6422E208A20037645C /* logImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6322E208A20037645C /* logImage.jpg */; };
+		600ABA6822E21C880037645C /* bigLog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6722E21C880037645C /* bigLog.jpg */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
@@ -110,8 +112,6 @@
 		552B5F0E22E1B092006EACBC /* security_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = security_setting.png; sourceTree = "<group>"; };
 		552B5F1022E1B10F006EACBC /* add_type.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_type.png; sourceTree = "<group>"; };
 		552B5F1422E1B1B4006EACBC /* about_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_my.png; sourceTree = "<group>"; };
-		552B5F1622E1B240006EACBC /* setting_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_password.png; path = ../../../../../Downloads/setting_password.png; sourceTree = "<group>"; };
-		552B5F1A22E1B545006EACBC /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedback.png; path = ../../../../../Downloads/feedback.png; sourceTree = "<group>"; };
 		553DD0D522D73C79005D739D /* AccountCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DD0D822D73C79005D739D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		553DD0D922D73C79005D739D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,7 +119,6 @@
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		555A6BEB22E204A1007796FF /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = ../../../../../Downloads/add.png; sourceTree = "<group>"; };
 		5577759122E01F6F00EBC77E /* JSDMyCenterTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterTextCell.h; sourceTree = "<group>"; };
 		5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterTextCell.m; sourceTree = "<group>"; };
 		5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMyCenterTextCell.xib; sourceTree = "<group>"; };
@@ -178,6 +177,11 @@
 		559333B722DF2005001D37D6 /* JSDFlagColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSDFlagColorModel.h; path = AccountCheat/Base/TabBarVC/JSDFlagColorModel.h; sourceTree = SOURCE_ROOT; };
 		559333B822DF2005001D37D6 /* JSDFlagColorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSDFlagColorModel.m; path = AccountCheat/Base/TabBarVC/JSDFlagColorModel.m; sourceTree = SOURCE_ROOT; };
 		59A5F0C2D479B410CED70D5E /* libPods-AccountCheat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountCheat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		600ABA5D22E207C10037645C /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		600ABA5F22E207D10037645C /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
+		600ABA6122E208000037645C /* setting_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_password.png; sourceTree = "<group>"; };
+		600ABA6322E208A20037645C /* logImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logImage.jpg; sourceTree = "<group>"; };
+		600ABA6722E21C880037645C /* bigLog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigLog.jpg; sourceTree = "<group>"; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
 		6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteVC.h; sourceTree = "<group>"; };
@@ -535,21 +539,23 @@
 		5593333122DECB75001D37D6 /* ImageAssets */ = {
 			isa = PBXGroup;
 			children = (
+				600ABA6722E21C880037645C /* bigLog.jpg */,
+				600ABA6322E208A20037645C /* logImage.jpg */,
 				552B5F1422E1B1B4006EACBC /* about_my.png */,
 				552B5F0C22E1B00F006EACBC /* security_password.png */,
 				5593333922DECFF7001D37D6 /* contact.png */,
 				552B5F1022E1B10F006EACBC /* add_type.png */,
 				552B5F0E22E1B092006EACBC /* security_setting.png */,
-				552B5F1622E1B240006EACBC /* setting_password.png */,
+				600ABA6122E208000037645C /* setting_password.png */,
 				5593333D22DECFF7001D37D6 /* game.png */,
 				5593334422DECFF8001D37D6 /* impression.png */,
 				55868B5F22E0079E0038903C /* web_.png */,
 				5593333A22DECFF7001D37D6 /* mac_note.png */,
 				5593334022DECFF7001D37D6 /* macNote.png */,
 				5593333822DECFF6001D37D6 /* password2.png */,
-				555A6BEB22E204A1007796FF /* add.png */,
+				600ABA5D22E207C10037645C /* add.png */,
+				600ABA5F22E207D10037645C /* feedback.png */,
 				5593333B22DECFF7001D37D6 /* password3.png */,
-				552B5F1A22E1B545006EACBC /* feedback.png */,
 			);
 			path = ImageAssets;
 			sourceTree = "<group>";
@@ -916,25 +922,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555A6BEC22E204A1007796FF /* add.png in Resources */,
-				552B5F1B22E1B545006EACBC /* feedback.png in Resources */,
 				6081897E22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib in Resources */,
 				552B5F0D22E1B010006EACBC /* security_password.png in Resources */,
 				552B5F1122E1B110006EACBC /* add_type.png in Resources */,
+				600ABA6222E208000037645C /* setting_password.png in Resources */,
 				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				552B5F1522E1B1B4006EACBC /* about_my.png in Resources */,
+				600ABA5E22E207C10037645C /* add.png in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
+				600ABA6022E207D10037645C /* feedback.png in Resources */,
 				5593332522DDA933001D37D6 /* JSDSearchViewCell.xib in Resources */,
 				5593334922DECFF8001D37D6 /* contact.png in Resources */,
 				5593335422DECFF8001D37D6 /* impression.png in Resources */,
 				5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */,
+				600ABA6422E208A20037645C /* logImage.jpg in Resources */,
 				5593335022DECFF8001D37D6 /* macNote.png in Resources */,
 				5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */,
 				5593334A22DECFF8001D37D6 /* mac_note.png in Resources */,
 				552B5F0F22E1B092006EACBC /* security_setting.png in Resources */,
+				600ABA6822E21C880037645C /* bigLog.jpg in Resources */,
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
 				553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */,
-				552B5F1722E1B241006EACBC /* setting_password.png in Resources */,
 				5577759522E01F6F00EBC77E /* JSDMyCenterTextCell.xib in Resources */,
 				5593334822DECFF8001D37D6 /* password2.png in Resources */,
 				5593334B22DECFF8001D37D6 /* password3.png in Resources */,
@@ -1220,9 +1228,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_TEAM = WMH655YJ87;
+				DEVELOPMENT_TEAM = 6GD2CA4X64;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AccountCheat/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1233,7 +1241,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AccountCheatDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1243,10 +1251,10 @@
 			baseConfigurationReference = CA36B848871123248EBEB14C /* Pods-AccountCheat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_TEAM = WMH655YJ87;
+				DEVELOPMENT_TEAM = 6GD2CA4X64;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AccountCheat/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1257,7 +1265,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AccountCheatApp;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

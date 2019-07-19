@@ -130,7 +130,7 @@
     // 关闭邮件发送视图
     JSDSnackManage* snackManage = [JSDSnackManage sharedInstance];
     [self dismissViewControllerAnimated:YES completion: ^{
-        [snackManage showText:@"非常感谢您使用我们App, 我们会认真查看您反馈的信息, 并且去尝试改进!"];
+        [snackManage showText:@"非常感谢您使用助记, 我们会认真查看您反馈的信息, 并且去尝试改进!"];
     }];
 }
 
@@ -162,7 +162,7 @@
         _tipLabel = [[UILabel alloc] init];
         _tipLabel.font = [UIFont systemFontOfSize:20];
         _tipLabel.numberOfLines = 0;
-        _tipLabel.text = @"感谢您的使用, 欢迎您给我们提供任何建议!";
+        _tipLabel.text = @"感谢您的使用助记, 欢迎您给我们提供任何建议!";
     }
     return _tipLabel;
 }

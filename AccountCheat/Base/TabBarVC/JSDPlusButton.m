@@ -19,7 +19,7 @@
     
     JSDPlusButton* flatButton = [[JSDPlusButton alloc] init];
     [flatButton setImage:[UIImage jsd_imageName:@"add"] forState:UIControlStateNormal];
-    [flatButton jsd_setsize:CGSizeMake(80, 80)];
+    [flatButton jsd_setsize:CGSizeMake(60, 60)];
     
     return flatButton;
 }
