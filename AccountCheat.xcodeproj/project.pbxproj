@@ -24,11 +24,11 @@
 		552B5F1522E1B1B4006EACBC /* about_my.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1422E1B1B4006EACBC /* about_my.png */; };
 		552B5F1722E1B241006EACBC /* setting_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1622E1B240006EACBC /* setting_password.png */; };
 		552B5F1B22E1B545006EACBC /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1A22E1B545006EACBC /* feedback.png */; };
-		552B5F1F22E1B674006EACBC /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 552B5F1E22E1B674006EACBC /* add.png */; };
 		553DD0DA22D73C79005D739D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0D922D73C79005D739D /* AppDelegate.m */; };
 		553DD0E522D73C7C005D739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E422D73C7C005D739D /* Assets.xcassets */; };
 		553DD0E822D73C7C005D739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DD0E622D73C7C005D739D /* LaunchScreen.storyboard */; };
 		553DD0EB22D73C7C005D739D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DD0EA22D73C7C005D739D /* main.m */; };
+		555A6BEC22E204A1007796FF /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A6BEB22E204A1007796FF /* add.png */; };
 		5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */; };
 		5577759522E01F6F00EBC77E /* JSDMyCenterTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */; };
 		5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5577759722E01F8A00EBC77E /* JSDMyCenterViewModel.m */; };
@@ -62,7 +62,6 @@
 		5593334B22DECFF8001D37D6 /* password3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333B22DECFF7001D37D6 /* password3.png */; };
 		5593334D22DECFF8001D37D6 /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593333D22DECFF7001D37D6 /* game.png */; };
 		5593335022DECFF8001D37D6 /* macNote.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334022DECFF7001D37D6 /* macNote.png */; };
-		5593335222DECFF8001D37D6 /* password4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334222DECFF8001D37D6 /* password4.png */; };
 		5593335422DECFF8001D37D6 /* impression.png in Resources */ = {isa = PBXBuildFile; fileRef = 5593334422DECFF8001D37D6 /* impression.png */; };
 		5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593335A22DEDC21001D37D6 /* JSDPlusButton.m */; };
 		559333B922DF2005001D37D6 /* JSDFlagColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 559333B822DF2005001D37D6 /* JSDFlagColorModel.m */; };
@@ -113,7 +112,6 @@
 		552B5F1422E1B1B4006EACBC /* about_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_my.png; sourceTree = "<group>"; };
 		552B5F1622E1B240006EACBC /* setting_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_password.png; path = ../../../../../Downloads/setting_password.png; sourceTree = "<group>"; };
 		552B5F1A22E1B545006EACBC /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedback.png; path = ../../../../../Downloads/feedback.png; sourceTree = "<group>"; };
-		552B5F1E22E1B674006EACBC /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = ../../../../../Downloads/add.png; sourceTree = "<group>"; };
 		553DD0D522D73C79005D739D /* AccountCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DD0D822D73C79005D739D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		553DD0D922D73C79005D739D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +119,7 @@
 		553DD0E722D73C7C005D739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DD0E922D73C7C005D739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553DD0EA22D73C7C005D739D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		555A6BEB22E204A1007796FF /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = ../../../../../Downloads/add.png; sourceTree = "<group>"; };
 		5577759122E01F6F00EBC77E /* JSDMyCenterTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterTextCell.h; sourceTree = "<group>"; };
 		5577759222E01F6F00EBC77E /* JSDMyCenterTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterTextCell.m; sourceTree = "<group>"; };
 		5577759322E01F6F00EBC77E /* JSDMyCenterTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMyCenterTextCell.xib; sourceTree = "<group>"; };
@@ -173,7 +172,6 @@
 		5593333B22DECFF7001D37D6 /* password3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password3.png; sourceTree = "<group>"; };
 		5593333D22DECFF7001D37D6 /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
 		5593334022DECFF7001D37D6 /* macNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macNote.png; sourceTree = "<group>"; };
-		5593334222DECFF8001D37D6 /* password4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password4.png; sourceTree = "<group>"; };
 		5593334422DECFF8001D37D6 /* impression.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = impression.png; sourceTree = "<group>"; };
 		5593335922DEDC21001D37D6 /* JSDPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPlusButton.h; sourceTree = "<group>"; };
 		5593335A22DEDC21001D37D6 /* JSDPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDPlusButton.m; sourceTree = "<group>"; };
@@ -549,9 +547,8 @@
 				5593333A22DECFF7001D37D6 /* mac_note.png */,
 				5593334022DECFF7001D37D6 /* macNote.png */,
 				5593333822DECFF6001D37D6 /* password2.png */,
+				555A6BEB22E204A1007796FF /* add.png */,
 				5593333B22DECFF7001D37D6 /* password3.png */,
-				5593334222DECFF8001D37D6 /* password4.png */,
-				552B5F1E22E1B674006EACBC /* add.png */,
 				552B5F1A22E1B545006EACBC /* feedback.png */,
 			);
 			path = ImageAssets;
@@ -919,6 +916,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555A6BEC22E204A1007796FF /* add.png in Resources */,
 				552B5F1B22E1B545006EACBC /* feedback.png in Resources */,
 				6081897E22DF5BF7007CF7E9 /* JSDAddNoteToTypeView.xib in Resources */,
 				552B5F0D22E1B010006EACBC /* security_password.png in Resources */,
@@ -926,9 +924,7 @@
 				559332FF22DC4B14001D37D6 /* JSDAddTypeVC.xib in Resources */,
 				552B5F1522E1B1B4006EACBC /* about_my.png in Resources */,
 				6081896722DAE59E007CF7E9 /* JSDEditNoteView.xib in Resources */,
-				552B5F1F22E1B674006EACBC /* add.png in Resources */,
 				5593332522DDA933001D37D6 /* JSDSearchViewCell.xib in Resources */,
-				5593335222DECFF8001D37D6 /* password4.png in Resources */,
 				5593334922DECFF8001D37D6 /* contact.png in Resources */,
 				5593335422DECFF8001D37D6 /* impression.png in Resources */,
 				5593330622DC71C6001D37D6 /* JSDItemListCell.xib in Resources */,
