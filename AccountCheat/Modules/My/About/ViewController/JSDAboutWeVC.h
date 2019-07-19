@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDAboutWeVC : JSDBaseBackViewController
+@interface JSDAboutWeVC : JSDBaseCollectionController
 
 @end
 

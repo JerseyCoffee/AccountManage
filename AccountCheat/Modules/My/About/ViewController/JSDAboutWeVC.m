@@ -46,6 +46,10 @@
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_grayColor];
+    
+    [self.collectionView registerClass:[MDCCollectionViewTextCell class] forCellWithReuseIdentifier:@"cell"];
+    
+    self.styler.cellStyle = MDCCollectionViewCellStyleCard;
 }
 
 - (void)reloadView {
@@ -59,6 +63,57 @@
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return 3;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MDCCollectionViewTextCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+
+    if (indexPath.row == 0) {
+        
+        cell.textLabel.text = @"App 版本";
+        cell.detailTextLabel.text = @"1.0.0";
+        
+    } else if (indexPath.row == 1) {
+        
+        cell.textLabel.text = @"数据安全";
+        cell.detailTextLabel.numberOfLines = 2;
+        cell.detailTextLabel.text = @"请放心,该 App 数据信息(账号密码等)仅存储在手机内, 不会再服务器进行备份";
+    } else {
+        
+        cell.detailTextLabel.numberOfLines = 2;
+        cell.textLabel.text = @"官网";
+        cell.detailTextLabel.text = @"https://www.jianshu.com/p/469c02b6dc15";
+    }
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    if (indexPath.row == 2) {
+        JSDSnackManage* snackManage = [JSDSnackManage sharedInstance];
+        UIPasteboard* pasterboard = [[UIPasteboard alloc] init];
+        pasterboard.string = @"https://www.jianshu.com/p/469c02b6dc15";
+        [snackManage showText:@"官网已复制到剪切板"];
+    }
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGSize size = [super collectionView:collectionView layout:collectionViewLayout sizeForItemAtIndexPath:indexPath];
+    
+    return CGSizeMake(size.width, 100);
+}
 
 #pragma mark - 5.Event Response
 
