@@ -35,7 +35,6 @@
     
     CYLTabBarController* tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers  tabBarItemsAttributes:[self tabBarItemsAttributesForController] imageInsets:imageInsets titlePositionAdjustment:titlePositionAdjustment];
     
-    
     [self customizeTabBarAppearance:tabBarController];
     self.navigationController.navigationBar.hidden = YES;
     return (self = (JSDTabBarController *)tabBarController);
@@ -43,8 +42,7 @@
 
 - (void)customizeTabBarAppearance:(CYLTabBarController *)tabBarController {
     
-    [tabBarController setTintColor:[UIColor colorWithRed:170 / 255.0f green:230/ 255.0f blue:245/ 255.0f alpha:1.0f]];
-    
+    [tabBarController setTintColor:[UIColor jsd_skyBluecolor]];
 }
 
 - (NSArray *)tabBarItemsAttributesForController {

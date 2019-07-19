@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="156" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-sD-mbS">
-                        <rect key="frame" x="62.5" y="70" width="31" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-sD-mbS">
+                        <rect key="frame" x="10" y="70" width="136" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,7 +35,9 @@
             <constraints>
                 <constraint firstItem="T2c-sD-mbS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1AE-JC-fcg"/>
                 <constraint firstItem="T2c-sD-mbS" firstAttribute="top" secondItem="uJB-BU-2WP" secondAttribute="bottom" constant="15" id="1rv-mj-Up3"/>
+                <constraint firstAttribute="trailing" secondItem="T2c-sD-mbS" secondAttribute="trailing" constant="10" id="Ugj-T5-U3U"/>
                 <constraint firstItem="uJB-BU-2WP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="eus-ch-BiG"/>
+                <constraint firstItem="T2c-sD-mbS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="jwP-OJ-28b"/>
                 <constraint firstItem="uJB-BU-2WP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vSr-2B-kio"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>

@@ -57,6 +57,16 @@
     return [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1];
 }
 
++ (UIColor *)jsd_tealcolor {
+    
+    return [UIColor jsd_colorWithHexString:@"#1AAA8C"];
+}
+
++ (UIColor *)jsd_skyBluecolor {
+    
+    return [UIColor jsd_colorWithHexString:@"#1296db"];
+}
+
 //绘制渐变色颜色的方法
 + (CAGradientLayer *)jsd_setGradualChangeView:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr{
     

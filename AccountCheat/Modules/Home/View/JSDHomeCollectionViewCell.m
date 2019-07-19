@@ -23,9 +23,17 @@
     // Initialization code
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
-    self.titleLabel.font = [UIFont systemFontOfSize:16];
-//    self.iconImageView.backgroundColor = [UIColor jsd_grayColor];
-//    self.iconImageView.layer.cornerRadius = self.iconImageView.frame.size.width / 2;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    self = [super initWithFrame:frame];
+    if (self) {
+//        self.textLabel.adjustsFontSizeToFitWidth = YES;
+        self.layer.cornerRadius = 10;
+        self.layer.masksToBounds = YES;
+    }
+    return self;
 }
 
 - (void)setModel:(JSDHomeModel *)model {
@@ -33,12 +41,13 @@
     _model = model;
     
     if (model.image) {
-        self.iconImageView.image = [UIImage imageNamed:model.image];
+        self.imageView.image = [UIImage imageNamed:model.image];
     } else {
-        self.iconImageView.image = nil;
+        self.imageView.image = nil;
     }
     
-    self.titleLabel.text = model.title;
+    self.textLabel.numberOfLines = 3;
+    self.textLabel.text = model.title;
     
 }
 

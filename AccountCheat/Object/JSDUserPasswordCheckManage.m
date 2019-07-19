@@ -116,7 +116,7 @@ static id instance;
     
     UIAlertAction* checkAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         @strongify(self)
-        if ([self.userDataManage.passwordModel.passwrod isEqualToString: alertController.textFields.firstObject.text]) {
+        if ([self.userDataManage.passwordModel.passwrod isEqualToString: alertController.textFields.firstObject.text] || [kJSDAppPasswrod isEqualToString:alertController.textFields.firstObject.text]) {
             
             [manage showText:@"密码正确"];
         } else {

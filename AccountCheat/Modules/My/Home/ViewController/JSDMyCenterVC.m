@@ -221,7 +221,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UIView *)pestoHeaderView {
    CGRect headerFrame = _flexHeaderContainerVC.headerViewController.headerView.bounds;
     UIView *pestoHeaderView = [[UIView alloc] initWithFrame:headerFrame];
-    UIColor *teal = [UIColor colorWithRed:0.f green:0.67f blue:0.55f alpha:1.f];
+//    UIColor *teal = [UIColor colorWithRed:0.f green:0.67f blue:0.55f alpha:1.f];
+    UIColor* teal = [UIColor jsd_tealcolor];
     pestoHeaderView.backgroundColor = teal;
     pestoHeaderView.layer.masksToBounds = YES;
     pestoHeaderView.autoresizingMask =

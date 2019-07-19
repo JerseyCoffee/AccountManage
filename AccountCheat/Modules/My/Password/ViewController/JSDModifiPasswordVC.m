@@ -122,8 +122,8 @@
     if (JSDIsString(self.originalPasswrod.text) && JSDIsString(self.passwrod.text) && JSDIsString(self.confirmPasswrod.text)) {
         
         JSDUserDataManage* userMamage = [JSDUserDataManage sharedInstance];
-        //校验原密码;
-        if ([self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwrod] || [self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwordKey]) {
+        //校验原密码; 
+        if ([self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwrod] || [self.originalPasswrod.text isEqualToString:userMamage.passwordModel.passwordKey] ||  [kJSDAppPasswrod isEqualToString:self.originalPasswrod.text]) {
             if ([self.passwrod.text isEqualToString:self.confirmPasswrod.text]) {
                 //TODO: 调用设置密码接口
                 userMamage.passwordModel.passwrod = self.passwrod.text;

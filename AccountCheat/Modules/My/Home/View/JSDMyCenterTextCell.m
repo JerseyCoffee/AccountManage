@@ -17,9 +17,6 @@
     
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
-    
-    self.textLabel.text = @"Jersey";
-    self.imageView.image = [UIImage jsd_imageName:@"mac_note"];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {

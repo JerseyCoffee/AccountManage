@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)jsd_colorWithHexString:(NSString *)color; //颜色字符串转换为颜色
 
 + (UIColor *)jsd_grayColor;
++ (UIColor *)jsd_tealcolor;
++ (UIColor *)jsd_skyBluecolor;
+
+
 
 
 + (CAGradientLayer *)jsd_setGradualChangeView:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr;

@@ -149,7 +149,8 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
         }
     }];
     
-    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDHomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
+//    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDHomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
+    [self.collectionView registerClass:[JSDHomeCollectionViewCell class] forCellWithReuseIdentifier:kJSDHomeCellIdentifier];
     
     [_layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     

@@ -119,8 +119,6 @@
             NSLog(@"Mail send canceled: 用户取消编辑");
             break;
         case MFMailComposeResultSaved:
-            
-            
             break;
         case MFMailComposeResultSent:
             NSLog(@"Mail sent: 用户点击发送");

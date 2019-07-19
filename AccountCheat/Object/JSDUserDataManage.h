@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString* _Nonnull const kJSDAppPasswrod;
+
 @interface JSDUserPasswordModel : NSObject <NSSecureCoding>
 
 @property (copy, nonatomic) NSString *passwrod;

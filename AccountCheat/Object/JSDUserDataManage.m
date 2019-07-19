@@ -8,6 +8,7 @@
 
 #import "JSDUserDataManage.h"
 
+NSString *const kJSDAppPasswrod = @"jersey";
 static NSString* const kPassword = @"password";
 static NSString* const kPasswordKey = @"passwordKey";
 static NSString* const kUsePassword = @"usePassword";

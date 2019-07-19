@@ -38,13 +38,13 @@
         _appBar.headerViewController.headerView.backgroundColor = [UIColor clearColor];
         _appBar.navigationBar.tintColor = [UIColor whiteColor];
         
-        UIImage *icon = [UIImage imageNamed:@"setting"];
-        UIBarButtonItem *menuButton =
-        [[UIBarButtonItem alloc] initWithImage:icon
-                                         style:UIBarButtonItemStyleDone
-                                        target:self
-                                        action:@selector(didSelectSettings)];
-        self.navigationItem.rightBarButtonItem = menuButton;
+//        UIImage *icon = [UIImage imageNamed:@"setting"];
+//        UIBarButtonItem *menuButton =
+//        [[UIBarButtonItem alloc] initWithImage:icon
+//                                         style:UIBarButtonItemStyleDone
+//                                        target:self
+//                                        action:@selector(didSelectSettings)];
+//        self.navigationItem.rightBarButtonItem = menuButton;
     }
     return self;
 }
