@@ -92,7 +92,7 @@
         
         cell.detailTextLabel.numberOfLines = 2;
         cell.textLabel.text = @"官网";
-        cell.detailTextLabel.text = @"https://www.jianshu.com/p/469c02b6dc15";
+        cell.detailTextLabel.text = @"https://www.jianshu.com/p/216691edbd0d";
     }
     return cell;
 }
@@ -103,7 +103,8 @@
     if (indexPath.row == 2) {
         JSDSnackManage* snackManage = [JSDSnackManage sharedInstance];
         UIPasteboard* pasterboard = [[UIPasteboard alloc] init];
-        pasterboard.string = @"https://www.jianshu.com/p/469c02b6dc15";
+        //TODO:官网
+        pasterboard.string = @"https://www.jianshu.com/p/216691edbd0d";
         [snackManage showText:@"官网已复制到剪切板"];
     }
 }
