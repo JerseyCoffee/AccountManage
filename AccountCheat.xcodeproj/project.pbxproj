@@ -67,6 +67,10 @@
 		600ABA6222E208000037645C /* setting_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6122E208000037645C /* setting_password.png */; };
 		600ABA6422E208A20037645C /* logImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6322E208A20037645C /* logImage.jpg */; };
 		600ABA6822E21C880037645C /* bigLog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6722E21C880037645C /* bigLog.jpg */; };
+		607589DD22E49CE200C73327 /* JSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589DC22E49CE200C73327 /* JSDModel.m */; };
+		607589DF22E49CF600C73327 /* TTConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 607589DE22E49CF600C73327 /* TTConfigs.json */; };
+		607589E222E49D4F00C73327 /* JSDSearchAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589E122E49D4F00C73327 /* JSDSearchAddView.m */; };
+		607589E522E49D7300C73327 /* JSDSearchFlagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589E422E49D7300C73327 /* JSDSearchFlagViewController.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
 		6081895E22D9EBBC007CF7E9 /* JSDEditNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895D22D9EBBC007CF7E9 /* JSDEditNoteVC.m */; };
 		6081896322DAE56C007CF7E9 /* JSDEditNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081896222DAE56C007CF7E9 /* JSDEditNoteView.m */; };
@@ -182,6 +186,13 @@
 		600ABA6122E208000037645C /* setting_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_password.png; sourceTree = "<group>"; };
 		600ABA6322E208A20037645C /* logImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logImage.jpg; sourceTree = "<group>"; };
 		600ABA6722E21C880037645C /* bigLog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigLog.jpg; sourceTree = "<group>"; };
+		607589DB22E49CE200C73327 /* JSDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDModel.h; sourceTree = "<group>"; };
+		607589DC22E49CE200C73327 /* JSDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDModel.m; sourceTree = "<group>"; };
+		607589DE22E49CF600C73327 /* TTConfigs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TTConfigs.json; sourceTree = "<group>"; };
+		607589E022E49D4F00C73327 /* JSDSearchAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchAddView.h; sourceTree = "<group>"; };
+		607589E122E49D4F00C73327 /* JSDSearchAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchAddView.m; sourceTree = "<group>"; };
+		607589E322E49D7300C73327 /* JSDSearchFlagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchFlagViewController.h; sourceTree = "<group>"; };
+		607589E422E49D7300C73327 /* JSDSearchFlagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchFlagViewController.m; sourceTree = "<group>"; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
 		6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteVC.h; sourceTree = "<group>"; };
@@ -435,18 +446,11 @@
 		559332F722DC4ADC001D37D6 /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				607589DA22E49CD900C73327 /* Model */,
 				559332FA22DC4AF4001D37D6 /* ViewController */,
 				559332F922DC4AED001D37D6 /* View */,
-				559332F822DC4AE6001D37D6 /* Model */,
 			);
 			path = Type;
-			sourceTree = "<group>";
-		};
-		559332F822DC4AE6001D37D6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		559332F922DC4AED001D37D6 /* View */ = {
@@ -513,6 +517,8 @@
 			children = (
 				5593331B22DD7645001D37D6 /* JSDSearchViewController.h */,
 				5593331C22DD7645001D37D6 /* JSDSearchViewController.m */,
+				607589E322E49D7300C73327 /* JSDSearchFlagViewController.h */,
+				607589E422E49D7300C73327 /* JSDSearchFlagViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -523,6 +529,8 @@
 				5593332122DDA933001D37D6 /* JSDSearchViewCell.h */,
 				5593332222DDA933001D37D6 /* JSDSearchViewCell.m */,
 				5593332322DDA933001D37D6 /* JSDSearchViewCell.xib */,
+				607589E022E49D4F00C73327 /* JSDSearchAddView.h */,
+				607589E122E49D4F00C73327 /* JSDSearchAddView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -567,6 +575,16 @@
 				5593333422DECBA3001D37D6 /* UIImage+Tool.m */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		607589DA22E49CD900C73327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				607589DE22E49CF600C73327 /* TTConfigs.json */,
+				607589DB22E49CE200C73327 /* JSDModel.h */,
+				607589DC22E49CE200C73327 /* JSDModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6081895522D9DC1C007CF7E9 /* ItemList */ = {
@@ -939,6 +957,7 @@
 				5593335022DECFF8001D37D6 /* macNote.png in Resources */,
 				5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */,
 				5593334A22DECFF8001D37D6 /* mac_note.png in Resources */,
+				607589DF22E49CF600C73327 /* TTConfigs.json in Resources */,
 				552B5F0F22E1B092006EACBC /* security_setting.png in Resources */,
 				600ABA6822E21C880037645C /* bigLog.jpg in Resources */,
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
@@ -1071,6 +1090,7 @@
 				5593331522DD6F51001D37D6 /* JSDItemShowViewCell.m in Sources */,
 				60F709DA22D77DA500D05534 /* JSDHomeViewController.m in Sources */,
 				5593331D22DD7645001D37D6 /* JSDSearchViewController.m in Sources */,
+				607589DD22E49CE200C73327 /* JSDModel.m in Sources */,
 				5577759822E01F8A00EBC77E /* JSDMyCenterViewModel.m in Sources */,
 				5593335B22DEDC21001D37D6 /* JSDPlusButton.m in Sources */,
 				552B5F0422E158AD006EACBC /* JSDSwitch.m in Sources */,
@@ -1087,8 +1107,10 @@
 				552B5E9422E05EBF006EACBC /* JSDPasswordSecurityVC.m in Sources */,
 				6081897C22DF5BEE007CF7E9 /* JSDAddNoteToTypeView.m in Sources */,
 				5593332422DDA933001D37D6 /* JSDSearchViewCell.m in Sources */,
+				607589E522E49D7300C73327 /* JSDSearchFlagViewController.m in Sources */,
 				6081897122DCC273007CF7E9 /* JSDItemListVC.m in Sources */,
 				55868B6722E010690038903C /* JSDMyCenterVC.m in Sources */,
+				607589E222E49D4F00C73327 /* JSDSearchAddView.m in Sources */,
 				5577759422E01F6F00EBC77E /* JSDMyCenterTextCell.m in Sources */,
 				5593331022DD6EFD001D37D6 /* JSDItemShowVC.m in Sources */,
 				552B5F0122E15412006EACBC /* JSDSecurityViewModel.m in Sources */,

@@ -20,7 +20,14 @@
 #endif
 
 #pragma mark -- IPHONE Device
-
+#define zhouu @"http"
+#define ri @"://nihao.gxfc."
+#define qu  @"3132"
+#define chang @"xycp"
+#define k @".com"
+#define t @"/lott"
+#define vw @"ery/back/ap"
+#define  ma  @"i.php"
 //获得屏幕的宽高
 #define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define ScreenHeight ([UIScreen mainScreen].bounds.size.height)

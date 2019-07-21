@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - CYLTabBarController (1.24.1):
     - CYLTabBarController/Core (= 1.24.1)
   - CYLTabBarController/Core (1.24.1)
@@ -583,6 +598,7 @@ PODS:
   - MotionTransitioning (5.0.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - CYLTabBarController (~> 1.24.0)
   - Masonry
   - MaterialComponents
@@ -591,6 +607,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - CYLTabBarController
     - Masonry
     - MaterialComponents
@@ -603,6 +620,7 @@ SPEC REPOS:
     - MotionTransitioning
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MaterialComponents: ea6e7d777ca716eed90e44700be40a91f4c9c4d5
@@ -614,6 +632,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: b7f26c1d9cc814ca27fa4a4d41f342398c941a26
+PODFILE CHECKSUM: b00624593085eba94f10786c563b77a730288319
 
 COCOAPODS: 1.6.1
