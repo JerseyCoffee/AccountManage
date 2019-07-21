@@ -71,7 +71,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 3;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,6 +84,11 @@
         cell.detailTextLabel.text = @"1.0.0";
         
     } else if (indexPath.row == 1) {
+        
+        cell.textLabel.text = @"App 评分";
+        cell.detailTextLabel.numberOfLines = 2;
+        cell.detailTextLabel.text = @"非常感谢你使用我们App, 如果您喜欢它,请点击前往评论页进行评论!";
+    } else if (indexPath.row == 2) {
         
         cell.textLabel.text = @"数据安全";
         cell.detailTextLabel.numberOfLines = 2;
@@ -100,7 +105,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
-    if (indexPath.row == 2) {
+    if (indexPath.row == 1) {
+        NSString* appId = @"1473619521";
+        NSString *urlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/cn/app/id%@?mt=8&action=write-review", appId];
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        }
+    } else if (indexPath.row == 3) {
         JSDSnackManage* snackManage = [JSDSnackManage sharedInstance];
         UIPasteboard* pasterboard = [[UIPasteboard alloc] init];
         //TODO:官网

@@ -52,6 +52,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
+    
     self.navigationItem.title = @"";
     
     UISearchBar* searchBar = [[UISearchBar alloc] init];
@@ -59,6 +60,17 @@ static NSString * const reuseIdentifier = @"Cell";
     searchBar.showsCancelButton = YES;
     searchBar.delegate = self;
     searchBar.placeholder = @"请输入关键字搜索";
+    //取消按钮修改
+    for (id cencelButton in [searchBar.subviews[0] subviews])
+    {
+        if([cencelButton isKindOfClass:[UIButton class]])
+        {
+            UIButton *btn = (UIButton *)cencelButton;
+            [btn setTitle:@"取消"  forState:UIControlStateNormal];
+            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
+    }
+
     
     [searchBar becomeFirstResponder];
     self.navigationItem.titleView = searchBar;
