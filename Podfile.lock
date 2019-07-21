@@ -17,6 +17,9 @@ PODS:
   - CYLTabBarController (1.24.1):
     - CYLTabBarController/Core (= 1.24.1)
   - CYLTabBarController/Core (1.24.1)
+  - JCore (1.2.6)
+  - JPush (3.1.0):
+    - JCore (~> 1.2.0)
   - Masonry (1.1.0)
   - MaterialComponents (84.0.0):
     - MaterialComponents/ActionSheet (= 84.0.0)
@@ -600,6 +603,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController (~> 1.24.0)
+  - JPush (= 3.1.0)
   - Masonry
   - MaterialComponents
   - MGSwipeTableCell
@@ -609,6 +613,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - CYLTabBarController
+    - JCore
+    - JPush
     - Masonry
     - MaterialComponents
     - MDFInternationalization
@@ -622,6 +628,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: 5921e25ad13e0386351079217b009f2039084eac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MaterialComponents: ea6e7d777ca716eed90e44700be40a91f4c9c4d5
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -632,6 +640,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: b00624593085eba94f10786c563b77a730288319
+PODFILE CHECKSUM: 38d2323e14bbc1ec580abc513070d84435f607e0
 
 COCOAPODS: 1.6.1

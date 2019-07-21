@@ -13,6 +13,7 @@
 #import <MaterialComponents/MDCAppBarNavigationController.h>
 #import "JSDTabBarController.h"
 #import "JSDUserPasswordCheckManage.h"
+#import <JPUSHService.h>
 
 @interface AppDelegate ()
 
@@ -30,9 +31,21 @@
     self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
     
+    [self setupPushApplication:application Options:launchOptions];
+    
     return YES;
 }
 
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [application registerForRemoteNotifications];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -62,6 +75,32 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
+}
+
+- (void) setupPushApplication:(UIApplication *)application Options:(NSDictionary *)launchOptions {
+    
+    NSString *appKey = @"85b2fe79cf80674e73bb8a42";
+    NSString *channel = @"channel";
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    }
+    else if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    }
+    
+    BOOL isProduction = false;
+    [JPUSHService setupWithOption:launchOptions appKey:appKey
+                          channel:channel
+                 apsForProduction:isProduction
+            advertisingIdentifier:nil];  //
+    
+    [application registerForRemoteNotifications];
 }
 
 

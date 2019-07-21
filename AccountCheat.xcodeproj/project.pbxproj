@@ -68,7 +68,7 @@
 		600ABA6422E208A20037645C /* logImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6322E208A20037645C /* logImage.jpg */; };
 		600ABA6822E21C880037645C /* bigLog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 600ABA6722E21C880037645C /* bigLog.jpg */; };
 		607589DD22E49CE200C73327 /* JSDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589DC22E49CE200C73327 /* JSDModel.m */; };
-		607589DF22E49CF600C73327 /* TTConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 607589DE22E49CF600C73327 /* TTConfigs.json */; };
+		607589DF22E49CF600C73327 /* JSDConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 607589DE22E49CF600C73327 /* JSDConfigs.json */; };
 		607589E222E49D4F00C73327 /* JSDSearchAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589E122E49D4F00C73327 /* JSDSearchAddView.m */; };
 		607589E522E49D7300C73327 /* JSDSearchFlagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607589E422E49D7300C73327 /* JSDSearchFlagViewController.m */; };
 		6081895922D9DC68007CF7E9 /* JSDItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */; };
@@ -188,11 +188,13 @@
 		600ABA6722E21C880037645C /* bigLog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigLog.jpg; sourceTree = "<group>"; };
 		607589DB22E49CE200C73327 /* JSDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDModel.h; sourceTree = "<group>"; };
 		607589DC22E49CE200C73327 /* JSDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDModel.m; sourceTree = "<group>"; };
-		607589DE22E49CF600C73327 /* TTConfigs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TTConfigs.json; sourceTree = "<group>"; };
+		607589DE22E49CF600C73327 /* JSDConfigs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSDConfigs.json; sourceTree = "<group>"; };
 		607589E022E49D4F00C73327 /* JSDSearchAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchAddView.h; sourceTree = "<group>"; };
 		607589E122E49D4F00C73327 /* JSDSearchAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchAddView.m; sourceTree = "<group>"; };
 		607589E322E49D7300C73327 /* JSDSearchFlagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSearchFlagViewController.h; sourceTree = "<group>"; };
 		607589E422E49D7300C73327 /* JSDSearchFlagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSearchFlagViewController.m; sourceTree = "<group>"; };
+		607589E622E4B7A300C73327 /* AccountCheat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccountCheat.entitlements; sourceTree = "<group>"; };
+		607589E722E4BEC300C73327 /* JSDDevMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
 		6081895722D9DC68007CF7E9 /* JSDItemListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDItemListViewController.h; sourceTree = "<group>"; };
 		6081895822D9DC68007CF7E9 /* JSDItemListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDItemListViewController.m; sourceTree = "<group>"; };
 		6081895C22D9EBBC007CF7E9 /* JSDEditNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDEditNoteVC.h; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		553DD0D722D73C79005D739D /* AccountCheat */ = {
 			isa = PBXGroup;
 			children = (
+				607589E622E4B7A300C73327 /* AccountCheat.entitlements */,
 				60F709DE22D77ED400D05534 /* Application */,
 				60F709C922D7770100D05534 /* Base */,
 				60F709B922D7770000D05534 /* CategoryTool */,
@@ -580,7 +583,7 @@
 		607589DA22E49CD900C73327 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				607589DE22E49CF600C73327 /* TTConfigs.json */,
+				607589DE22E49CF600C73327 /* JSDConfigs.json */,
 				607589DB22E49CE200C73327 /* JSDModel.h */,
 				607589DC22E49CE200C73327 /* JSDModel.m */,
 			);
@@ -845,6 +848,7 @@
 			children = (
 				5593333122DECB75001D37D6 /* ImageAssets */,
 				60F709DB22D77E3200D05534 /* JSDMacro.h */,
+				607589E722E4BEC300C73327 /* JSDDevMacro.h */,
 				60F709DC22D77E3200D05534 /* JSDPrefixHeader.pch */,
 				60F709DD22D77E3200D05534 /* JSDPublic.h */,
 				553DD0E922D73C7C005D739D /* Info.plist */,
@@ -914,6 +918,11 @@
 				TargetAttributes = {
 					553DD0D422D73C79005D739D = {
 						CreatedOnToolsVersion = 11.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -957,7 +966,7 @@
 				5593335022DECFF8001D37D6 /* macNote.png in Resources */,
 				5593331622DD6F51001D37D6 /* JSDItemShowViewCell.xib in Resources */,
 				5593334A22DECFF8001D37D6 /* mac_note.png in Resources */,
-				607589DF22E49CF600C73327 /* TTConfigs.json in Resources */,
+				607589DF22E49CF600C73327 /* JSDConfigs.json in Resources */,
 				552B5F0F22E1B092006EACBC /* security_setting.png in Resources */,
 				600ABA6822E21C880037645C /* bigLog.jpg in Resources */,
 				559332F622DC37FA001D37D6 /* typeData.json in Resources */,
@@ -1249,8 +1258,9 @@
 			baseConfigurationReference = 1B43226E312D774371B81F5D /* Pods-AccountCheat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AccountCheat/AccountCheat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6GD2CA4X64;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
@@ -1263,7 +1273,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AccountCheatDev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1273,8 +1283,9 @@
 			baseConfigurationReference = CA36B848871123248EBEB14C /* Pods-AccountCheat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = AccountCheat/AccountCheat.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6GD2CA4X64;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AccountCheat/Supporting Files/JSDPrefixHeader.pch";
@@ -1287,7 +1298,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.AccountCheat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AccountCheatApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

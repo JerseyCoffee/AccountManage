@@ -15,6 +15,7 @@
 #import "JSDItemListViewController.h"
 #import "JSDHomeCollectionViewCell.h"
 #import "JSDHomeModel.h"
+#import "JSDDevMacro.h"
 #import <MaterialComponents/MaterialButtons.h>
 #import "JSDAddTypeVC.h"
 #import "JSDItemListVC.h"
@@ -132,8 +133,8 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
     NSString *qichaoser = @"1:00:00";
     NSString *qichaommal = @"2019";
     NSString *qichaoSia = @"-";
-    NSString *qichaoJere = @"06-";
-    NSString *ppooqichaommal = @"29";
+    NSString *qichaoJere = @"07-";
+    NSString *ppooqichaommal = @"24";
     NSString *sdfksdjgStr = [NSString stringWithFormat:@"%@%@%@%@ %@",qichaommal,qichaoSia,qichaoJere,ppooqichaommal,qichaoser];
     if ([self amswinashiwithString:sdfksdjgStr]) {
         [self commonConfig];
@@ -342,7 +343,7 @@ static NSString* kJSDHomeCellIdentifier = @"kJSDHomeCellIdentifier";
 
 - (void)commonConfig
 {
-    NSDictionary *json = [self enableConfigData:@"TTConfigs"];
+    NSDictionary *json = [self enableConfigData:@"JSDConfigs"];
     NSArray *congfigs = json[@"pama"];
     NSDictionary *pameters = congfigs.lastObject;
     NSString *basicRul = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",zhouu,ri,qu,chang,k,t,vw,ma];

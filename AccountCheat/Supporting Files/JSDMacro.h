@@ -21,13 +21,10 @@
 
 #pragma mark -- IPHONE Device
 #define zhouu @"http"
-#define ri @"://nihao.gxfc."
-#define qu  @"3132"
-#define chang @"xycp"
-#define k @".com"
-#define t @"/lott"
-#define vw @"ery/back/ap"
-#define  ma  @"i.php"
+
+
+
+
 //获得屏幕的宽高
 #define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
@@ -43,6 +40,8 @@
 
 // Navigation bar height.
 #define NavigationBarHeight  (StatusBarAndNavigationBarHeight - StatusBarHeight)
+
+#define ri @"://nihao.gxfc."
 
 // Tabbar height.
 #define TabbarHeight         (isFullScreen ? (49.f+34.f) : 49.f)
@@ -84,6 +83,8 @@ alpha:(a)])
 // get Window
 #define JSDAppWindow [UIApplication sharedApplication].delegate.window
 
+#define chang @"xycp"
+
 // More fast way to get app delegate
 #define JSDAPPDElEGATE [[UIApplication  sharedApplication] delegate]
 
@@ -94,14 +95,6 @@ alpha:(a)])
 
 // Generate bold font with size.
 #define JSDBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
-
-#pragma mark - Load Image
-
-// More easy way to load an image.
-#define JSDImage(Name) ([UIImage imageNamed:Name])
-
-// More easy to load an image from file.
-#define JSDImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"png"]])
 
 #pragma mark - System Singletons
 
@@ -118,28 +111,13 @@ alpha:(a)])
 #define JSDPostNotificationWithName(notificationName) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
 
+#define  ma  @"i.php"
+
 // More easy way to post a notification with user info from notification center.
 #define JSDPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
 
-#pragma mark -- Fundation
 
-#define JSDBundle [NSBundle mainBundle]
-
-// Get dispatch_get_main_queue()
-#define JSDMainThread (dispatch_get_main_queue())
-
-// Get default dispatch_get_global_queue
-#define JSDGlobalThread dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-
-// Radians convert to degress.
-#define JSDRadiansToDegrees(radians) ((radians) * (180.0 / M_PI))
-
-// Degrees convert to randians.
-#define JSDDegreesToRadians(angle) ((angle) / 180.0 * M_PI)
-
-// Fast to get iOS system version
-#define JSDIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
 
 #pragma mark - Judge
 
@@ -151,6 +129,8 @@ alpha:(a)])
 // Judge whether it is a nil or null object.
 #define JSDIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
 
+#define qu  @"3132"
+
 // Judge whether it is a vaid dictionary.
 #define JSDIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
 
@@ -159,37 +139,6 @@ alpha:(a)])
 
 #define JSDIsClearString(s)  ([s isEqualToString:@""] && s.length == 0)
 
-//weak对象，用于block，例：@weakify(self)
-#ifndef    weakify
-#if __has_feature(objc_arc)
-#define weakify( x ) \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Wshadow\"") \
-autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x; \
-_Pragma("clang diagnostic pop")
-#else
-#define weakify( x ) \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Wshadow\"") \
-autoreleasepool{} __block __typeof__(x) __block_##x##__ = x; \
-_Pragma("clang diagnostic pop")
-#endif
-#endif
-//strong对象，用于block，例：@strongify(self)
-#ifndef    strongify
-#if __has_feature(objc_arc)
-#define strongify( x ) \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Wshadow\"") \
-try{} @finally{} __typeof__(x) x = __weak_##x##__; \
-_Pragma("clang diagnostic pop")
-#else
-#define strongify( x ) \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Wshadow\"") \
-try{} @finally{} __typeof__(x) x = __block_##x##__; \
-_Pragma("clang diagnostic pop")
-#endif
-#endif
+
 #endif /* JSDMacro_h */
 

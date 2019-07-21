@@ -14,5 +14,6 @@
 #import "JSDMacro.h"
 #import <Masonry.h>
 #import <MJExtension.h>
+#import "JSDDevMacro.h"
 
 #endif /* JSDPrefixHeader_pch */
