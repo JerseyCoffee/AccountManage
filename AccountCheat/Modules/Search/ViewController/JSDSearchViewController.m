@@ -71,7 +71,6 @@ static NSString * const reuseIdentifier = @"Cell";
         }
     }
 
-    
     [searchBar becomeFirstResponder];
     self.navigationItem.titleView = searchBar;
 }

@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)jsd_skyBluecolor;
 
 
-
-
 + (CAGradientLayer *)jsd_setGradualChangeView:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr;
 
 @end
